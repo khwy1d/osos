@@ -9,9 +9,6 @@ export const DISPLAY_PHONE = '+967 776 002 190';
 export const NAV_LINKS: NavLink[] = [
   { key: 'home', label: { ar: 'الرئيسية', en: 'Home' }, href: '/' },
   { key: 'services', label: { ar: 'خدماتنا', en: 'Services' }, href: '/services' },
-  { key: 'medical', label: { ar: 'تنسيق طبي', en: 'Medical' }, href: '/medical-tourism' },
-  { key: 'clearance', label: { ar: 'موافقات أمنية', en: 'Security Clearance' }, href: '/security-clearance-egypt' },
-  { key: 'realestate', label: { ar: 'خدمات عقارية', en: 'Real Estate' }, href: '/real-estate' },
   { key: 'about', label: { ar: 'عنّا', en: 'About Us' }, href: '/about' },
   { key: 'contact', label: { ar: 'اتصل بنا', en: 'Contact' }, href: '/contact' },
 ];
