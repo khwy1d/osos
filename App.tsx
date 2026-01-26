@@ -31,7 +31,7 @@ const App: React.FC = () => {
         <ScrollToTop />
         <div className="min-h-screen flex flex-col selection:bg-brand-coral selection:text-white">
           <Navbar />
-          <div className="mt-16 sm:mt-24 flex-1 flex flex-col">
+          <div className="mt-16 md:mt-24 flex-1 flex flex-col">
             <Breadcrumbs />
             <main className="flex-1">
               <Routes>

@@ -40,15 +40,15 @@ const Navbar: React.FC = () => {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-24">
           {/* Logo Area */}
-          <Link to="/" className="flex items-center gap-3 cursor-pointer group shrink-0">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-brand-blue rounded-xl flex items-center justify-center transition-all duration-500 group-hover:rotate-12 group-hover:bg-brand-coral shadow-lg shadow-brand-blue/20">
-              <span className="text-white font-black text-2xl">W</span>
+          <Link to="/" className="flex items-center gap-2 md:gap-3 cursor-pointer group shrink-0">
+            <div className="w-8 h-8 md:w-12 md:h-12 bg-brand-blue rounded-lg md:rounded-xl flex items-center justify-center transition-all duration-500 group-hover:rotate-12 group-hover:bg-brand-coral shadow-lg shadow-brand-blue/20">
+              <span className="text-white font-black text-lg md:text-2xl">W</span>
             </div>
             <div className="flex flex-col leading-none">
-              <span className="text-brand-blue font-black text-2xl md:text-3xl tracking-tighter transition-colors group-hover:text-brand-coral">
+              <span className="text-brand-blue font-black text-xl md:text-3xl tracking-tighter transition-colors group-hover:text-brand-coral">
                 {t('واصِل', 'Wasil')}
               </span>
-              <span className="text-[10px] text-brand-coral font-bold uppercase tracking-widest hidden sm:block group-hover:text-brand-blue transition-colors mt-0.5">Travel & Tourism</span>
+              <span className="text-[8px] md:text-[10px] text-brand-coral font-bold uppercase tracking-widest hidden sm:block group-hover:text-brand-blue transition-colors mt-0.5">Travel & Tourism</span>
             </div>
           </Link>
 
@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
                 key={link.key}
                 to={link.href}
                 className={({ isActive }) => 
-                  `text-brand-text hover:text-brand-blue font-bold text-base lg:text-lg transition-all py-2 relative group ${isActive ? 'text-brand-blue' : ''}`
+                  `text-brand-text hover:text-brand-blue font-bold text-sm lg:text-lg transition-all py-2 relative group ${isActive ? 'text-brand-blue' : ''}`
                 }
               >
                 {({ isActive }) => (
@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
               href={`https://wa.me/${WA_PHONE}?text=${defaultMsg}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-brand-coral hover:bg-brand-coralLight text-white px-6 py-3.5 rounded-2xl font-black transition-all hover:scale-105 active:scale-95 shadow-xl shadow-brand-coral/20 hover:shadow-brand-coral/40 text-sm lg:text-base"
+              className="flex items-center gap-2 bg-brand-coral hover:bg-brand-coralLight text-white px-5 py-3 lg:px-6 lg:py-3.5 rounded-xl md:rounded-2xl font-black transition-all hover:scale-105 active:scale-95 shadow-xl shadow-brand-coral/20 hover:shadow-brand-coral/40 text-sm lg:text-base"
             >
               <MessageCircle className="w-5 h-5 fill-current animate-pulse" />
               {t('احجز الآن', 'Book Now')}
@@ -93,46 +93,46 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile UI Buttons */}
-          <div className="md:hidden flex items-center gap-3">
+          <div className="md:hidden flex items-center gap-2">
              <button
                 onClick={() => setLang(lang === 'ar' ? 'en' : 'ar')}
-                className="p-2 text-brand-text bg-slate-100 rounded-lg"
+                className="p-2 text-brand-text bg-slate-100 rounded-lg active:bg-brand-blue active:text-white transition-colors"
               >
-                <Globe className="w-6 h-6" />
+                <Globe className="w-5 h-5" />
               </button>
-            <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-brand-blue bg-slate-100 rounded-lg transition-transform duration-300 hover:scale-110">
-              {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+            <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-brand-blue bg-slate-100 rounded-lg transition-transform duration-300 hover:scale-110 active:bg-brand-blue active:text-white">
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Sidebar/Drawer - Simplified as requested */}
+      {/* Mobile Sidebar/Drawer - Balanced text sizes */}
       {isOpen && (
         <div className="md:hidden fixed inset-0 z-50 bg-white animate-in slide-in-from-top duration-300 overflow-y-auto">
-          <div className="p-6 flex flex-col h-full">
-            <div className="flex justify-between items-center mb-10">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-brand-blue rounded-xl flex items-center justify-center">
-                  <span className="text-white font-black text-xl">W</span>
+          <div className="p-5 flex flex-col h-full">
+            <div className="flex justify-between items-center mb-8">
+              <div className="flex items-center gap-2">
+                <div className="w-9 h-9 bg-brand-blue rounded-lg flex items-center justify-center">
+                  <span className="text-white font-black text-lg">W</span>
                 </div>
-                <span className="text-brand-blue font-black text-2xl tracking-tighter">
+                <span className="text-brand-blue font-black text-xl tracking-tighter">
                   {t('واصِل', 'Wasil')}
                 </span>
               </div>
               <button onClick={() => setIsOpen(false)} className="p-2 text-brand-blue bg-slate-100 rounded-lg">
-                <X className="w-8 h-8" />
+                <X className="w-6 h-6" />
               </button>
             </div>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3">
               {NAV_LINKS.map((link) => (
                 <NavLink
                   key={link.key}
                   to={link.href}
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) => 
-                    `text-2xl font-black p-4 rounded-2xl transition-all ${isActive ? 'bg-brand-blue text-white shadow-xl translate-x-2' : 'text-brand-text hover:bg-slate-50'}`
+                    `text-lg font-black p-4 rounded-xl transition-all ${isActive ? 'bg-brand-blue text-white shadow-lg translate-x-2' : 'text-brand-text hover:bg-slate-50'}`
                   }
                 >
                   {link.label[lang]}
@@ -140,21 +140,21 @@ const Navbar: React.FC = () => {
               ))}
             </div>
 
-            <div className="mt-auto pt-10 space-y-4">
+            <div className="mt-auto pt-8 space-y-3">
               <a
                 href={`https://wa.me/${WA_PHONE}?text=${defaultMsg}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-5 rounded-2xl font-black text-xl shadow-xl active:scale-95"
+                className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 rounded-xl font-black text-lg shadow-lg active:scale-95"
               >
-                <MessageCircle className="w-7 h-7" />
+                <MessageCircle className="w-6 h-6" />
                 {t('تواصل عبر واتساب', 'WhatsApp Us')}
               </a>
               <a
                 href={`tel:+${WA_PHONE}`}
-                className="flex items-center justify-center gap-3 border-2 border-brand-blue text-brand-blue py-5 rounded-2xl font-black text-xl hover:bg-brand-blue hover:text-white transition-all"
+                className="flex items-center justify-center gap-3 border-2 border-brand-blue text-brand-blue py-4 rounded-xl font-black text-lg hover:bg-brand-blue hover:text-white transition-all"
               >
-                <Phone className="w-7 h-7" />
+                <Phone className="w-6 h-6" />
                 {t('اتصل بنا هاتفياً', 'Call Us Now')}
               </a>
             </div>
