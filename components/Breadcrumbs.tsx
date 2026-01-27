@@ -15,10 +15,10 @@ const Breadcrumbs: React.FC = () => {
   const getLabel = (slug: string) => {
     switch(slug) {
       case 'services': return t('خدماتنا', 'Services');
-      case 'medical-tourism': return t('تنسيق طبي', 'Medical Coordination');
+      case 'medical-tourism': return t('السفر العلاجي', 'Medical Travel');
       case 'security-clearance-egypt': return t('الموافقات الأمنية', 'Security Clearance');
       case 'saudi-visit': return t('زيارة السعودية', 'Saudi Visit');
-      case 'tourism': return t('السياحة (داخلية ودولية)', 'Tourism (Domestic & Intl)');
+      case 'tourism': return t('السياحة', 'Tourism');
       case 'transport': return t('النقل والمواصلات', 'Transport');
       case 'flights': return t('تذاكر طيران', 'Flight Tickets');
       case 'umrah': return t('تأشيرات عمرة', 'Umrah Visas');

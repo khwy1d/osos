@@ -36,10 +36,10 @@ export const SERVICES: Service[] = [
     id: 'medical',
     priority: true,
     icon: <HeartPulse className="w-8 h-8" />,
-    title: { ar: 'السفر العلاجي والسياحة', en: 'Medical Travel & Tourism' },
+    title: { ar: 'السفر العلاجي', en: 'Medical Travel' },
     description: { ar: 'تنسيق مواعيد وخصومات خاصة على الفحوصات الطبية في مصر والأردن وإجراءات سفر ميسرة.', en: 'Coordination of medical appointments and special discounts in Egypt & Jordan.' },
     cta: { ar: 'نسّق رحلتك', en: 'Coordinate Now' },
-    waMessage: "أريد الاستعلام عن خدمة التنسيق الطبي والسفر العلاجي والسياحة.",
+    waMessage: "أريد الاستعلام عن خدمة التنسيق الطبي والسفر العلاجي.",
     link: '/medical-tourism'
   },
   {
@@ -77,10 +77,10 @@ export const SERVICES: Service[] = [
     id: 'tourism',
     priority: false,
     icon: <Palmtree className="w-8 h-8" />,
-    title: { ar: 'السياحة (داخلية ودولية)', en: 'Tourism (Domestic & Intl)' },
+    title: { ar: 'السياحة', en: 'Tourism' },
     description: { ar: 'باكجات سياحية متكاملة ورحلات استكشافية داخل اليمن وإلى تركيا، ماليزيا، جورجيا، ومصر.', en: 'Full tour packages within Yemen and to Turkey, Malaysia, Georgia, and Egypt.' },
     cta: { ar: 'استكشف عروضنا', en: 'Explore Offers' },
-    waMessage: "أريد الاستعلام عن عروض السياحة (الداخلية/الدولية) المتوفرة.",
+    waMessage: "أريد الاستعلام عن عروض السياحة المتوفرة.",
     link: '/tourism'
   },
   {
