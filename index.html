@@ -15,34 +15,38 @@
               brand: {
                 blue: '#004B87',
                 coral: '#FF7043',
-                gray: '#F5F5F5',
+                gray: '#F8FAFC',
                 blueLight: '#005CA8',
                 coralLight: '#FF8A65',
-                text: '#37474F'
+                text: '#1E293B',
+                accent: '#0EA5E9'
               }
             },
             fontFamily: {
               cairo: ['Cairo', 'sans-serif'],
               inter: ['Inter', 'sans-serif']
             },
+            borderRadius: {
+              '4xl': '2rem',
+              '5xl': '3rem',
+            },
             animation: {
               'float': 'float 6s ease-in-out infinite',
-              'float-delayed': 'float 6s ease-in-out 3s infinite',
-              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
               'pulse-soft': 'pulseSoft 3s infinite',
+              'slide-in': 'slideIn 0.5s ease-out forwards',
             },
             keyframes: {
               float: {
                 '0%, 100%': { transform: 'translateY(0)' },
                 '50%': { transform: 'translateY(-20px)' },
               },
-              fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(30px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
               pulseSoft: {
                 '0%, 100%': { opacity: '1' },
-                '50%': { opacity: '0.7' },
+                '50%': { opacity: '0.8' },
+              },
+              slideIn: {
+                '0%': { transform: 'translateX(100%)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
               }
             }
           }
@@ -54,25 +58,24 @@
         font-family: 'Cairo', 'Inter', sans-serif;
         scroll-behavior: smooth;
         overflow-x: hidden;
+        background-color: #F8FAFC;
       }
-      .active-link {
-        color: #004B87 !important;
+      .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
       }
-      .active-link::after {
-        width: 100% !important;
+      .text-gradient {
+        background: linear-gradient(135deg, #004B87 0%, #0EA5E9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
-      
-      /* Smooth Image Loading */
-      img {
-        transition: opacity 0.5s ease-in-out;
-      }
-
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
-        width: 6px;
+        width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #f1f1f1;
+        background: #f1f5f9;
       }
       ::-webkit-scrollbar-thumb {
         background: #cbd5e1;
@@ -96,7 +99,7 @@
 }
 </script>
   </head>
-  <body class="bg-white text-brand-text antialiased selection:bg-brand-coral selection:text-white">
+  <body class="selection:bg-brand-coral selection:text-white">
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
   </body>

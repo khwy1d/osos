@@ -1,8 +1,9 @@
 
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
-import { HeartPulse, Stethoscope, Hospital, ClipboardList, ShieldCheck, MessageCircle, CheckCircle2, Award, ArrowLeft } from 'lucide-react';
+import { Stethoscope, Hospital, ClipboardList, ShieldCheck, CheckCircle2, Award, ArrowLeft } from 'lucide-react';
 import { WA_PHONE } from '../constants';
+import { WhatsAppIcon } from '../components/BrandIcons';
 
 const MedicalPage: React.FC = () => {
   const { t, lang } = useLanguage();
@@ -22,7 +23,7 @@ const MedicalPage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <a href={`https://wa.me/${WA_PHONE}?text=${mainMsg}`} target="_blank" rel="noopener noreferrer" className="bg-brand-coral text-white px-8 py-4 rounded-2xl font-black text-lg flex items-center justify-center gap-2 shadow-xl hover:scale-105 transition-transform">
-                  <MessageCircle className="w-6 h-6" />
+                  <WhatsAppIcon className="w-6 h-6 fill-current" />
                   {t('استفسر عن التنسيق الطبي', 'Inquire About Coordination')}
                 </a>
               </div>
@@ -59,7 +60,7 @@ const MedicalPage: React.FC = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-brand-teal font-black hover:text-brand-coral transition-colors mt-auto"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <WhatsAppIcon className="w-4 h-4 fill-current" />
                   {t('طلب الخدمة', 'Request Service')}
                   <ArrowLeft className={`w-4 h-4 ${lang === 'ar' ? '' : 'rotate-180'}`} />
                 </a>

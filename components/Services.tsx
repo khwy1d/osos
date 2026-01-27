@@ -38,7 +38,8 @@ const Services: React.FC = () => {
                 
                 {/* Large Icon Container - Scaled for mobile */}
                 <div className="relative w-14 h-14 md:w-24 md:h-24 bg-white shadow-lg rounded-2xl md:rounded-3xl flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-500 mb-6 md:mb-8 group-hover:rotate-12 group-hover:scale-110">
-                  {React.cloneElement(service.icon as React.ReactElement, { className: 'w-7 h-7 md:w-12 md:h-12' })}
+                  {/* Fix: Explicitly typed React.ReactElement to include className prop to fix TS error */}
+                  {React.cloneElement(service.icon as React.ReactElement<{ className?: string }>, { className: 'w-7 h-7 md:w-12 md:h-12' })}
                 </div>
 
                 <h4 className="relative text-lg md:text-3xl font-black text-brand-blue mb-2 md:mb-4 tracking-tight transition-colors">

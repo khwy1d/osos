@@ -1,8 +1,9 @@
 
 import React, { useState } from 'react';
 import { useLanguage } from '../components/LanguageContext';
-import { Calendar, MapPin, MessageCircle, Info } from 'lucide-react';
+import { Calendar, MapPin, Info } from 'lucide-react';
 import { WA_PHONE } from '../constants';
+import { WhatsAppIcon } from '../components/BrandIcons';
 
 const FlightsPage: React.FC = () => {
   const { t } = useLanguage();
@@ -88,7 +89,7 @@ const FlightsPage: React.FC = () => {
                        rel="noopener noreferrer" 
                        className="w-full bg-brand-teal text-white py-4 rounded-xl font-black text-lg hover:bg-brand-tealLight transition-colors flex items-center justify-center gap-2"
                     >
-                       <MessageCircle className="w-5 h-5" />
+                       <WhatsAppIcon className="w-5 h-5 fill-current" />
                        {t('استفسر الآن عبر واتساب', 'Inquire via WhatsApp')}
                     </a>
                     <div className="flex gap-2 p-4 bg-blue-50 border border-blue-100 rounded-xl text-blue-800 text-xs font-bold leading-relaxed">
