@@ -10,24 +10,24 @@ const ContactPage: React.FC = () => {
   const msg = encodeURIComponent("السلام عليكم، أريد الاستفسار عن خدماتكم.");
 
   const socialLinks = [
-    { icon: <WhatsAppIcon className="w-5 h-5" />, name: 'WhatsApp', link: `https://wa.me/${WA_PHONE}?text=${msg}` },
-    { icon: <FacebookIcon className="w-5 h-5" />, name: 'Facebook', link: '#' },
-    { icon: <InstagramIcon className="w-5 h-5" />, name: 'Instagram', link: '#' },
-    { icon: <TikTokIcon className="w-5 h-5" />, name: 'TikTok', link: '#' },
-    { icon: <XIcon className="w-5 h-5" />, name: 'X (Twitter)', link: '#' }
+    { icon: <WhatsAppIcon className="w-4 h-4" />, name: 'WhatsApp', link: `https://wa.me/${WA_PHONE}?text=${msg}` },
+    { icon: <FacebookIcon className="w-4 h-4" />, name: 'Facebook', link: '#' },
+    { icon: <InstagramIcon className="w-4 h-4" />, name: 'Instagram', link: '#' },
+    { icon: <TikTokIcon className="w-4 h-4" />, name: 'TikTok', link: '#' },
+    { icon: <XIcon className="w-4 h-4" />, name: 'X (Twitter)', link: '#' }
   ];
 
   const contactCards = [
     { 
       icon: <WhatsAppIcon />, 
       title: t('واتساب', 'WhatsApp'), 
-      value: t('محادثة فورية', 'Live Chat'), 
+      value: t('محادثة فورية', 'Live Support'), 
       action: `https://wa.me/${WA_PHONE}?text=${msg}`, 
       color: 'green' 
     },
     { 
       icon: <Phone />, 
-      title: t('اتصل بنا', 'Call Us'), 
+      title: t('اتصل بنا', 'Direct Call'), 
       value: DISPLAY_PHONE, 
       action: `tel:${WA_PHONE}`, 
       color: 'blue' 
@@ -41,41 +41,41 @@ const ContactPage: React.FC = () => {
     },
     { 
       icon: <Clock />, 
-      title: t('ساعات العمل', 'Working Hours'), 
-      value: t('24 ساعة / 7 أيام', '24/7 Service'), 
+      title: t('ساعات العمل', 'Service Hours'), 
+      value: t('24 ساعة / 7 أيام', 'Available 24/7'), 
       action: null, 
       color: 'blue' 
     }
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50/50">
-      {/* Header Section */}
-      <section className="relative pt-24 pb-32 bg-brand-blue overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20">
-          <div className="absolute top-[-10%] right-[-10%] w-[400px] h-[400px] bg-white rounded-full blur-[100px]"></div>
-          <div className="absolute bottom-[-10%] left-[-10%] w-[300px] h-[300px] bg-brand-coral rounded-full blur-[80px]"></div>
+    <div className="min-h-screen bg-slate-50/30">
+      {/* Header Section - Reduced heights and sizes */}
+      <section className="relative pt-20 pb-24 bg-brand-blue overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-10">
+          <div className="absolute top-[-10%] right-[-5%] w-72 h-72 bg-white rounded-full blur-[80px]"></div>
+          <div className="absolute bottom-[-10%] left-[-5%] w-60 h-60 bg-brand-coral rounded-full blur-[60px]"></div>
         </div>
         
-        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center text-white space-y-6">
-           <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-1.5 rounded-full border border-white/20 text-[10px] md:text-xs font-bold uppercase tracking-widest">
-              <span className="w-1.5 h-1.5 bg-brand-coral rounded-full animate-pulse"></span>
-              {t('متاحون الآن لخدمتكم من تعز', 'Live Support From Taiz')}
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white space-y-5">
+           <div className="inline-flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full border border-white/20 text-[10px] font-bold uppercase tracking-widest">
+              <span className="w-1.5 h-1.5 bg-brand-coral rounded-full"></span>
+              {t('متاحون لخدمتكم من تعز', 'Live From Taiz')}
            </div>
-           <h1 className="text-3xl md:text-6xl font-black tracking-tight leading-tight">
-              {t('تواصل مع خبراء السفر', 'Talk to Our Experts')}
+           <h1 className="text-3xl md:text-5xl font-black tracking-tight leading-tight">
+              {t('تواصل مع فريقنا', 'Get in Touch')}
            </h1>
-           <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto font-medium leading-relaxed">
-             {t('فريقنا المتخصص متواجد دائماً للإجابة على استفساراتكم وتسهيل كافة إجراءات سفركم بمهنية عالية.', 'Our expert team is always available to answer your questions and facilitate your travel needs.')}
+           <p className="text-sm md:text-base text-white/70 max-w-xl mx-auto font-medium leading-relaxed">
+             {t('نحن دائماً بالقرب منكم، تواصل معنا عبر أي وسيلة تفضلها وسيقوم فريقنا بالرد عليكم فوراً.', 'We are always close to you, connect with us and our team will respond instantly.')}
            </p>
         </div>
       </section>
 
-      {/* Grid Layout */}
-      <section className="max-w-6xl mx-auto px-4 -mt-16 pb-24 relative z-20">
-        <div className="grid lg:grid-cols-3 gap-6">
+      {/* Grid Layout - Compacted spacing */}
+      <section className="max-w-5xl mx-auto px-4 -mt-10 pb-20 relative z-20">
+        <div className="grid lg:grid-cols-3 gap-5">
            
-           {/* Primary Contact Cards */}
+           {/* Primary Cards Column */}
            <div className="lg:col-span-2 grid sm:grid-cols-2 gap-4">
               {contactCards.map((card, i) => (
                 <a 
@@ -83,69 +83,69 @@ const ContactPage: React.FC = () => {
                   href={card.action || '#'}
                   target={card.action?.startsWith('http') ? "_blank" : undefined}
                   rel={card.action?.startsWith('http') ? "noopener noreferrer" : undefined}
-                  className={`bg-white p-6 md:p-8 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 group block relative overflow-hidden ${card.color === 'green' ? 'hover:border-[#25D366]/30' : 'hover:border-brand-blue/20'}`}
+                  className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 group flex flex-col items-start"
                 >
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 ${
+                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 transition-all ${
                     card.color === 'green' ? 'bg-[#25D366]/10 text-[#25D366]' : 'bg-brand-blue/5 text-brand-blue'
-                  } group-hover:scale-110 group-hover:rotate-3`}>
-                     {React.cloneElement(card.icon as React.ReactElement<{ className?: string }>, { className: 'w-6 h-6 fill-current' })}
+                  }`}>
+                     {React.cloneElement(card.icon as React.ReactElement<{ className?: string }>, { className: 'w-5 h-5 fill-current' })}
                   </div>
-                  <h3 className="text-slate-400 text-[10px] font-black uppercase tracking-widest mb-1">{card.title}</h3>
-                  <p className={`text-xl font-black ${card.color === 'green' ? 'text-[#25D366]' : 'text-brand-blue'}`} dir="ltr">{card.value}</p>
+                  <h3 className="text-slate-400 text-[10px] font-black uppercase tracking-wider mb-0.5">{card.title}</h3>
+                  <p className={`text-base md:text-lg font-black ${card.color === 'green' ? 'text-[#25D366]' : 'text-brand-blue'}`} dir="ltr">{card.value}</p>
                 </a>
               ))}
 
-              {/* HQ Map Card - Spans full width on tablet/desktop within its container */}
-              <div className="sm:col-span-2 bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col md:flex-row items-center gap-8 group">
-                 <div className="w-20 h-20 rounded-2xl bg-slate-50 flex items-center justify-center text-brand-coral flex-shrink-0 group-hover:bg-brand-coral group-hover:text-white transition-all duration-500">
-                    <MapPin className="w-8 h-8" />
+              {/* HQ Map Card - More Compact */}
+              <div className="sm:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col sm:flex-row items-center gap-6 group">
+                 <div className="w-16 h-16 rounded-xl bg-slate-50 flex items-center justify-center text-brand-coral flex-shrink-0 group-hover:bg-brand-coral group-hover:text-white transition-colors">
+                    <MapPin className="w-7 h-7" />
                  </div>
-                 <div className="flex-1 text-center md:text-right">
-                    <h2 className="text-xl font-black text-brand-blue mb-2">{t('المقر الرئيسي في تعز', 'Taiz Headquarters')}</h2>
-                    <p className="text-sm font-bold text-slate-500 leading-relaxed max-w-md">
-                       {t('اليمن، تعز - مكتب واصل للسياحة والسفر الرئيسي، وجهتك الأولى لخدمات السفر الاحترافية.', 'Yemen, Taiz - Wasil Travel HQ, your primary destination for professional services.')}
+                 <div className="flex-1 text-center sm:text-right">
+                    <h2 className="text-lg font-black text-brand-blue mb-1">{t('المقر الرئيسي في تعز', 'Taiz Headquarters')}</h2>
+                    <p className="text-xs font-bold text-slate-500 leading-relaxed max-w-md">
+                       {t('اليمن، تعز - مكتب واصل الرئيسي، وجهتك الأولى لخدمات السفر.', 'Yemen, Taiz - Wasil Main HQ, your destination for travel services.')}
                     </p>
                  </div>
                  <a 
                     href={`https://wa.me/${WA_PHONE}?text=${encodeURIComponent("أريد الحصول على إحداثيات المكتب في تعز.")}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-brand-blue text-white px-6 py-4 rounded-2xl shadow-lg hover:bg-brand-blueLight transition-all flex items-center justify-center gap-2 group/btn"
+                    className="bg-brand-blue text-white px-5 py-3 rounded-xl shadow hover:bg-brand-blueLight transition-all flex items-center justify-center gap-2 group/btn shrink-0"
                   >
-                    <span className="font-bold text-sm">{t('موقعنا', 'Location')}</span>
-                    <ArrowUpRight className="w-4 h-4 group-hover/btn:rotate-45 transition-transform" />
+                    <span className="font-bold text-xs">{t('الموقع', 'Map')}</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                  </a>
               </div>
            </div>
 
-           {/* Socials Column */}
-           <div className="bg-slate-900 rounded-3xl p-8 text-white shadow-xl flex flex-col h-full overflow-hidden relative group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-coral/10 rounded-full blur-2xl"></div>
-              <h2 className="text-lg font-black mb-8 relative z-10 border-r-2 border-brand-coral pr-3">{t('منصاتنا', 'Our Socials')}</h2>
+           {/* Socials Column - More refined */}
+           <div className="bg-slate-900 rounded-2xl p-6 text-white shadow-lg flex flex-col h-full overflow-hidden relative group">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-brand-coral/5 rounded-full blur-xl"></div>
+              <h2 className="text-sm font-black mb-6 relative z-10 border-r-2 border-brand-coral pr-2.5">{t('منصاتنا', 'Our Socials')}</h2>
               
-              <div className="space-y-3 relative z-10 flex-1">
+              <div className="space-y-2.5 relative z-10 flex-1">
                  {socialLinks.map((social, i) => (
                    <a 
                      key={i}
                      href={social.link}
                      target="_blank"
                      rel="noopener noreferrer"
-                     className="flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-all group/item hover:-translate-x-1"
+                     className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-all group/item"
                    >
-                     <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover/item:text-brand-coral transition-colors">
+                     <div className="flex items-center gap-3.5">
+                        <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center group-hover/item:text-brand-coral transition-colors">
                            {social.icon}
                         </div>
-                        <span className="font-bold text-sm text-slate-300 group-hover/item:text-white transition-colors">{social.name}</span>
+                        <span className="font-bold text-xs text-slate-300 group-hover:text-white">{social.name}</span>
                      </div>
-                     <ArrowUpRight className="w-4 h-4 opacity-20 group-hover/item:opacity-100 transition-all" />
+                     <ArrowUpRight className="w-3.5 h-3.5 opacity-20 group-hover:opacity-100 transition-all" />
                    </a>
                  ))}
               </div>
 
-              <div className="mt-10 p-5 bg-white/5 rounded-2xl border border-white/10 relative z-10 text-center">
-                 <p className="text-[10px] font-bold text-slate-400 leading-relaxed uppercase tracking-widest">
-                    {t('نحن دائماً بالقرب منك على كافة المنصات', 'Always close to you on all platforms')}
+              <div className="mt-8 p-4 bg-white/5 rounded-xl border border-white/5 text-center">
+                 <p className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">
+                    {t('نحن دائماً بالقرب منك', 'Always Near You')}
                  </p>
               </div>
            </div>
