@@ -19,7 +19,7 @@ const WhatsAppButton: React.FC = () => {
   const msg = encodeURIComponent("السلام عليكم، أريد الاستفسار عن خدماتكم.");
 
   return (
-    <div className="fixed bottom-5 left-5 z-[150]">
+    <div className="fixed bottom-4 left-4 z-[150]">
       <a
         href={`https://wa.me/${WA_PHONE}?text=${msg}`}
         target="_blank"
@@ -28,11 +28,11 @@ const WhatsAppButton: React.FC = () => {
         aria-label="Contact Wasil on WhatsApp"
       >
         {/* Subtle Pulse Effect */}
-        <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-20 group-hover:opacity-40"></div>
+        <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-10 group-hover:opacity-30"></div>
         
-        {/* Shrunken Button Body */}
-        <div className="relative bg-[#25D366] text-white p-3.5 md:p-4 rounded-full shadow-lg transition-all duration-300 transform group-hover:scale-110 active:scale-90 border-4 border-white">
-          <WhatsAppIcon className="w-6 h-6 md:w-7 md:h-7 fill-current" />
+        {/* Optimized Small Button Body */}
+        <div className="relative bg-[#25D366] text-white p-3 md:p-3.5 rounded-full shadow-lg transition-all duration-300 transform group-hover:scale-105 active:scale-90 border-2 border-white">
+          <WhatsAppIcon className="w-5 h-5 md:w-6 md:h-6 fill-current" />
         </div>
       </a>
     </div>

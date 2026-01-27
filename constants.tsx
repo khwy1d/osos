@@ -36,10 +36,10 @@ export const SERVICES: Service[] = [
     id: 'medical',
     priority: true,
     icon: <HeartPulse className="w-8 h-8" />,
-    title: { ar: 'السفر العلاجي', en: 'Medical Travel' },
+    title: { ar: 'السفر العلاجي والسياحة', en: 'Medical Travel & Tourism' },
     description: { ar: 'تنسيق مواعيد وخصومات خاصة على الفحوصات الطبية في مصر والأردن وإجراءات سفر ميسرة.', en: 'Coordination of medical appointments and special discounts in Egypt & Jordan.' },
     cta: { ar: 'نسّق رحلتك', en: 'Coordinate Now' },
-    waMessage: "أريد الاستعلام عن خدمة التنسيق الطبي والسياحة العلاجية.",
+    waMessage: "أريد الاستعلام عن خدمة التنسيق الطبي والسفر العلاجي والسياحة.",
     link: '/medical-tourism'
   },
   {
