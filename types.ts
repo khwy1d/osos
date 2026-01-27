@@ -12,6 +12,7 @@ export interface Service {
   waMessage: string;
   priority: boolean;
   link: string;
+  hidden?: boolean;
 }
 
 export interface Step {

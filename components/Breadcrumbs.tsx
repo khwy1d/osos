@@ -18,12 +18,11 @@ const Breadcrumbs: React.FC = () => {
       case 'medical-tourism': return t('تنسيق طبي', 'Medical Coordination');
       case 'security-clearance-egypt': return t('الموافقات الأمنية', 'Security Clearance');
       case 'saudi-visit': return t('زيارة السعودية', 'Saudi Visit');
-      case 'tourism': return t('سياحة دولية', 'Tourism');
+      case 'tourism': return t('السياحة (داخلية ودولية)', 'Tourism (Domestic & Intl)');
       case 'transport': return t('النقل والمواصلات', 'Transport');
       case 'flights': return t('تذاكر طيران', 'Flight Tickets');
       case 'umrah': return t('تأشيرات عمرة', 'Umrah Visas');
       case 'real-estate': return t('خدمات عقارية', 'Real Estate');
-      case 'domestic-tourism': return t('سياحة داخلية', 'Domestic Tourism');
       case 'car-rental': return t('تأجير سيارات', 'Car Rental');
       case 'about': return t('عن واصل', 'About Us');
       case 'contact': return t('اتصل بنا', 'Contact');

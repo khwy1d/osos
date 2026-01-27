@@ -17,6 +17,9 @@ const Footer: React.FC = () => {
     { icon: <XIcon className="w-6 h-6" />, label: 'X (Twitter)', link: '#' }
   ];
 
+  // Filter out hidden services for the footer list
+  const footerServices = SERVICES.filter(s => !s.hidden).slice(0, 6);
+
   return (
     <footer id="contact" className="bg-slate-950 text-white pt-24 pb-12 overflow-hidden relative">
       {/* Decorative Blur Elements */}
@@ -71,7 +74,7 @@ const Footer: React.FC = () => {
               {t('خدماتنا الأكثر طلباً', 'Most Requested')}
             </h4>
             <ul className="grid grid-cols-1 gap-4">
-              {SERVICES.slice(0, 6).map(service => (
+              {footerServices.map(service => (
                 <li key={service.id}>
                   <Link 
                     to={service.link}

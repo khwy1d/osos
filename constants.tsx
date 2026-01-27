@@ -55,6 +55,7 @@ export const SERVICES: Service[] = [
   {
     id: 'saudi-visit',
     priority: false,
+    hidden: true,
     icon: <Briefcase className="w-8 h-8" />,
     title: { ar: 'زيارة السعودية', en: 'Saudi Arabia Visit' },
     description: { ar: 'تجهيز تأشيرات الزيارة العائلية والشخصية والأعمال للمملكة وإنجاز المعاملات عبر منصة إنجاز.', en: 'Processing family, personal, and business visit visas to KSA and Enjaz platform.' },
@@ -76,21 +77,11 @@ export const SERVICES: Service[] = [
     id: 'tourism',
     priority: false,
     icon: <Palmtree className="w-8 h-8" />,
-    title: { ar: 'سياحة خارجية', en: 'International Tourism' },
-    description: { ar: 'باكجات سياحية متكاملة إلى تركيا، ماليزيا، جورجيا، ومصر شاملة الطيران والسكن.', en: 'Full tour packages to Turkey, Malaysia, Georgia, and Egypt including flights and stay.' },
-    cta: { ar: 'استكشف العالم', en: 'Explore World' },
-    waMessage: "أريد الاستعلام عن العروض السياحية الدولية المتوفرة.",
+    title: { ar: 'السياحة (داخلية ودولية)', en: 'Tourism (Domestic & Intl)' },
+    description: { ar: 'باكجات سياحية متكاملة ورحلات استكشافية داخل اليمن وإلى تركيا، ماليزيا، جورجيا، ومصر.', en: 'Full tour packages within Yemen and to Turkey, Malaysia, Georgia, and Egypt.' },
+    cta: { ar: 'استكشف عروضنا', en: 'Explore Offers' },
+    waMessage: "أريد الاستعلام عن عروض السياحة (الداخلية/الدولية) المتوفرة.",
     link: '/tourism'
-  },
-  {
-    id: 'domestic-tourism',
-    priority: false,
-    icon: <MapPin className="w-8 h-8" />,
-    title: { ar: 'سياحة داخلية', en: 'Domestic Tourism' },
-    description: { ar: 'خدمات سياحية محلية مبسطة وعملية لاستكشاف أجمل المناطق اليمنية والمحميات.', en: 'Simple and practical local tourism services to explore beautiful Yemeni regions.' },
-    cta: { ar: 'اكتشف اليمن', en: 'Discover Yemen' },
-    waMessage: "أريد الاستفسار عن رحلات السياحة الداخلية في اليمن.",
-    link: '/domestic-tourism'
   },
   {
     id: 'bus-reservations',

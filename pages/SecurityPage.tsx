@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
-import { FileCheck, CheckCircle, AlertCircle } from 'lucide-react';
+import { FileCheck, CheckCircle } from 'lucide-react';
 import { WA_PHONE } from '../constants';
 import { WhatsAppIcon } from '../components/BrandIcons';
 
@@ -75,12 +75,6 @@ const SecurityPage: React.FC = () => {
                     </li>
                   ))}
                </ul>
-               <div className="bg-brand-coral/10 p-6 rounded-2xl border border-brand-coral/20 flex gap-4">
-                  <AlertCircle className="w-10 h-10 text-brand-coral flex-shrink-0" />
-                  <p className="text-brand-coral font-bold text-sm leading-relaxed">
-                    {t('ملاحظة: تختلف مدة الصدور حسب الإجراءات الرسمية المتبعة.', 'Note: Issuance duration varies based on official procedures.')}
-                  </p>
-               </div>
                
                <a 
                  href={`https://wa.me/${WA_PHONE}?text=${msg}`}

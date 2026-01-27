@@ -17,7 +17,6 @@ import TransportPage from './pages/TransportPage';
 import FlightsPage from './pages/FlightsPage';
 import UmrahPage from './pages/UmrahPage';
 import RealEstatePage from './pages/RealEstatePage';
-import DomesticTourismPage from './pages/DomesticTourismPage';
 import CarRentalPage from './pages/CarRentalPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
@@ -45,7 +44,6 @@ const App: React.FC = () => {
                 <Route path="/flights" element={<FlightsPage />} />
                 <Route path="/umrah" element={<UmrahPage />} />
                 <Route path="/real-estate" element={<RealEstatePage />} />
-                <Route path="/domestic-tourism" element={<DomesticTourismPage />} />
                 <Route path="/car-rental" element={<CarRentalPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
