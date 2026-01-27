@@ -1,10 +1,11 @@
 
 import React from 'react';
 import { useLanguage } from './LanguageContext';
-import { SERVICES } from '../constants';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { SERVICES, WA_PHONE } from '../constants';
+import { ArrowRight } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 import { Link } from 'react-router-dom';
+import { WhatsAppIcon } from './BrandIcons';
 
 const Services: React.FC = () => {
   const { lang, t } = useLanguage();
@@ -29,16 +30,14 @@ const Services: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-10">
           {SERVICES.map((service, idx) => (
             <ScrollReveal key={service.id} delay={idx * 50} direction="up">
-              <Link
-                to={service.link}
-                className="group relative h-full p-6 md:p-12 rounded-[2rem] md:rounded-[3rem] bg-brand-gray border border-slate-100 hover:border-brand-blue hover:bg-white hover:shadow-2xl transition-all duration-500 flex flex-col cursor-pointer transform hover:-translate-y-3"
+              <div
+                className="group relative h-full p-6 md:p-12 rounded-[2rem] md:rounded-[3rem] bg-brand-gray border border-slate-100 hover:border-brand-blue hover:bg-white hover:shadow-2xl transition-all duration-500 flex flex-col transform hover:-translate-y-3"
               >
                 {/* Accent Background */}
                 <div className="absolute top-0 right-0 w-32 md:w-40 h-32 md:h-40 bg-brand-blue/5 rounded-bl-[100%] transition-transform group-hover:scale-125 duration-700"></div>
                 
-                {/* Large Icon Container - Scaled for mobile */}
+                {/* Large Icon Container */}
                 <div className="relative w-14 h-14 md:w-24 md:h-24 bg-white shadow-lg rounded-2xl md:rounded-3xl flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-500 mb-6 md:mb-8 group-hover:rotate-12 group-hover:scale-110">
-                  {/* Fix: Explicitly typed React.ReactElement to include className prop to fix TS error */}
                   {React.cloneElement(service.icon as React.ReactElement<{ className?: string }>, { className: 'w-7 h-7 md:w-12 md:h-12' })}
                 </div>
 
@@ -50,18 +49,26 @@ const Services: React.FC = () => {
                 </p>
                 
                 <div className="relative flex flex-col gap-2 md:gap-3 mt-auto">
-                  {/* Unified Action Button */}
-                  <div className="inline-flex items-center justify-center gap-2 md:gap-3 bg-brand-coral text-white px-5 py-3 md:py-5 rounded-xl md:rounded-2xl font-black text-sm md:text-lg transition-all group-hover:bg-brand-coralLight shadow-lg shadow-brand-coral/10 group-hover:shadow-brand-coral/40">
-                    <ArrowUpRight className={`w-5 h-5 md:w-6 md:h-6 ${lang === 'ar' ? 'rotate-180' : ''} transition-transform group-hover:scale-125`} />
+                  {/* WhatsApp Quick Action */}
+                  <a 
+                    href={`https://wa.me/${WA_PHONE}?text=${encodeURIComponent("السلام عليكم، " + service.waMessage)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 md:gap-3 bg-[#25D366] text-white px-5 py-3 md:py-5 rounded-xl md:rounded-2xl font-black text-sm md:text-lg transition-all hover:bg-[#128C7E] shadow-lg shadow-[#25D366]/20"
+                  >
+                    <WhatsAppIcon className="w-5 h-5 md:w-6 md:h-6 fill-current" />
                     {service.cta[lang]}
-                  </div>
+                  </a>
                   
-                  <div className="inline-flex items-center justify-center gap-1.5 text-slate-400 font-black text-[10px] md:text-sm group-hover:text-brand-blue py-1 md:py-2 transition-colors uppercase tracking-widest">
+                  <Link 
+                    to={service.link}
+                    className="inline-flex items-center justify-center gap-1.5 text-slate-400 font-black text-[10px] md:text-sm group-hover:text-brand-blue py-1 md:py-2 transition-colors uppercase tracking-widest"
+                  >
                     {t('عرض التفاصيل', 'View Details')}
                     <ArrowRight className={`w-3 h-3 md:w-4 md:h-4 transition-transform group-hover:translate-x-2 ${lang === 'ar' ? 'rotate-180 group-hover:-translate-x-2' : ''}`} />
-                  </div>
+                  </Link>
                 </div>
-              </Link>
+              </div>
             </ScrollReveal>
           ))}
         </div>

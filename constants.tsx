@@ -3,7 +3,8 @@ import React from 'react';
 import { Plane, Bus, HeartPulse, FileCheck, Landmark, Car, Building2, MapPin, Clock, BadgeDollarSign, Headphones, Users, Briefcase, Palmtree } from 'lucide-react';
 import { Service, NavLink, Offer, Step } from './types';
 
-export const WA_PHONE = '776002190';
+// الرقم بالصيغة الدولية بدون + لروابط API
+export const WA_PHONE = '967776002190';
 export const DISPLAY_PHONE = '+967 776 002 190';
 
 export const NAV_LINKS: NavLink[] = [
@@ -28,7 +29,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'الموافقات الأمنية لمصر', en: 'Egypt Security Clearance' },
     description: { ar: 'استخراج الموافقات الأمنية الرسمية للمواطنين اليمنيين بسرعة ودقة ومتابعة مستمرة.', en: 'Handling official security clearances for Yemeni citizens with speed and follow-up.' },
     cta: { ar: 'اطلب موافقتك', en: 'Request Clearance' },
-    waMessage: "السلام عليكم ، اريد الاستعلام عن خدمة الموافقات الامنية للسفر.",
+    waMessage: "أريد الاستعلام عن خدمة الموافقات الأمنية لمصر.",
     link: '/security-clearance-egypt'
   },
   {
@@ -38,7 +39,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'السفر العلاجي', en: 'Medical Travel' },
     description: { ar: 'تنسيق مواعيد وخصومات خاصة على الفحوصات الطبية في مصر والأردن وإجراءات سفر ميسرة.', en: 'Coordination of medical appointments and special discounts in Egypt & Jordan.' },
     cta: { ar: 'نسّق رحلتك', en: 'Coordinate Now' },
-    waMessage: "السلام عليكم ، اريد الاستعلام عن خدمة السفر العلاجي.",
+    waMessage: "أريد الاستعلام عن خدمة التنسيق الطبي والسياحة العلاجية.",
     link: '/medical-tourism'
   },
   {
@@ -48,7 +49,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'تذاكر طيران', en: 'Flight Tickets' },
     description: { ar: 'حجز طيران داخلي ودولي عبر اليمنية وفلاي أدين بأسعار منافسة وتأكيد فوري.', en: 'Domestic and international flights via Yemenia & Fly Aden with competitive rates.' },
     cta: { ar: 'استعلم عن رحلة', en: 'Inquire Now' },
-    waMessage: "السلام عليكم ، اريد الاستعلام عن خدمة تذاكر الطيران.",
+    waMessage: "أريد الاستعلام عن توفر تذاكر طيران (داخلي/دولي).",
     link: '/flights'
   },
   {
@@ -58,7 +59,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'زيارة السعودية', en: 'Saudi Arabia Visit' },
     description: { ar: 'تجهيز تأشيرات الزيارة العائلية والشخصية والأعمال للمملكة وإنجاز المعاملات عبر منصة إنجاز.', en: 'Processing family, personal, and business visit visas to KSA and Enjaz platform.' },
     cta: { ar: 'ابدأ المعاملة', en: 'Start Process' },
-    waMessage: "السلام عليكم ، اريد الاستعلام عن خدمة زيارة المملكة العربية السعودية.",
+    waMessage: "أريد البدء في إجراءات تأشيرة زيارة المملكة العربية السعودية.",
     link: '/saudi-visit'
   },
   {
@@ -68,7 +69,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'الحج والعمرة', en: 'Hajj & Umrah' },
     description: { ar: 'خدمات متكاملة للحجاج والمعتمرين، إصدار تأشيرات وتنظيم رحلات للمشاعر المقدسة.', en: 'Integrated services for Hajj & Umrah, visa issuance, and organized trips to holy sites.' },
     cta: { ar: 'اطلب الآن', en: 'Request Now' },
-    waMessage: "السلام عليكم ، اريد الاستعلام عن خدمات الحج والعمرة.",
+    waMessage: "أريد الاستفسار عن باقات العمرة والحج المتاحة.",
     link: '/umrah'
   },
   {
@@ -78,7 +79,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'سياحة خارجية', en: 'International Tourism' },
     description: { ar: 'باكجات سياحية متكاملة إلى تركيا، ماليزيا، جورجيا، ومصر شاملة الطيران والسكن.', en: 'Full tour packages to Turkey, Malaysia, Georgia, and Egypt including flights and stay.' },
     cta: { ar: 'استكشف العالم', en: 'Explore World' },
-    waMessage: "السلام عليكم ، اريد الاستعلام عن العروض السياحية الدولية.",
+    waMessage: "أريد الاستعلام عن العروض السياحية الدولية المتوفرة.",
     link: '/tourism'
   },
   {
@@ -88,7 +89,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'سياحة داخلية', en: 'Domestic Tourism' },
     description: { ar: 'خدمات سياحية محلية مبسطة وعملية لاستكشاف أجمل المناطق اليمنية والمحميات.', en: 'Simple and practical local tourism services to explore beautiful Yemeni regions.' },
     cta: { ar: 'اكتشف اليمن', en: 'Discover Yemen' },
-    waMessage: "السلام عليكم ، اريد الاستعلام عن خدمة السياحة الداخلية.",
+    waMessage: "أريد الاستفسار عن رحلات السياحة الداخلية في اليمن.",
     link: '/domestic-tourism'
   },
   {
@@ -98,7 +99,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'حجز الباصات', en: 'Bus Reservations' },
     description: { ar: 'حجز باصات دولية ومحلية (داخلي وخارجي) بأسعار منافسة وتنسيق دقيق.', en: 'Internal and external bus bookings with competitive rates.' },
     cta: { ar: 'احجز وسيلة نقلك', en: 'Book Transport' },
-    waMessage: "السلام عليكم ، اريد الاستعلام عن خدمة حجز الباصات.",
+    waMessage: "أريد حجز تذاكر باص (محلي/دولي).",
     link: '/transport'
   },
   {
@@ -108,7 +109,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'تأجير سيارات', en: 'Car Rental' },
     description: { ar: 'تنسيق تأجير السيارات في مصر مع دعم كامل وشروط واضحة.', en: 'Car rental coordination in Egypt with full support and clear conditions.' },
     cta: { ar: 'اطلب سيارة', en: 'Request Car' },
-    waMessage: "السلام عليكم ، اريد الاستعلام عن خدمة تاجير السيارات في مصر.",
+    waMessage: "أريد الاستفسار عن خدمة تأجير السيارات في مصر.",
     link: '/car-rental'
   },
   {
@@ -118,7 +119,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'خدمات عقارية', en: 'Real Estate' },
     description: { ar: 'إدارة أملاك، بيع وشراء شقق، تأجير وإدارة إدارية للعقارات بمهنية.', en: 'Property management, apartment sales, and rentals.' },
     cta: { ar: 'استشرنا عقارياً', en: 'Consult Us' },
-    waMessage: "السلام عليكم ، اريد الاستعلام عن خدمات العقارات.",
+    waMessage: "أريد الاستشارة بخصوص الخدمات العقارية (بيع/شراء/تأجير).",
     link: '/real-estate'
   }
 ];

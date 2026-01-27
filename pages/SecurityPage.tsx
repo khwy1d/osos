@@ -1,12 +1,13 @@
 
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
-import { FileCheck, CheckCircle, MessageCircle, AlertCircle } from 'lucide-react';
+import { FileCheck, CheckCircle, AlertCircle } from 'lucide-react';
 import { WA_PHONE } from '../constants';
+import { WhatsAppIcon } from '../components/BrandIcons';
 
 const SecurityPage: React.FC = () => {
   const { t } = useLanguage();
-  const msg = encodeURIComponent("السلام عليكم ، اريد الاستعلام عن خدمة الموافقات الامنية للسفر.");
+  const msg = encodeURIComponent("السلام عليكم، أريد الاستعلام عن خدمة الموافقات الأمنية لمصر.");
 
   return (
     <div className="pt-10">
@@ -19,8 +20,8 @@ const SecurityPage: React.FC = () => {
               {t('نحن نتولى كافة الإجراءات الرسمية لاستخراج موافقتك الأمنية بطريقة رسمية ومضمونة، مع متابعة دقيقة لكل حالة.', 'We handle all official procedures to issue your security clearance officially, with careful follow-up.')}
            </p>
            <div className="pt-4">
-              <a href={`https://wa.me/${WA_PHONE}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="bg-brand-coral text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl hover:scale-105 transition-transform flex items-center justify-center gap-3 w-fit mx-auto">
-                 <MessageCircle className="w-6 h-6" />
+              <a href={`https://wa.me/${WA_PHONE}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl hover:scale-105 transition-transform flex items-center justify-center gap-3 w-fit mx-auto">
+                 <WhatsAppIcon className="w-6 h-6 fill-current" />
                  {t('اطلب موافقتك الرسمية', 'Request Official Clearance')}
               </a>
            </div>
@@ -82,12 +83,12 @@ const SecurityPage: React.FC = () => {
                </div>
                
                <a 
-                 href={`https://wa.me/${WA_PHONE}?text=${encodeURIComponent("السلام عليكم، جاهز لتقديم طلب الموافقة الأمنية.")}`}
+                 href={`https://wa.me/${WA_PHONE}?text=${msg}`}
                  target="_blank"
                  rel="noopener noreferrer"
-                 className="w-full bg-brand-teal text-white py-4 rounded-xl font-black text-center flex items-center justify-center gap-2 hover:bg-brand-tealLight transition-all shadow-lg"
+                 className="w-full bg-[#25D366] text-white py-4 rounded-xl font-black text-center flex items-center justify-center gap-2 hover:bg-[#128C7E] shadow-lg"
                >
-                 <MessageCircle className="w-5 h-5" />
+                 <WhatsAppIcon className="w-5 h-5 fill-current" />
                  {t('ابدأ الإجراءات الآن', 'Start Procedures Now')}
                </a>
             </div>

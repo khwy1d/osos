@@ -1,12 +1,13 @@
 
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
-import { Briefcase, Users, FileCheck, MessageCircle, CheckCircle, Globe, ShieldCheck } from 'lucide-react';
+import { Briefcase, Users, FileCheck, CheckCircle, Globe, ShieldCheck } from 'lucide-react';
 import { WA_PHONE } from '../constants';
+import { WhatsAppIcon } from '../components/BrandIcons';
 
 const SaudiVisitPage: React.FC = () => {
-  const { t, lang } = useLanguage();
-  const mainMsg = encodeURIComponent("السلام عليكم ، اريد الاستعلام عن خدمة زيارة المملكة العربية السعودية.");
+  const { t } = useLanguage();
+  const mainMsg = encodeURIComponent("السلام عليكم، أريد الاستفسار عن تأشيرات زيارة المملكة العربية السعودية وإنجاز المعاملات.");
 
   return (
     <div className="pt-10">
@@ -20,8 +21,8 @@ const SaudiVisitPage: React.FC = () => {
               {t('خدمات متكاملة لاستخراج تأشيرات الزيارة العائلية، الشخصية، والأعمال، بالإضافة إلى إنجاز المعاملات عبر منصة إنجاز.', 'Integrated services for family, personal, and business visit visas, plus Enjaz platform processing.')}
            </p>
            <div className="pt-4">
-              <a href={`https://wa.me/${WA_PHONE}?text=${mainMsg}`} target="_blank" rel="noopener noreferrer" className="bg-brand-coral text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl hover:scale-105 transition-transform flex items-center justify-center gap-3 w-fit mx-auto">
-                 <MessageCircle className="w-6 h-6" />
+              <a href={`https://wa.me/${WA_PHONE}?text=${mainMsg}`} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl hover:scale-105 transition-transform flex items-center justify-center gap-3 w-fit mx-auto">
+                 <WhatsAppIcon className="w-6 h-6 fill-current" />
                  {t('ابدأ معاملتك الآن', 'Start Your Process Now')}
               </a>
            </div>
@@ -54,13 +55,13 @@ const SaudiVisitPage: React.FC = () => {
                           <h4 className="font-black text-xl text-slate-900 mb-2">{item.title}</h4>
                           <p className="text-slate-600 font-medium text-sm leading-relaxed">{item.desc}</p>
                           <a 
-                            href={`https://wa.me/${WA_PHONE}?text=${encodeURIComponent(`السلام عليكم، استفسار بخصوص: ${item.title}`)}`}
+                            href={`https://wa.me/${WA_PHONE}?text=${encodeURIComponent(`السلام عليكم، استفسار بخصوص خدمة: ${item.title}`)}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-brand-coral font-bold text-xs mt-3 hover:underline"
+                            className="inline-flex items-center gap-1 text-[#25D366] font-bold text-xs mt-3 hover:underline"
                           >
-                            <MessageCircle className="w-3 h-3" />
-                            {t('استفسر', 'Inquire')}
+                            <WhatsAppIcon className="w-3 h-3 fill-current" />
+                            {t('استفسر عن هذه الخدمة', 'Inquire')}
                           </a>
                        </div>
                     </div>
@@ -94,10 +95,10 @@ const SaudiVisitPage: React.FC = () => {
                    href={`https://wa.me/${WA_PHONE}?text=${mainMsg}`}
                    target="_blank"
                    rel="noopener noreferrer"
-                   className="w-full bg-brand-teal text-white py-4 rounded-xl font-black text-center flex items-center justify-center gap-2 hover:bg-brand-tealLight transition-all shadow-lg"
+                   className="w-full bg-[#25D366] text-white py-4 rounded-xl font-black text-center flex items-center justify-center gap-2 hover:bg-[#128C7E] shadow-lg"
                  >
-                   <FileCheck className="w-5 h-5" />
-                   {t('رفع المستندات', 'Submit Documents')}
+                   <WhatsAppIcon className="w-5 h-5 fill-current" />
+                   {t('ابدأ المعاملة عبر واتساب', 'Submit Documents')}
                  </a>
                </div>
             </div>
