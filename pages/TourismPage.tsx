@@ -1,82 +1,91 @@
 
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
-import { Palmtree, Map, Plane, MessageCircle, Compass, MapPin } from 'lucide-react';
+import { Palmtree, Map, Plane, Compass, MapPin, CheckCircle } from 'lucide-react';
 import { WA_PHONE } from '../constants';
+import { WhatsAppIcon } from '../components/BrandIcons';
 
 const TourismPage: React.FC = () => {
   const { t } = useLanguage();
   const mainMsg = encodeURIComponent("السلام عليكم ، اريد الاستعلام عن العروض السياحية الداخلية والدولية المتوفرة.");
 
   return (
-    <div className="pt-10">
-      <section className="bg-brand-blue py-20 text-white text-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
-         <div className="max-w-4xl mx-auto px-4 relative z-10 space-y-6">
-            <h1 className="text-4xl md:text-6xl font-black mb-4">
-              {t('السياحة الداخلية والدولية مع واصِل', 'Domestic & Intl Tourism with Wasil')}
-            </h1>
-            <p className="text-xl text-white/80 font-medium max-w-2xl mx-auto px-4">
-              {t('نأخذك في رحلات لا تُنسى لاستكشاف جمال اليمن أو الوجهات العالمية الرائدة بأسعار واقعية وخدمة متكاملة.', 'Taking you on unforgettable journeys to explore Yemen or top global destinations.')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <a href={`https://wa.me/${WA_PHONE}?text=${mainMsg}`} target="_blank" rel="noopener noreferrer" className="bg-brand-coral text-white px-8 py-4 rounded-2xl font-black text-lg shadow-xl hover:scale-105 transition-transform inline-flex items-center justify-center gap-2">
-                 <MessageCircle className="w-6 h-6" />
-                 {t('استفسر عن الرحلات', 'Inquire About Trips')}
-              </a>
-            </div>
-         </div>
+    <div className="pb-20">
+      {/* Hero Section */}
+      <section className="bg-brand-blue py-20 text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 relative z-10 text-center space-y-8">
+          <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20 text-xs font-bold uppercase tracking-widest">
+            <Palmtree className="w-4 h-4 text-brand-coral" />
+            {t('رحلات ترفيهية واستكشافية', 'Leisure & Exploratory Trips')}
+          </div>
+          <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tighter">
+            {t('السياحة (داخلية ودولية)', 'Tourism (Domestic & Intl)')}
+          </h1>
+          <p className="text-xl text-white/80 max-w-2xl mx-auto font-medium">
+            {t('استمتع بأجمل الوجهات السياحية في اليمن، تركيا، مصر، وماليزيا بباكجات متكاملة تشمل كافة احتياجاتك.', 'Enjoy top destinations in Yemen, Turkey, Egypt, and Malaysia with all-inclusive packages.')}
+          </p>
+          <div className="pt-4 flex justify-center">
+            <a href={`https://wa.me/${WA_PHONE}?text=${mainMsg}`} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white px-10 py-5 rounded-2xl font-black text-xl flex items-center gap-3 shadow-2xl hover:scale-105 transition-all">
+              <WhatsAppIcon className="w-7 h-7 fill-current" />
+              {t('استكشف عروضنا', 'Explore Our Offers')}
+            </a>
+          </div>
+        </div>
       </section>
 
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           
-           <div className="text-center mb-16">
-              <h2 className="text-brand-coral font-black tracking-widest uppercase text-sm mb-2">{t('خدماتنا السياحية', 'TOURISM SERVICES')}</h2>
-              <h3 className="text-3xl font-black text-slate-900">{t('خيارات متنوعة تناسب تطلعاتكم', 'Diverse Options to Suit You')}</h3>
-           </div>
+      {/* Content Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-3 gap-16 items-start">
+            <div className="lg:col-span-2 space-y-12">
+              <div className="space-y-6">
+                <h2 className="text-3xl font-black text-brand-blue">{t('وجهاتك المفضلة بلمسة واصِل', 'Your Favorite Destinations')}</h2>
+                <p className="text-lg text-slate-600 font-medium leading-relaxed">
+                  {t('نحن نوفر لك تجربة سياحية فريدة تبدأ من التخطيط وحتى العودة، نعتني بحجوزات الطيران، الفنادق، والجولات السياحية اليومية لضمان قضائك أجمل الأوقات.', 'Unique tourism experience from planning to return, we care for flights, hotels, and tours.')}
+                </p>
+              </div>
 
-           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { 
-                  icon: <MapPin className="text-brand-coral" />, 
-                  title: t('سياحة داخلية (اليمن)', 'Domestic Tourism (Yemen)'), 
-                  desc: t('استكشاف المحميات الطبيعية، المدن التاريخية، والمناطق الجبلية الساحرة في اليمن مع تنسيق كامل للنقل والسكن.', 'Exploring reserves, historical cities, and mountains in Yemen with full coordination.') 
-                },
-                { 
-                  icon: <Plane className="text-brand-blue" />, 
-                  title: t('سياحة دولية', 'International Tourism'), 
-                  desc: t('باكجات سياحية متكاملة إلى تركيا، مصر، ماليزيا، وجورجيا تشمل الطيران، الفنادق، والجولات اليومية.', 'Full tour packages to Turkey, Egypt, Malaysia, and Georgia including flights and hotels.') 
-                },
-                { 
-                  icon: <Compass className="text-brand-coral" />, 
-                  title: t('رحلات خاصة وعائلية', 'Private & Family Trips'), 
-                  desc: t('تنسيق رحلات مخصصة للعائلات والمجموعات بخصوصية تامة وبرامج مرنة تلبي رغباتكم الخاصة.', 'Customizing trips for families and groups with full privacy and flexible programs.') 
-                },
-                { 
-                  icon: <Map className="text-brand-blue" />, 
-                  title: t('حجوزات فندقية', 'Hotel Bookings'), 
-                  desc: t('توفير خيارات سكن متنوعة تناسب ميزانيتكم في أفضل المواقع السياحية حول العالم.', 'Providing various accommodation options in top tourist locations worldwide.') 
-                },
-              ].map((item, idx) => (
-                <div key={idx} className="p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 text-center space-y-4 hover:shadow-lg transition-all flex flex-col items-center group">
-                   <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-brand-blue group-hover:text-white transition-all">
+              <div className="grid sm:grid-cols-2 gap-8">
+                {[
+                  { icon: <MapPin />, title: t('سياحة داخلية', 'Domestic Tourism'), desc: t('رحلات استكشافية لأجمل محميات ومدن اليمن.', 'Exploratory trips to Yemen\'s beautiful cities.') },
+                  { icon: <Plane />, title: t('سياحة خارجية', 'Intl Tourism'), desc: t('عروض خاصة لتركيا، ماليزيا، جورجيا، ومصر.', 'Special offers for Turkey, Malaysia, and Egypt.') },
+                  { icon: <Compass />, title: t('رحلات عائلية', 'Family Packages'), desc: t('باكجات مخصصة توفر الخصوصية والراحة للعائلات.', 'Custom packages for family privacy and comfort.') },
+                  { icon: <Map />, title: t('جولات يومية', 'Daily Tours'), desc: t('تنسيق جولات سياحية منظمة مع مرشدين محليين.', 'Organized tours with local guides.') },
+                ].map((item, idx) => (
+                  <div key={idx} className="flex gap-5 group">
+                    <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-coral border border-slate-100 group-hover:bg-brand-blue group-hover:text-white transition-all">
                       {item.icon}
-                   </div>
-                   <h3 className="text-2xl font-black text-slate-900">{item.title}</h3>
-                   <p className="text-slate-600 font-medium leading-relaxed flex-1">{item.desc}</p>
-                   <a 
-                      href={`https://wa.me/${WA_PHONE}?text=${encodeURIComponent(`السلام عليكم، استفسار بخصوص خدمة: ${item.title}`)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-brand-coral font-bold text-sm flex items-center justify-center gap-1 hover:underline mt-4"
-                    >
-                     <MessageCircle className="w-4 h-4" />
-                     {t('طلب عرض سعر', 'Request a Quote')}
-                   </a>
-                </div>
-              ))}
-           </div>
+                    </div>
+                    <div>
+                      <h4 className="font-black text-xl text-slate-900 mb-1">{item.title}</h4>
+                      <p className="text-slate-500 font-medium text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm space-y-8 sticky top-28">
+               <h3 className="text-2xl font-black text-brand-blue">{t('مميزات الباكجات', 'Package Features')}</h3>
+               <ul className="space-y-4">
+                  {[
+                    t('تذاكر طيران دولية ومحلية.', 'Intl & Domestic Flight Tickets.'),
+                    t('إقامة فندقية بمستويات مختلفة.', 'Hotel accommodation (various levels).'),
+                    t('استقبال وتوديع من المطار.', 'Airport pickup and drop-off.'),
+                    t('تأشيرات سياحية ميسرة.', 'Simplified tourism visas.'),
+                  ].map((text, idx) => (
+                    <li key={idx} className="flex items-center gap-3 font-bold text-slate-700">
+                       <CheckCircle className="w-5 h-5 text-brand-coral flex-shrink-0" />
+                       <span className="text-sm">{text}</span>
+                    </li>
+                  ))}
+               </ul>
+               <a href={`https://wa.me/${WA_PHONE}?text=${mainMsg}`} target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black text-center flex items-center justify-center gap-2 hover:bg-[#128C7E] transition-all">
+                 <WhatsAppIcon className="w-5 h-5 fill-current" />
+                 {t('طلب عرض سياحي', 'Request a Quote')}
+               </a>
+            </div>
+          </div>
         </div>
       </section>
     </div>

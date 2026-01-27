@@ -1,60 +1,90 @@
 
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
-import { FileCheck, ShieldCheck, MessageCircle, ClipboardCheck, Landmark, Star, Heart } from 'lucide-react';
+import { Landmark, CheckCircle, MessageCircle, FileCheck, ShieldCheck, ClipboardCheck } from 'lucide-react';
 import { WA_PHONE } from '../constants';
+import { WhatsAppIcon } from '../components/BrandIcons';
 
 const UmrahPage: React.FC = () => {
-  const { t, lang } = useLanguage();
+  const { t } = useLanguage();
   const msg = encodeURIComponent("السلام عليكم ، اريد الاستعلام عن خدمات الحج والعمرة.");
 
   return (
-    <div className="pt-10">
-      <section className="bg-brand-teal py-20 text-white text-center relative overflow-hidden">
-         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
-         <div className="max-w-3xl mx-auto px-4 space-y-6 relative z-10">
-            <div className="w-20 h-20 bg-white/10 rounded-3xl flex items-center justify-center mx-auto mb-4 backdrop-blur-md border border-white/20">
-               <Landmark className="w-10 h-10 text-brand-coral" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-black">{t('خدمات الحج والعمرة بإجراءات ميسرة', 'Hajj & Umrah Services')}</h1>
-            <p className="text-xl text-white/90 font-medium leading-relaxed">
-               {t('نحن متخصصون في استخراج وتجهيز كافة تأشيرات الحج والعمرة عبر القنوات الرسمية لضمان رحلة إيمانية خالية من العوائق.', 'We specialize in all Hajj & Umrah visa processing via official channels for a smooth journey.')}
-            </p>
-            <a href={`https://wa.me/${WA_PHONE}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="bg-brand-coral text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl hover:scale-105 transition-transform inline-flex items-center gap-2">
-               <MessageCircle className="w-6 h-6" />
-               {t('اطلب خدمتك الآن', 'Request Service Now')}
+    <div className="pb-20">
+      {/* Hero Section */}
+      <section className="bg-brand-blue py-20 text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 relative z-10 text-center space-y-8">
+          <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20 text-xs font-bold uppercase tracking-widest">
+            <Landmark className="w-4 h-4 text-brand-coral" />
+            {t('خدمة ضيوف الرحمن', 'Serving Pilgrims')}
+          </div>
+          <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tighter">
+            {t('تأشيرات وخدمات الحج والعمرة', 'Hajj & Umrah Visas')}
+          </h1>
+          <p className="text-xl text-white/80 max-w-2xl mx-auto font-medium">
+            {t('نعتز بخدمتكم في استخراج تأشيرات العمرة والحج وتنسيق رحلاتكم الإيمانية بكل يسر وأمان.', 'Proudly serving you in issuing Umrah & Hajj visas and coordinating your journeys with ease.')}
+          </p>
+          <div className="pt-4 flex justify-center">
+            <a href={`https://wa.me/${WA_PHONE}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white px-10 py-5 rounded-2xl font-black text-xl flex items-center gap-3 shadow-2xl hover:scale-105 transition-all">
+              <WhatsAppIcon className="w-7 h-7 fill-current" />
+              {t('اطلب خدمتك الآن', 'Request Service Now')}
             </a>
-         </div>
+          </div>
+        </div>
       </section>
 
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="grid md:grid-cols-3 gap-12">
-              {[
-                { icon: <FileCheck className="text-brand-teal" />, title: t('إجراءات رسمية للحج', 'Official Hajj Procedures'), desc: t('كافة معاملات الحج والعمرة تتم عبر المسار الإلكتروني المعتمد لضمان الأمان والشرعية.', 'All transactions are done via the approved electronic path for safety.') },
-                { icon: <ShieldCheck className="text-brand-coral" />, title: t('ضمان الصدور', 'Issuance Guarantee'), desc: t('نحرص على دقة البيانات لضمان صدور التأشيرات وتصاريح الحج في المواعيد المحددة.', 'We ensure data accuracy for timely issuance of all pilgrimage permits.') },
-                { icon: <ClipboardCheck className="text-brand-teal" />, title: t('برامج سكن ونقل', 'Lodging & Transport'), desc: t('نوفر خيارات سكن متنوعة قريبة من الحرمين مع خدمات نقل مريحة ومنظمة.', 'We provide lodging options near the Harams with organized transport services.') },
-              ].map((item, idx) => (
-                <div key={idx} className="text-center space-y-4 hover:bg-slate-50 p-8 rounded-3xl transition-colors group border border-transparent hover:border-slate-100">
-                   <div className="mx-auto w-16 h-16 bg-brand-canvas group-hover:bg-white rounded-2xl flex items-center justify-center text-2xl shadow-sm border border-slate-100 transition-colors">
+      {/* Content Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-3 gap-16 items-start">
+            <div className="lg:col-span-2 space-y-12">
+              <div className="space-y-6">
+                <h2 className="text-3xl font-black text-brand-blue">{t('رحلة إيمانية خالية من العوائق', 'Smooth Faith Journey')}</h2>
+                <p className="text-lg text-slate-600 font-medium leading-relaxed">
+                  {t('نحن نوفر لك كافة التسهيلات اللازمة لزيارة بيت الله الحرام، بدءاً من استخراج التأشيرات الرسمية وحتى تنظيم السكن والنقل، لضمان تفرغك الكامل للعبادة.', 'We provide all facilities for visiting Allah\'s House, from visas to lodging and transport, ensuring your focus remains on worship.')}
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-8">
+                {[
+                  { icon: <FileCheck />, title: t('تأشيرات رسمية', 'Official Visas'), desc: t('إصدار التأشيرات عبر المسار الإلكتروني المعتمد.', 'Issuing visas via the approved electronic path.') },
+                  { icon: <ShieldCheck />, title: t('ضمان الإجراءات', 'Guaranteed Process'), desc: t('دقة عالية في رفع البيانات لضمان الصدور السريع.', 'High accuracy in data entry for fast issuance.') },
+                  { icon: <ClipboardCheck />, title: t('تنسيق السكن', 'Lodging Support'), desc: t('توفير خيارات سكن متنوعة قريبة من الحرم.', 'Providing various lodging options near the Haram.') },
+                  { icon: <Landmark />, title: t('خدمة متكاملة', 'Integrated Service'), desc: t('دعم ومتابعة منذ التقديم وحتى إتمام المناسك.', 'Support from application until completion of rituals.') },
+                ].map((item, idx) => (
+                  <div key={idx} className="flex gap-5 group">
+                    <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-coral border border-slate-100 group-hover:bg-brand-blue group-hover:text-white transition-all">
                       {item.icon}
-                   </div>
-                   <h3 className="text-2xl font-black text-brand-grey">{item.title}</h3>
-                   <p className="text-slate-500 font-bold leading-relaxed">{item.desc}</p>
-                   <div className="pt-4">
-                      <a 
-                        href={`https://wa.me/${WA_PHONE}?text=${encodeURIComponent(`السلام عليكم، استفسار بخصوص: ${item.title}`)}`}
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-brand-teal font-black text-sm flex items-center justify-center gap-1 hover:text-brand-coral transition-colors"
-                      >
-                         <MessageCircle className="w-4 h-4" />
-                         {t('تفاصيل أكثر', 'More Details')}
-                      </a>
-                   </div>
-                </div>
-              ))}
-           </div>
+                    </div>
+                    <div>
+                      <h4 className="font-black text-xl text-slate-900 mb-1">{item.title}</h4>
+                      <p className="text-slate-500 font-medium text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm space-y-8 sticky top-28">
+               <h3 className="text-2xl font-black text-brand-blue">{t('المتطلبات الأساسية', 'Basic Requirements')}</h3>
+               <ul className="space-y-4">
+                  {[
+                    t('صورة جواز سفر ساري (6 أشهر على الأقل).', 'Valid passport (at least 6 months).'),
+                    t('صورة شخصية حديثة بخلفية بيضاء.', 'Recent photo with white background.'),
+                    t('تحديد موعد السفر المفضل.', 'Preferred travel date.'),
+                  ].map((text, idx) => (
+                    <li key={idx} className="flex items-center gap-3 font-bold text-slate-700">
+                       <CheckCircle className="w-5 h-5 text-brand-coral flex-shrink-0" />
+                       <span className="text-sm">{text}</span>
+                    </li>
+                  ))}
+               </ul>
+               <a href={`https://wa.me/${WA_PHONE}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black text-center flex items-center justify-center gap-2 hover:bg-[#128C7E] transition-all">
+                 <WhatsAppIcon className="w-5 h-5 fill-current" />
+                 {t('ابدأ إجراءات التأشيرة', 'Start Visa Process')}
+               </a>
+            </div>
+          </div>
         </div>
       </section>
     </div>

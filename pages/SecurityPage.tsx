@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
-import { FileCheck, CheckCircle } from 'lucide-react';
+import { FileCheck, CheckCircle, ShieldAlert } from 'lucide-react';
 import { WA_PHONE } from '../constants';
 import { WhatsAppIcon } from '../components/BrandIcons';
 
@@ -10,78 +10,76 @@ const SecurityPage: React.FC = () => {
   const msg = encodeURIComponent("السلام عليكم، أريد الاستعلام عن خدمة الموافقات الأمنية لمصر.");
 
   return (
-    <div className="pt-10">
-      <section className="bg-slate-900 py-20 text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-           <h1 className="text-4xl md:text-6xl font-black max-w-4xl mx-auto leading-tight">
-              {t('استخراج الموافقات الأمنية لمصر بوضوح وسرعة', 'Security Clearances for Egypt with Clarity & Speed')}
-           </h1>
-           <p className="text-xl text-slate-400 max-w-2xl mx-auto font-medium leading-relaxed">
-              {t('نحن نتولى كافة الإجراءات الرسمية لاستخراج موافقتك الأمنية بطريقة رسمية ومضمونة، مع متابعة دقيقة لكل حالة.', 'We handle all official procedures to issue your security clearance officially, with careful follow-up.')}
-           </p>
-           <div className="pt-4">
-              <a href={`https://wa.me/${WA_PHONE}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl hover:scale-105 transition-transform flex items-center justify-center gap-3 w-fit mx-auto">
-                 <WhatsAppIcon className="w-6 h-6 fill-current" />
-                 {t('اطلب موافقتك الرسمية', 'Request Official Clearance')}
-              </a>
-           </div>
+    <div className="pb-20">
+      {/* Hero Section */}
+      <section className="bg-brand-blue py-20 text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 relative z-10 text-center space-y-8">
+          <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20 text-xs font-bold uppercase tracking-widest">
+            <ShieldAlert className="w-4 h-4 text-brand-coral" />
+            {t('إجراءات رسمية وموثقة', 'Official & Documented')}
+          </div>
+          <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tighter">
+            {t('الموافقات الأمنية لدخول مصر', 'Egypt Security Clearance')}
+          </h1>
+          <p className="text-xl text-white/80 max-w-2xl mx-auto font-medium">
+            {t('نحن ننهي كافة إجراءات موافقتك الأمنية من الجهات المختصة بوضوح وسرعة ومتابعة مستمرة.', 'Completing all clearance procedures officially with continuous follow-up and clarity.')}
+          </p>
+          <div className="pt-4 flex justify-center">
+            <a href={`https://wa.me/${WA_PHONE}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white px-10 py-5 rounded-2xl font-black text-xl flex items-center gap-3 shadow-2xl hover:scale-105 transition-all">
+              <WhatsAppIcon className="w-7 h-7 fill-current" />
+              {t('اطلب موافقتك الرسمية', 'Request Official Clearance')}
+            </a>
+          </div>
         </div>
       </section>
 
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div className="space-y-12">
-               <div className="space-y-4">
-                  <h2 className="text-3xl font-black text-slate-900">{t('لماذا تحتاج للموافقة الأمنية؟', 'Why Do You Need Security Clearance?')}</h2>
-                  <p className="text-slate-600 font-medium leading-relaxed text-lg">
-                    {t('تعتبر الموافقة الأمنية شرطاً أساسياً لدخول المواطنين اليمنيين إلى جمهورية مصر العربية. نحن نوفر لك هذه الخدمة بعيداً عن التعقيدات وبطرق رسمية وموثقة.', 'Security clearance is a prerequisite for Yemeni citizens entering Egypt. We provide this service without complications via official and documented channels.')}
-                  </p>
-               </div>
+      {/* Content Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-3 gap-16 items-start">
+            <div className="lg:col-span-2 space-y-12">
+              <div className="space-y-6">
+                <h2 className="text-3xl font-black text-brand-blue">{t('بوابتك الرسمية لدخول جمهورية مصر', 'Your Official Gateway to Egypt')}</h2>
+                <p className="text-lg text-slate-600 font-medium leading-relaxed">
+                  {t('تعتبر الموافقة الأمنية متطلباً أساسياً للمواطنين اليمنيين الراغبين في زيارة مصر. نحن نوفر لك هذه الخدمة بعيداً عن التعقيدات، مع ضمان الدقة والالتزام بكافة الشروط القانونية.', 'Security clearance is a must for Yemeni citizens visiting Egypt. We provide this without complexity, ensuring accuracy and legal compliance.')}
+                </p>
+              </div>
 
-               <div className="space-y-6">
-                  {[
-                    { title: t('دقة المعلومات', 'Info Accuracy'), desc: t('نراجع بياناتك بدقة لتجنب أي تأخير في الصدور.', 'We review your data carefully to avoid any issuance delays.') },
-                    { title: t('متابعة مستمرة', 'Constant Follow-up'), desc: t('نطلعك على حالة طلبك حتى صدور الموافقة.', 'We keep you updated on your request status until issuance.') },
-                    { title: t('تعامل رسمي', 'Official Handling'), desc: t('كافة الإجراءات تتم عبر القنوات الرسمية المعتمدة.', 'All procedures are done via approved official channels.') },
-                  ].map((item, idx) => (
-                    <div key={idx} className="flex gap-6 items-start">
-                       <div className="w-12 h-12 bg-brand-teal/10 rounded-xl flex items-center justify-center text-brand-teal flex-shrink-0">
-                          <CheckCircle className="w-6 h-6" />
-                       </div>
-                       <div>
-                          <h4 className="font-black text-xl text-slate-900 mb-1">{item.title}</h4>
-                          <p className="text-slate-600 font-medium">{item.desc}</p>
-                       </div>
+              <div className="grid sm:grid-cols-2 gap-8">
+                {[
+                  { icon: <FileCheck />, title: t('تدقيق البيانات', 'Data Auditing'), desc: t('مراجعة دقيقة لبياناتك قبل التقديم لتجنب الرفض.', 'Careful data review before submission.') },
+                  { icon: <CheckCircle />, title: t('متابعة دورية', 'Regular Follow-up'), desc: t('تحديثات مستمرة حول حالة طلبك حتى الصدور.', 'Continuous updates until issuance.') },
+                  { icon: <FileCheck />, title: t('تنسيق الطيران', 'Flight Coordination'), desc: t('إمكانية ربط الموافقة بحجز التذاكر بأسعار خاصة.', 'Option to link clearance with flight bookings.') },
+                  { icon: <CheckCircle />, title: t('وضوح مـالي', 'Financial Clarity'), desc: t('أسعار معلنة وواقعية دون تكاليف خفية.', 'Clear prices with no hidden costs.') },
+                ].map((item, idx) => (
+                  <div key={idx} className="flex gap-5 group">
+                    <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-coral border border-slate-100 group-hover:bg-brand-blue group-hover:text-white transition-all">
+                      {item.icon}
                     </div>
-                  ))}
-               </div>
+                    <div>
+                      <h4 className="font-black text-xl text-slate-900 mb-1">{item.title}</h4>
+                      <p className="text-slate-500 font-medium text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 shadow-sm space-y-8">
-               <h3 className="text-2xl font-black text-brand-teal flex items-center gap-2">
-                  <FileCheck className="w-6 h-6" />
-                  {t('المتطلبات الأساسية', 'Required Documents')}
-               </h3>
+            <div className="bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm space-y-8 sticky top-28">
+               <h3 className="text-2xl font-black text-brand-blue">{t('المستندات المطلوبة', 'Required Docs')}</h3>
                <ul className="space-y-4">
                   {[
-                    t('صورة واضحة من جواز السفر الساري.', 'Clear copy of valid passport.'),
-                    t('توضيح الغرض من السفر.', 'Purpose of travel clarification.'),
-                    t('تاريخ السفر التقريبي.', 'Approximate travel date.'),
+                    t('صورة واضحة لجواز السفر (ساري).', 'Clear passport copy (valid).'),
+                    t('توضيح الغرض من الزيارة (علاج/سياحة).', 'Clarification of visit purpose.'),
+                    t('تاريخ السفر المقترح.', 'Proposed travel date.'),
                   ].map((text, idx) => (
                     <li key={idx} className="flex items-center gap-3 font-bold text-slate-700">
-                       <div className="w-1.5 h-1.5 rounded-full bg-brand-coral"></div>
-                       {text}
+                       <CheckCircle className="w-5 h-5 text-brand-coral flex-shrink-0" />
+                       <span className="text-sm">{text}</span>
                     </li>
                   ))}
                </ul>
-               
-               <a 
-                 href={`https://wa.me/${WA_PHONE}?text=${msg}`}
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 className="w-full bg-[#25D366] text-white py-4 rounded-xl font-black text-center flex items-center justify-center gap-2 hover:bg-[#128C7E] shadow-lg"
-               >
+               <a href={`https://wa.me/${WA_PHONE}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black text-center flex items-center justify-center gap-2 hover:bg-[#128C7E] transition-all">
                  <WhatsAppIcon className="w-5 h-5 fill-current" />
                  {t('ابدأ الإجراءات الآن', 'Start Procedures Now')}
                </a>

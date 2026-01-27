@@ -1,79 +1,95 @@
 
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
-import { Bus, Users, ShieldCheck, MessageCircle, MapPin, BadgeDollarSign } from 'lucide-react';
+import { Bus, Users, ShieldCheck, MapPin, BadgeDollarSign, CheckCircle } from 'lucide-react';
 import { WA_PHONE } from '../constants';
+import { WhatsAppIcon } from '../components/BrandIcons';
 
 const TransportPage: React.FC = () => {
   const { t } = useLanguage();
-
   const busMsg = encodeURIComponent("السلام عليكم ، اريد الاستعلام عن خدمة حجز الباصات.");
-  const privateMsg = encodeURIComponent("السلام عليكم ، اريد الاستعلام عن خدمة النقل الخاص او الباصات الصغيرة.");
 
   return (
-    <div className="pt-10">
-      <section className="bg-brand-teal py-20 text-white text-center">
-        <div className="max-w-4xl mx-auto px-4 space-y-6">
-           <h1 className="text-4xl md:text-6xl font-black leading-tight">
-              {t('خدمات النقل البري وتأجير الحافلات', 'Land Transport & Bus Rentals')}
-           </h1>
-           <p className="text-xl text-white/80 font-medium leading-relaxed">
-              {t('حجز باصات دولية ومحلية، حافلات صغيرة، ونقل خاص بأسعار منافسة وتنسيق دقيق يلبي كافة احتياجاتكم.', 'Internal and external bus bookings, small buses, and private transport coordination at competitive rates.')}
-           </p>
-           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={`https://wa.me/${WA_PHONE}?text=${busMsg}`} className="inline-flex items-center gap-2 bg-brand-coral text-white px-8 py-4 rounded-2xl font-black text-lg shadow-xl hover:scale-105 transition-transform">
-                 <MessageCircle className="w-6 h-6" />
-                 {t('حجز باص', 'Book Bus')}
-              </a>
-              <a href={`https://wa.me/${WA_PHONE}?text=${privateMsg}`} className="inline-flex items-center gap-2 bg-white text-brand-teal px-8 py-4 rounded-2xl font-black text-lg shadow-xl hover:scale-105 transition-transform">
-                 <MessageCircle className="w-6 h-6" />
-                 {t('نقل خاص / حافلة صغيرة', 'Private / Small Bus')}
-              </a>
-           </div>
+    <div className="pb-20">
+      {/* Hero Section */}
+      <section className="bg-brand-blue py-20 text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 relative z-10 text-center space-y-8">
+          <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20 text-xs font-bold uppercase tracking-widest">
+            <Bus className="w-4 h-4 text-brand-coral" />
+            {t('نقل آمن ومنظم', 'Safe & Organized Transport')}
+          </div>
+          <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tighter">
+            {t('خدمات النقل البري وحجز الباصات', 'Land Transport Services')}
+          </h1>
+          <p className="text-xl text-white/80 max-w-2xl mx-auto font-medium">
+            {t('رحلات يومية منظمة وحجز باصات دولية ومحلية بأحدث الأساطيل وأسعار تناسب الجميع.', 'Daily organized trips and bus bookings via modern fleets at affordable prices.')}
+          </p>
+          <div className="pt-4 flex justify-center">
+            <a href={`https://wa.me/${WA_PHONE}?text=${busMsg}`} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white px-10 py-5 rounded-2xl font-black text-xl flex items-center gap-3 shadow-2xl hover:scale-105 transition-all">
+              <WhatsAppIcon className="w-7 h-7 fill-current" />
+              {t('احجز رحلتك البرية', 'Book Your Trip')}
+            </a>
+          </div>
         </div>
       </section>
 
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { icon: <Bus />, title: t('باصات دولية ومحلية', 'Intl & Local Buses'), desc: t('رحلات منظمة عبر أحدث الأساطيل وبأسعار منافسة.', 'Organized trips via modern fleets at competitive prices.'), msg: busMsg },
-                { icon: <Users />, title: t('حافلات صغيرة', 'Small Buses'), desc: t('تنسيق حافلات صغيرة للمجموعات والعائلات بخصوصية تامة.', 'Small bus coordination for groups and families with full privacy.'), msg: privateMsg },
-                { icon: <ShieldCheck />, title: t('نقل خاص', 'Private Transport'), desc: t('خدمات نقل خاص للأفراد وكبار الشخصيات بمهنية وسرعة.', 'Private transport services for individuals and VIPs professionally.'), msg: privateMsg },
-              ].map((item, idx) => (
-                <div key={idx} className="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 space-y-4">
-                   <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-brand-teal shadow-sm">
-                      {item.icon}
-                   </div>
-                   <h3 className="text-2xl font-black text-slate-900">{item.title}</h3>
-                   <p className="text-slate-600 font-medium leading-relaxed mb-4">{item.desc}</p>
-                   <a href={`https://wa.me/${WA_PHONE}?text=${item.msg}`} className="text-brand-coral font-black flex items-center gap-2 hover:underline">
-                      <MessageCircle className="w-5 h-5" />
-                      {t('استفسر الآن', 'Inquire Now')}
-                   </a>
-                </div>
-              ))}
-           </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="grid md:grid-cols-2 gap-16 items-center">
+      {/* Content Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-3 gap-16 items-start">
+            <div className="lg:col-span-2 space-y-12">
               <div className="space-y-6">
-                 <h2 className="text-3xl font-black">{t('تنسيق دقيق وأسعار واقعية', 'Precise Coordination & Realistic Rates')}</h2>
-                 <p className="text-slate-400 text-lg">
-                    {t('نحن في واصل نضمن لك تجربة نقل مريحة من خلال التنسيق المباشر مع شركات النقل الموثوقة، مع التركيز على السلامة والالتزام بالمواعيد.', 'At Wasil, we ensure a comfortable transport experience through direct coordination with trusted companies.')}
-                 </p>
-                 <ul className="space-y-4">
-                    <li className="flex items-center gap-3"><MapPin className="text-brand-coral" /> {t('تغطية واسعة لكافة الخطوط الرئيسية.', 'Wide coverage for all main routes.')}</li>
-                    <li className="flex items-center gap-3"><BadgeDollarSign className="text-brand-coral" /> {t('أسعار منافسة تناسب الجميع.', 'Competitive rates for everyone.')}</li>
-                 </ul>
+                <h2 className="text-3xl font-black text-brand-blue">{t('حلول نقل متكاملة لكافة الخطوط', 'Integrated Transport Solutions')}</h2>
+                <p className="text-lg text-slate-600 font-medium leading-relaxed">
+                  {t('سواء كنت تبحث عن حجز باصات دولية بين اليمن والدول المجاورة، أو نقل محلي داخل المدن، أو حتى حافلات خاصة للمجموعات، فنحن نوفر لك التنسيق الكامل بمهنية عالية.', 'International or local bus bookings, or private group buses, we provide professional coordination.')}
+                </p>
               </div>
-              <div className="rounded-[2.5rem] overflow-hidden shadow-2xl">
-                 <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=2069" alt="Transport Services" />
+
+              <div className="grid sm:grid-cols-2 gap-8">
+                {[
+                  { icon: <Bus />, title: t('باصات دولية', 'Intl Buses'), desc: t('رحلات منظمة عبر الخطوط البرية الدولية.', 'Organized international land routes.') },
+                  { icon: <Users />, title: t('نقل مجموعات', 'Group Transport'), desc: t('تنسيق حافلات خاصة للرحلات العائلية.', 'Private bus coordination for family trips.') },
+                  { icon: <ShieldCheck />, title: t('أمان وراحة', 'Safety & Comfort'), desc: t('التعاون مع أفضل شركات النقل الموثوقة.', 'Partnering with the best trusted transport companies.') },
+                  { icon: <BadgeDollarSign />, title: t('أسعار واقعية', 'Realistic Rates'), desc: t('عروض أسعار منافسة لكافة الخطوط والوجهات.', 'Competitive rates for all routes and destinations.') },
+                ].map((item, idx) => (
+                  <div key={idx} className="flex gap-5 group">
+                    <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-coral border border-slate-100 group-hover:bg-brand-blue group-hover:text-white transition-all">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h4 className="font-black text-xl text-slate-900 mb-1">{item.title}</h4>
+                      <p className="text-slate-500 font-medium text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-           </div>
+            </div>
+
+            <div className="bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm space-y-8 sticky top-28">
+               <h3 className="text-2xl font-black text-brand-blue text-center">{t('طلب حجز سريع', 'Quick Booking')}</h3>
+               <div className="space-y-4">
+                  <div className="space-y-1">
+                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t('منطقة الإقلاع', 'Origin')}</label>
+                    <input type="text" placeholder={t('المدينة', 'City')} className="w-full bg-white border border-slate-200 p-3 rounded-xl focus:ring-2 focus:ring-brand-blue outline-none font-bold" />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t('الوجهة النهائية', 'Destination')}</label>
+                    <input type="text" placeholder={t('الوجهة', 'Destination')} className="w-full bg-white border border-slate-200 p-3 rounded-xl focus:ring-2 focus:ring-brand-blue outline-none font-bold" />
+                  </div>
+                  <div className="pt-2">
+                    <a href={`https://wa.me/${WA_PHONE}?text=${busMsg}`} target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black text-center flex items-center justify-center gap-2 hover:bg-[#128C7E] transition-all">
+                      <WhatsAppIcon className="w-5 h-5 fill-current" />
+                      {t('استفسر الآن', 'Inquire Now')}
+                    </a>
+                  </div>
+               </div>
+               <div className="pt-4 border-t border-slate-200">
+                  <p className="text-[10px] text-slate-400 font-bold leading-relaxed">
+                    {t('* نضمن لك التنسيق المباشر مع شركات النقل فور استلام طلبك.', '* We ensure direct coordination with carriers upon receiving your request.')}
+                  </p>
+               </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
