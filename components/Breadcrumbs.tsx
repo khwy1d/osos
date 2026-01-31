@@ -24,7 +24,7 @@ const Breadcrumbs: React.FC = () => {
       case 'umrah': return t('تأشيرات عمرة', 'Umrah Visas');
       case 'real-estate': return t('خدمات عقارية', 'Real Estate');
       case 'car-rental': return t('تأجير سيارات', 'Car Rental');
-      case 'about': return t('عن واصل', 'About Us');
+      case 'about': return t('عن ثقة', 'About Thiqa');
       case 'contact': return t('اتصل بنا', 'Contact');
       default: return slug;
     }
@@ -33,7 +33,7 @@ const Breadcrumbs: React.FC = () => {
   return (
     <nav className="bg-slate-50 border-b border-slate-100 py-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-sm font-bold text-slate-500">
-        <Link to="/" className="hover:text-brand-teal flex items-center gap-1 transition-colors">
+        <Link to="/" className="hover:text-brand-green flex items-center gap-1 transition-colors">
           <Home className="w-4 h-4" />
           <span className="hidden sm:inline">{t('الرئيسية', 'Home')}</span>
         </Link>
@@ -44,9 +44,9 @@ const Breadcrumbs: React.FC = () => {
             <React.Fragment key={name}>
               <ChevronRight className={`w-4 h-4 ${lang === 'ar' ? 'rotate-180' : ''}`} />
               {isLast ? (
-                <span className="text-brand-teal">{getLabel(name)}</span>
+                <span className="text-brand-green">{getLabel(name)}</span>
               ) : (
-                <Link to={routeTo} className="hover:text-brand-teal transition-colors">
+                <Link to={routeTo} className="hover:text-brand-green transition-colors">
                   {getLabel(name)}
                 </Link>
               )}

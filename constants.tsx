@@ -3,7 +3,6 @@ import React from 'react';
 import { Plane, Bus, HeartPulse, FileCheck, Landmark, Car, Building2, MapPin, Clock, BadgeDollarSign, Headphones, Users, Briefcase, Palmtree } from 'lucide-react';
 import { Service, NavLink, Offer, Step } from './types';
 
-// الرقم بالصيغة الدولية بدون + لروابط API
 export const WA_PHONE = '967776002190';
 export const DISPLAY_PHONE = '+967 776 002 190';
 
@@ -15,132 +14,126 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const STEPS: Step[] = [
-  { id: 1, title: { ar: 'تقديم الطلب', en: 'Submit Request' }, desc: { ar: 'حدد الخدمة المطلوبة عبر الموقع أو الواتساب', en: 'Select your service via site or WhatsApp' } },
-  { id: 2, title: { ar: 'مراجعة المتطلبات', en: 'Review Requirements' }, desc: { ar: 'نرسل لك قائمة الأوراق المطلوبة والتكلفة', en: 'We send you the required docs and costs' } },
-  { id: 3, title: { ar: 'التنفيذ السريع', en: 'Fast Execution' }, desc: { ar: 'ننهي الإجراءات الرسمية في وقت قياسي', en: 'We complete official procedures in record time' } },
-  { id: 4, title: { ar: 'إتمام الخدمة', en: 'Completion' }, desc: { ar: 'استلام الخدمة أو التأشيرة وبدء رحلتك', en: 'Receive service or visa and start your journey' } },
+  { id: 1, title: { ar: 'تقديم الطلب', en: 'Submit Request' }, desc: { ar: 'حدد الخدمة عبر الموقع أو الواتساب', en: 'Select service via site or WhatsApp' } },
+  { id: 2, title: { ar: 'مراجعة المتطلبات', en: 'Review Docs' }, desc: { ar: 'نرسل لك قائمة الأوراق والتكاليف', en: 'We send required docs & costs' } },
+  { id: 3, title: { ar: 'التنفيذ السريع', en: 'Fast Execution' }, desc: { ar: 'ننهي الإجراءات الرسمية في وقت قياسي', en: 'Official procedures in record time' } },
+  { id: 4, title: { ar: 'إتمام الرحلة', en: 'Completion' }, desc: { ar: 'استلام التأشيرة وبدء رحلتك بأمان', en: 'Receive visa and start your journey' } },
 ];
 
 export const SERVICES: Service[] = [
   {
     id: 'security-clearance',
     priority: true,
-    icon: <FileCheck className="w-8 h-8" />,
+    icon: <FileCheck className="w-6 h-6" />,
     title: { ar: 'الموافقات الأمنية لمصر', en: 'Egypt Security Clearance' },
-    description: { ar: 'استخراج الموافقات الأمنية الرسمية للمواطنين اليمنيين بسرعة ودقة ومتابعة مستمرة.', en: 'Handling official security clearances for Yemeni citizens with speed and follow-up.' },
+    description: { ar: 'استخراج الموافقات الأمنية الرسمية للمواطنين اليمنيين بسرعة ودقة عبر وكالة ثقة للسفر.', en: 'Official security clearances for Yemeni citizens with speed via Thiqa Travel.' },
     cta: { ar: 'اطلب موافقتك', en: 'Request Clearance' },
-    waMessage: "أريد الاستعلام عن خدمة الموافقات الأمنية لمصر.",
+    waMessage: "أريد الاستعلام عن خدمة الموافقات الأمنية لمصر من وكالة ثقة.",
     link: '/security-clearance-egypt'
   },
   {
     id: 'medical',
     priority: true,
-    icon: <HeartPulse className="w-8 h-8" />,
+    icon: <HeartPulse className="w-6 h-6" />,
     title: { ar: 'السفر العلاجي', en: 'Medical Travel' },
-    description: { ar: 'تنسيق مواعيد وخصومات خاصة على الفحوصات الطبية في مصر والأردن وإجراءات سفر ميسرة.', en: 'Coordination of medical appointments and special discounts in Egypt & Jordan.' },
+    description: { ar: 'تنسيق طبي متكامل في مصر والأردن مع ضمان الثقة والاحترافية في التعامل.', en: 'Integrated medical coordination in Egypt & Jordan with trust and professionalism.' },
     cta: { ar: 'نسّق رحلتك', en: 'Coordinate Now' },
-    waMessage: "أريد الاستعلام عن خدمة التنسيق الطبي والسفر العلاجي.",
+    waMessage: "أريد الاستعلام عن خدمة التنسيق الطبي والسفر العلاجي لدى ثقة.",
     link: '/medical-tourism'
   },
   {
     id: 'flights',
     priority: false,
-    icon: <Plane className="w-8 h-8" />,
+    icon: <Plane className="w-6 h-6" />,
     title: { ar: 'تذاكر طيران', en: 'Flight Tickets' },
-    description: { ar: 'حجز طيران داخلي ودولي عبر اليمنية وفلاي أدين بأسعار منافسة وتأكيد فوري.', en: 'Domestic and international flights via Yemenia & Fly Aden with competitive rates.' },
-    cta: { ar: 'استعلم عن رحلة', en: 'Inquire Now' },
-    waMessage: "أريد الاستعلام عن توفر تذاكر طيران (داخلي/دولي).",
+    description: { ar: 'حجز طيران داخلي ودولي بأسعار منافسة وتأكيد فوري من وكالة ثقة.', en: 'Domestic and international flights with competitive rates from Thiqa agency.' },
+    cta: { ar: 'استعلم الآن', en: 'Inquire Now' },
+    waMessage: "أريد الاستعلام عن تذاكر طيران من وكالة ثقة.",
     link: '/flights'
-  },
-  {
-    id: 'saudi-visit',
-    priority: false,
-    hidden: true,
-    icon: <Briefcase className="w-8 h-8" />,
-    title: { ar: 'زيارة السعودية', en: 'Saudi Arabia Visit' },
-    description: { ar: 'تجهيز تأشيرات الزيارة العائلية والشخصية والأعمال للمملكة وإنجاز المعاملات عبر منصة إنجاز.', en: 'Processing family, personal, and business visit visas to KSA and Enjaz platform.' },
-    cta: { ar: 'ابدأ المعاملة', en: 'Start Process' },
-    waMessage: "أريد البدء في إجراءات تأشيرة زيارة المملكة العربية السعودية.",
-    link: '/saudi-visit'
-  },
-  {
-    id: 'umrah',
-    priority: false,
-    icon: <Landmark className="w-8 h-8" />,
-    title: { ar: 'الحج والعمرة', en: 'Hajj & Umrah' },
-    description: { ar: 'خدمات متكاملة للحجاج والمعتمرين، إصدار تأشيرات وتنظيم رحلات للمشاعر المقدسة.', en: 'Integrated services for Hajj & Umrah, visa issuance, and organized trips to holy sites.' },
-    cta: { ar: 'اطلب الآن', en: 'Request Now' },
-    waMessage: "أريد الاستفسار عن باقات العمرة والحج المتاحة.",
-    link: '/umrah'
   },
   {
     id: 'tourism',
     priority: false,
-    icon: <Palmtree className="w-8 h-8" />,
+    icon: <Palmtree className="w-6 h-6" />,
     title: { ar: 'السياحة', en: 'Tourism' },
-    description: { ar: 'باكجات سياحية متكاملة ورحلات استكشافية داخل اليمن وإلى تركيا، ماليزيا، جورجيا، ومصر.', en: 'Full tour packages within Yemen and to Turkey, Malaysia, Georgia, and Egypt.' },
-    cta: { ar: 'استكشف عروضنا', en: 'Explore Offers' },
-    waMessage: "أريد الاستعلام عن عروض السياحة المتوفرة.",
+    description: { ar: 'باكجات سياحية متكاملة داخل اليمن وإلى تركيا، ماليزيا، جورجيا، ومصر.', en: 'Full tour packages within Yemen and to Turkey, Malaysia, Georgia, and Egypt.' },
+    cta: { ar: 'اكتشف العروض', en: 'Explore Offers' },
+    waMessage: "أريد الاستعلام عن عروض السياحة لدى ثقة.",
     link: '/tourism'
+  },
+  {
+    id: 'umrah',
+    priority: false,
+    icon: <Landmark className="w-6 h-6" />,
+    title: { ar: 'الحج والعمرة', en: 'Hajj & Umrah' },
+    description: { ar: 'خدمات متكاملة للحجاج والمعتمرين برؤية واضحة وإجراءات ميسرة.', en: 'Integrated services for Hajj & Umrah with clear vision and easy procedures.' },
+    cta: { ar: 'احجز مكانك', en: 'Request Now' },
+    waMessage: "أريد الاستفسار عن باقات العمرة والحج من ثقة.",
+    link: '/umrah'
   },
   {
     id: 'bus-reservations',
     priority: false,
-    icon: <Bus className="w-8 h-8" />,
+    icon: <Bus className="w-6 h-6" />,
     title: { ar: 'حجز الباصات', en: 'Bus Reservations' },
-    description: { ar: 'حجز باصات دولية ومحلية (داخلي وخارجي) بأسعار منافسة وتنسيق دقيق.', en: 'Internal and external bus bookings with competitive rates.' },
-    cta: { ar: 'احجز وسيلة نقلك', en: 'Book Transport' },
-    waMessage: "أريد حجز تذاكر باص (محلي/دولي).",
+    description: { ar: 'حجز باصات دولية ومحلية بأسعار منافسة وتنسيق دقيق للمواعيد.', en: 'Internal and external bus bookings with competitive rates.' },
+    cta: { ar: 'احجز رحلتك', en: 'Book Transport' },
+    waMessage: "أريد حجز تذاكر باص عبر وكالة ثقة.",
     link: '/transport'
   },
   {
     id: 'car-rental',
     priority: false,
-    icon: <Car className="w-8 h-8" />,
+    icon: <Car className="w-6 h-6" />,
     title: { ar: 'تأجير سيارات', en: 'Car Rental' },
-    description: { ar: 'تنسيق تأجير السيارات في مصر مع دعم كامل وشروط واضحة.', en: 'Car rental coordination in Egypt with full support and clear conditions.' },
+    description: { ar: 'تنسيق تأجير السيارات في مصر مع دعم كامل وشروط واضحة.', en: 'Car rental coordination in Egypt with full support.' },
     cta: { ar: 'اطلب سيارة', en: 'Request Car' },
-    waMessage: "أريد الاستفسار عن خدمة تأجير السيارات في مصر.",
+    waMessage: "أريد الاستفسار عن تأجير السيارات في مصر عبر ثقة.",
     link: '/car-rental'
   },
   {
     id: 'real-estate',
     priority: false,
-    icon: <Building2 className="w-8 h-8" />,
+    icon: <Building2 className="w-6 h-6" />,
     title: { ar: 'خدمات عقارية', en: 'Real Estate' },
-    description: { ar: 'إدارة أملاك، بيع وشراء شقق، تأجير وإدارة إدارية للعقارات بمهنية.', en: 'Property management, apartment sales, and rentals.' },
+    description: { ar: 'إدارة أملاك، بيع وشراء شقق، وتأجير العقارات بمهنية في مصر واليمن.', en: 'Property management, apartment sales, and rentals.' },
     cta: { ar: 'استشرنا عقارياً', en: 'Consult Us' },
-    waMessage: "أريد الاستشارة بخصوص الخدمات العقارية (بيع/شراء/تأجير).",
+    waMessage: "أريد الاستشارة بخصوص الخدمات العقارية لدى ثقة.",
     link: '/real-estate'
   }
 ];
 
-export const TRUST_SIGNALS = [
-  { ar: 'تنفيذ سريع وموثوق بكافة الإجراءات', en: 'Fast & reliable execution of all procedures' },
-  { ar: 'أسعار منافسة وشفافية مطلقة', en: 'Competitive pricing & absolute transparency' },
-  { ar: 'فريق متخصص لمتابعة طلبك حتى النهاية', en: 'Dedicated team to follow your request until completion' },
-];
-
 export const LIVE_OFFERS: Offer[] = [
-  { id: '1', route: { ar: 'صنعاء - القاهرة (طيران)', en: 'Sana\'a - Cairo (Flight)' }, day: { ar: 'رحلات يومية', en: 'Daily Flights' }, price: '$420', type: 'Flight' },
-  { id: '2', route: { ar: 'عدن - القاهرة (باص)', en: 'Aden - Cairo (Bus)' }, day: { ar: 'كل سبت واثنين', en: 'Every Sat & Mon' }, price: '$110', type: 'Bus' },
-  { id: '3', route: { ar: 'تعز - عدن (نقل خاص)', en: 'Taiz - Aden (Private)' }, day: { ar: 'حسب الطلب', en: 'On Request' }, price: '$60', type: 'Bus' },
+  {
+    id: 'offer-1',
+    route: { ar: 'صنعاء ⟵ القاهرة', en: 'Sanaa ⟵ Cairo' },
+    day: { ar: 'كل إثنين وخميس', en: 'Every Mon & Thu' },
+    price: '$380',
+    type: 'Flight',
+  },
+  {
+    id: 'offer-2',
+    route: { ar: 'تعز ⟵ الرياض', en: 'Taiz ⟵ Riyadh' },
+    day: { ar: 'يومياً', en: 'Daily' },
+    price: '450 SAR',
+    type: 'Bus',
+  }
 ];
 
 export const WHY_CHOOSE_US = [
   {
-    icon: <Clock className="w-10 h-10" />,
+    icon: <Clock className="w-8 h-8" />,
     title: { ar: 'سرعة التنفيذ', en: 'Fast Execution' },
-    desc: { ar: 'نحن ندرك قيمة الوقت، لذا ننهي معاملاتك في أسرع وقت ممكن.', en: 'We understand the value of time, so we complete your transactions as quickly as possible.' }
+    desc: { ar: 'ننهي معاملاتك في أسرع وقت ممكن لتوفير جهدك ومالك.', en: 'We complete your transactions quickly to save effort and money.' }
   },
   {
-    icon: <BadgeDollarSign className="w-10 h-10" />,
-    title: { ar: 'أسعار منافسة', en: 'Competitive Prices' },
-    desc: { ar: 'نقدم خدماتنا بأسعار واقعية ومنافسة تلبي احتياجات الجميع.', en: 'We offer our services at realistic and competitive prices that meet everyone\'s needs.' }
+    icon: <BadgeDollarSign className="w-8 h-8" />,
+    title: { ar: 'أسعار واقعية', en: 'Realistic Prices' },
+    desc: { ar: 'شفافية كاملة في التسعير بدون أي تكاليف خفية.', en: 'Full pricing transparency without hidden costs.' }
   },
   {
-    icon: <Headphones className="w-10 h-10" />,
-    title: { ar: 'دعم مباشر ومستمر', en: 'Direct Continuous Support' },
-    desc: { ar: 'فريقنا متاح للرد على استفساراتكم ومتابعة معاملاتكم بوضوح.', en: 'Our team is available to answer your questions and follow up your transactions clearly.' }
+    icon: <Headphones className="w-8 h-8" />,
+    title: { ar: 'دعم مستمر', en: 'Continuous Support' },
+    desc: { ar: 'فريقنا متاح للرد على استفساراتكم ومتابعة معاملاتكم.', en: 'Our team is available to answer your questions.' }
   }
 ];

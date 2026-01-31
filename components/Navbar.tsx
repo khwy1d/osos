@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, ArrowLeft, ArrowRight, Home, LayoutGrid, Info, PhoneCall, Globe } from 'lucide-react';
+import { Menu, X, Home, LayoutGrid, Info, PhoneCall, Globe, ArrowLeft, ArrowRight } from 'lucide-react';
 import { NavLink, Link } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
-import { NAV_LINKS, WA_PHONE, DISPLAY_PHONE } from '../constants';
-import { WhatsAppIcon } from './BrandIcons';
+import { NAV_LINKS, WA_PHONE } from '../constants';
+import { WhatsAppIcon, ThiqaLogo } from './BrandIcons';
 
 const LanguageToggle: React.FC<{ variant?: 'nav' | 'sidebar' }> = ({ variant = 'nav' }) => {
   const { lang, setLang } = useLanguage();
@@ -24,7 +24,7 @@ const LanguageToggle: React.FC<{ variant?: 'nav' | 'sidebar' }> = ({ variant = '
       <Globe 
         className={`transition-colors duration-300 ${
           variant === 'sidebar' ? 'w-6 h-6' : 'w-5 h-5 md:w-5.5 md:h-5.5'
-        } text-brand-blue group-hover:text-brand-coral stroke-[1.5]`} 
+        } text-brand-navy group-hover:text-brand-green stroke-[1.5]`} 
       />
       {variant === 'sidebar' && (
         <span className="font-black text-slate-700 text-xs tracking-widest uppercase">
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const defaultMsg = encodeURIComponent("السلام عليكم ، اريد الاستعلام عن خدماتكم.");
+  const defaultMsg = encodeURIComponent("السلام عليكم ، اريد الاستعلام عن خدمات وكالة ثقة.");
 
   const getIcon = (key: string) => {
     switch(key) {
@@ -66,15 +66,15 @@ const Navbar: React.FC = () => {
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="flex justify-between items-center h-14 md:h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 group shrink-0">
-              <div className="w-8 h-8 md:w-9 md:h-9 bg-brand-blue rounded-xl flex items-center justify-center transition-all duration-500 group-hover:rotate-12 group-hover:bg-brand-coral shadow-lg">
-                <span className="text-white font-black text-lg md:text-xl">W</span>
+            <Link to="/" className="flex items-center gap-3 group shrink-0">
+              <div className="w-12 h-10 md:w-16 md:h-12 flex items-center justify-center transition-all duration-500 group-hover:scale-110">
+                <ThiqaLogo className="w-full h-full" />
               </div>
               <div className="flex flex-col leading-none">
-                <span className="text-brand-blue font-black text-lg md:text-xl tracking-tighter">
-                  {t('واصِل', 'Wasil')}
+                <span className="text-brand-navy font-black text-lg md:text-xl tracking-tighter">
+                  {t('ثقة للسفريات', 'Thiqa Travel')}
                 </span>
-                <span className="text-[8px] text-brand-coral font-bold uppercase tracking-widest mt-0.5">Travel & Tourism</span>
+                <span className="text-[8px] text-brand-green font-bold uppercase tracking-widest mt-0.5">Premium Services</span>
               </div>
             </Link>
 
@@ -85,13 +85,13 @@ const Navbar: React.FC = () => {
                   key={link.key}
                   to={link.href}
                   className={({ isActive }) => 
-                    `text-sm font-bold transition-all relative group py-1.5 ${isActive ? 'text-brand-blue' : 'text-slate-600 hover:text-brand-blue'}`
+                    `text-sm font-bold transition-all relative group py-1.5 ${isActive ? 'text-brand-navy' : 'text-slate-600 hover:text-brand-navy'}`
                   }
                 >
                   {({ isActive }) => (
                     <>
                       {link.label[lang]}
-                      <span className={`absolute -bottom-0.5 left-0 h-0.5 bg-brand-coral transition-all duration-300 group-hover:w-full ${isActive ? 'w-full' : 'w-0'}`}></span>
+                      <span className={`absolute -bottom-0.5 left-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full ${isActive ? 'w-full' : 'w-0'}`}></span>
                     </>
                   )}
                 </NavLink>
@@ -106,7 +106,7 @@ const Navbar: React.FC = () => {
                 href={`https://wa.me/${WA_PHONE}?text=${defaultMsg}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:flex bg-brand-blue text-white px-5 py-2.5 rounded-xl font-black transition-all hover:bg-brand-blueLight shadow-md items-center gap-2 text-xs md:text-sm"
+                className="hidden sm:flex bg-brand-green text-white px-5 py-2.5 rounded-xl font-black transition-all hover:bg-brand-navy shadow-md items-center gap-2 text-xs md:text-sm"
               >
                 <WhatsAppIcon className="w-4 h-4 fill-current" />
                 <span>{t('احجز الآن', 'Book Now')}</span>
@@ -115,7 +115,7 @@ const Navbar: React.FC = () => {
               {/* Mobile Menu Toggle */}
               <button 
                 onClick={() => setIsOpen(true)} 
-                className="lg:hidden p-2 text-brand-blue bg-slate-50 rounded-xl border border-slate-200 active:scale-95 transition-all"
+                className="lg:hidden p-2 text-brand-navy bg-slate-50 rounded-xl border border-slate-200 active:scale-95 transition-all"
               >
                 <Menu className="w-5 h-5" />
               </button>
@@ -135,12 +135,10 @@ const Navbar: React.FC = () => {
           <div className="p-6 md:p-8 flex flex-col h-full bg-brand-gray/30">
             <div className="flex justify-between items-center mb-8 pb-4 border-b border-slate-100">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-brand-blue rounded-lg flex items-center justify-center">
-                  <span className="text-white font-black text-lg">W</span>
-                </div>
+                <ThiqaLogo className="w-16 h-8" />
                 <div className="flex flex-col leading-none">
-                  <span className="text-brand-blue font-black text-lg">{t('واصِل', 'Wasil')}</span>
-                  <span className="text-[7px] text-brand-coral font-bold uppercase tracking-[0.2em] mt-1">Premium Travel</span>
+                  <span className="text-brand-navy font-black text-lg">{t('ثقة', 'Thiqa')}</span>
+                  <span className="text-[7px] text-brand-green font-bold uppercase tracking-[0.2em] mt-1">Premium Travel</span>
                 </div>
               </div>
               <button onClick={() => setIsOpen(false)} className="p-2 text-slate-400 bg-white border border-slate-50 rounded-lg shadow-sm">
@@ -158,7 +156,7 @@ const Navbar: React.FC = () => {
                   className={({ isActive }) => 
                     `flex items-center justify-between p-3.5 rounded-xl transition-all border group ${
                       isActive 
-                        ? 'bg-brand-blue text-white border-brand-blue shadow-md' 
+                        ? 'bg-brand-navy text-white border-brand-navy shadow-md' 
                         : 'text-slate-600 border-transparent hover:bg-white hover:border-slate-100'
                     }`
                   }
@@ -179,7 +177,7 @@ const Navbar: React.FC = () => {
                 href={`https://wa.me/${WA_PHONE}?text=${defaultMsg}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2.5 py-4 rounded-xl bg-[#25D366] text-white font-black text-xs shadow-lg active:scale-95 transition-all"
+                className="w-full flex items-center justify-center gap-2.5 py-4 rounded-xl bg-brand-green text-white font-black text-xs shadow-lg active:scale-95 transition-all"
               >
                 <WhatsAppIcon className="w-5 h-5 fill-current" />
                 {t('واتساب سريع', 'Quick WhatsApp')}
