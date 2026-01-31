@@ -5,23 +5,34 @@ interface IconProps {
   className?: string;
 }
 
+/**
+ * ThiqaLogo: هو إعادة رسم دقيق للشعار المرفق.
+ * يتكون من رمز اللانهاية (Infinity) مع تدرج لوني انسيابي ونقطتين في مركز الدوائر.
+ */
 export const ThiqaLogo: React.FC<IconProps> = ({ className }) => (
   <svg viewBox="0 0 240 120" className={className} xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <linearGradient id="thiqaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="#2EC46E" />
-        <stop offset="100%" stopColor="#1B426E" />
+      <linearGradient id="thiqaInfinityGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="15%" stopColor="#2EC46E" />
+        <stop offset="85%" stopColor="#1B426E" />
       </linearGradient>
     </defs>
+    
+    {/* رمز اللانهاية المعاد رسمه بدقة */}
     <path 
-      d="M120 60 C80 120, 20 120, 20 60 C20 0, 80 0, 120 60 C160 120, 220 120, 220 60 C220 0, 160 0, 120 60" 
+      d="M120,60 C120,60 145,15 185,15 C225,15 225,105 185,105 C145,105 120,60 120,60 C120,60 95,105 55,105 C15,105 15,15 55,15 C95,15 120,60 120,60 Z" 
       fill="none" 
-      stroke="url(#thiqaGradient)" 
-      strokeWidth="15" 
+      stroke="url(#thiqaInfinityGradient)" 
+      strokeWidth="18" 
       strokeLinecap="round"
+      strokeLinejoin="round"
     />
-    <circle cx="50" cy="60" r="10" fill="#2EC46E" />
-    <circle cx="190" cy="60" r="10" fill="#1B426E" />
+    
+    {/* النقطة اليسرى (خضراء) */}
+    <circle cx="55" cy="60" r="10" fill="#2EC46E" />
+    
+    {/* النقطة اليمنى (نيفي) */}
+    <circle cx="185" cy="60" r="10" fill="#1B426E" />
   </svg>
 );
 

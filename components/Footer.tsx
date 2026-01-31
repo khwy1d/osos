@@ -31,15 +31,15 @@ const Footer: React.FC = () => {
               <div className="w-24 h-12 flex items-center justify-center">
                 <ThiqaLogo className="w-full h-full" />
               </div>
-              <div className="flex flex-col leading-none">
-                <span className="font-black text-2xl tracking-tighter">ثقة</span>
-                <span className="text-[8px] text-brand-green font-bold uppercase tracking-[0.2em] mt-0.5">Premium Services</span>
+              <div className="flex flex-col leading-[0.85]">
+                <span className="font-black text-2xl tracking-tighter uppercase font-inter">ثقة</span>
+                <span className="text-[8px] text-brand-green font-bold uppercase tracking-[0.2em] mt-1.5 font-inter">للسفر</span>
               </div>
             </div>
             
             <p className="text-slate-400 leading-relaxed font-medium text-base max-w-sm">
               {t(
-                'ثقة للسفريات، خيارك الأول والموثوق في خدمات السفر، الموافقات الأمنية، وحجوزات الطيران والنقل.',
+                'ثقة للسفر، خيارك الأول والموثوق في خدمات السفر، الموافقات الأمنية، وحجوزات الطيران والنقل.',
                 'Thiqa Travel, your primary and trusted choice for travel services, security clearances, and flight bookings.'
               )}
             </p>
@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-[10px] font-black tracking-widest uppercase">
-          <p>© {new Date().getFullYear()} {t('ثقة للسفريات والسياحة. جميع الحقوق محفوظة.', 'Thiqa Travel & Tourism.')}</p>
+          <p>© {new Date().getFullYear()} {t('ثقة للسفر والسياحة. جميع الحقوق محفوظة.', 'Thiqa Travel & Tourism.')}</p>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
              <Link to="/about" className="hover:text-white transition-colors">{t('عن ثقة', 'About')}</Link>
              <Link to="/contact" className="hover:text-white transition-colors">{t('اتصل بنا', 'Contact')}</Link>

@@ -65,16 +65,18 @@ const Navbar: React.FC = () => {
       <nav className={`fixed w-full top-0 left-0 right-0 z-[100] transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-xl py-1' : 'bg-white py-2 border-b border-slate-50'}`}>
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="flex justify-between items-center h-14 md:h-16">
-            {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 group shrink-0">
-              <div className="w-12 h-10 md:w-16 md:h-12 flex items-center justify-center transition-all duration-500 group-hover:scale-110">
+            {/* Logo Section */}
+            <Link to="/" className="flex items-center gap-2 md:gap-4 group shrink-0">
+              <div className="w-12 h-10 md:w-16 md:h-12 flex items-center justify-center transition-all duration-500 group-hover:scale-105">
                 <ThiqaLogo className="w-full h-full" />
               </div>
-              <div className="flex flex-col leading-none">
-                <span className="text-brand-navy font-black text-lg md:text-xl tracking-tighter">
-                  {t('ثقة للسفريات', 'Thiqa Travel')}
+              <div className="flex flex-col leading-[0.85] md:leading-[0.85]">
+                <span className="text-brand-navy font-black text-lg md:text-2xl tracking-tighter uppercase font-inter">
+                  {lang === 'ar' ? 'ثقـة' : 'THIQA'}
                 </span>
-                <span className="text-[8px] text-brand-green font-bold uppercase tracking-widest mt-0.5">Premium Services</span>
+                <span className="text-[7px] md:text-[9px] text-brand-green font-bold uppercase tracking-[0.3em] mt-1 md:mt-1.5 font-inter">
+                  {lang === 'ar' ? 'للسفر' : 'TRAVEL'}
+                </span>
               </div>
             </Link>
 
@@ -106,7 +108,7 @@ const Navbar: React.FC = () => {
                 href={`https://wa.me/${WA_PHONE}?text=${defaultMsg}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:flex bg-brand-green text-white px-5 py-2.5 rounded-xl font-black transition-all hover:bg-brand-navy shadow-md items-center gap-2 text-xs md:text-sm"
+                className="hidden sm:flex bg-brand-green text-white px-5 py-2.5 rounded-xl font-black transition-all hover:bg-brand-navy shadow-lg shadow-brand-green/20 items-center gap-2 text-xs md:text-sm active:scale-95"
               >
                 <WhatsAppIcon className="w-4 h-4 fill-current" />
                 <span>{t('احجز الآن', 'Book Now')}</span>
@@ -135,10 +137,10 @@ const Navbar: React.FC = () => {
           <div className="p-6 md:p-8 flex flex-col h-full bg-brand-gray/30">
             <div className="flex justify-between items-center mb-8 pb-4 border-b border-slate-100">
               <div className="flex items-center gap-2">
-                <ThiqaLogo className="w-16 h-8" />
+                <ThiqaLogo className="w-14 h-8" />
                 <div className="flex flex-col leading-none">
-                  <span className="text-brand-navy font-black text-lg">{t('ثقة', 'Thiqa')}</span>
-                  <span className="text-[7px] text-brand-green font-bold uppercase tracking-[0.2em] mt-1">Premium Travel</span>
+                  <span className="text-brand-navy font-black text-lg uppercase font-inter">{t('ثقة', 'THIQA')}</span>
+                  <span className="text-[7px] text-brand-green font-bold uppercase tracking-[0.2em] mt-1 font-inter">{t('للسفر', 'TRAVEL')}</span>
                 </div>
               </div>
               <button onClick={() => setIsOpen(false)} className="p-2 text-slate-400 bg-white border border-slate-50 rounded-lg shadow-sm">
