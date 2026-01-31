@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
   const footerServices = SERVICES.filter(s => !s.hidden).slice(0, 6);
 
   return (
-    <footer id="contact" className="bg-slate-950 text-white pt-16 pb-10 overflow-hidden relative border-t border-white/5">
+    <footer id="contact" className="hidden bg-slate-950 text-white pt-16 pb-10 overflow-hidden relative border-t border-white/5">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-navy/10 rounded-full blur-[120px] opacity-40"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

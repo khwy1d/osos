@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="text-[13px] sm:text-[14px] lg:text-[15px]">
+<html lang="ar" dir="rtl" class="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[16px] xl:text-[17px]">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ثقة للسفريات | Thiqa Travel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>ثقة للسفر | Thiqa Travel</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script>
@@ -13,8 +13,8 @@
           extend: {
             colors: {
               brand: {
-                navy: '#1B426E', // المستخرج من الشعار
-                green: '#2EC46E', // المستخرج من الشعار
+                navy: '#1B426E',
+                green: '#2EC46E',
                 blue: '#1B426E',
                 coral: '#2EC46E',
                 gray: '#F8FAFC',
@@ -22,25 +22,13 @@
                 accent: '#2EC46E' 
               }
             },
-            fontSize: {
-              'xs': ['0.65rem', { lineHeight: '1rem' }],
-              'sm': ['0.75rem', { lineHeight: '1.2rem' }],
-              'base': ['0.85rem', { lineHeight: '1.4rem' }],
-              'lg': ['0.95rem', { lineHeight: '1.6rem' }],
-              'xl': ['1.05rem', { lineHeight: '1.75rem' }],
-              '2xl': ['1.2rem', { lineHeight: '1.8rem' }],
-              '3xl': ['1.4rem', { lineHeight: '2rem' }],
-              '4xl': ['1.8rem', { lineHeight: '2.4rem' }],
-              '5xl': ['2.2rem', { lineHeight: '2.8rem' }],
-              '6xl': ['2.8rem', { lineHeight: '1.1' }],
-            },
             fontFamily: {
               cairo: ['Cairo', 'sans-serif'],
               inter: ['Inter', 'sans-serif']
             },
             borderRadius: {
               '4xl': '2rem',
-              '5xl': '3rem',
+              '5xl': '3.5rem',
             },
             animation: {
               'float': 'float 6s ease-in-out infinite',
@@ -61,11 +49,19 @@
       }
     </script>
     <style>
+      :root {
+        --sat: env(safe-area-inset-top);
+        --sar: env(safe-area-inset-right);
+        --sab: env(safe-area-inset-bottom);
+        --sal: env(safe-area-inset-left);
+      }
       body {
         font-family: 'Cairo', 'Inter', sans-serif;
         scroll-behavior: smooth;
         background-color: #F8FAFC;
         color: #1E293B;
+        padding: var(--sat) var(--sar) var(--sab) var(--sal);
+        -webkit-tap-highlight-color: transparent;
       }
       .bg-topo {
         background-color: #F8FAFC;
@@ -76,13 +72,10 @@
         backdrop-filter: blur(10px);
         border: 1px solid rgba(226, 232, 240, 0.8);
       }
-      .brand-gradient {
-        background: linear-gradient(135deg, #2EC46E 0%, #1B426E 100%);
-      }
-      .text-brand-gradient {
-        background: linear-gradient(135deg, #2EC46E 0%, #1B426E 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+      @media (max-width: 640px) {
+        .glass-card {
+          backdrop-filter: blur(5px);
+        }
       }
     </style>
     <script type="importmap">
@@ -99,7 +92,7 @@
 }
 </script>
   </head>
-  <body class="bg-topo selection:bg-brand-navy selection:text-white">
+  <body class="bg-topo selection:bg-brand-navy selection:text-white antialiased overflow-x-hidden">
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
   </body>

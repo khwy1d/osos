@@ -26,7 +26,7 @@ import TourismPage from './pages/TourismPage';
 const App: React.FC = () => {
   return (
     <LanguageProvider>
-      <Router>
+      <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <ScrollToTop />
         <div className="min-h-screen flex flex-col selection:bg-brand-coral selection:text-white">
           <Navbar />
