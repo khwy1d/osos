@@ -31,9 +31,9 @@ const Footer: React.FC = () => {
               <div className="w-24 h-12 flex items-center justify-center">
                 <ThiqaLogo className="w-full h-full" />
               </div>
-              <div className="flex flex-col leading-[0.85]">
-                <span className="font-black text-2xl tracking-tighter uppercase font-inter">ثقة</span>
-                <span className="text-[8px] text-brand-green font-bold uppercase tracking-[0.2em] mt-1.5 font-inter">للسفر</span>
+              <div className={`flex flex-col ${lang === 'ar' ? 'leading-[1.1]' : 'leading-[0.85]'}`}>
+                <span className={`font-black text-2xl uppercase ${lang === 'ar' ? 'font-cairo' : 'font-inter tracking-tighter'}`}>ثقة</span>
+                <span className={`text-brand-green font-bold uppercase ${lang === 'ar' ? 'text-[11px] font-cairo mt-1' : 'text-[8px] tracking-[0.2em] font-inter mt-1.5'}`}>للسفر</span>
               </div>
             </div>
             

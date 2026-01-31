@@ -70,11 +70,11 @@ const Navbar: React.FC = () => {
               <div className="w-12 h-10 md:w-16 md:h-12 flex items-center justify-center transition-all duration-500 group-hover:scale-105">
                 <ThiqaLogo className="w-full h-full" />
               </div>
-              <div className="flex flex-col leading-[0.85] md:leading-[0.85]">
-                <span className="text-brand-navy font-black text-lg md:text-2xl tracking-tighter uppercase font-inter">
-                  {lang === 'ar' ? 'ثقـة' : 'THIQA'}
+              <div className={`flex flex-col ${lang === 'ar' ? 'leading-[1.1] md:leading-[1.1]' : 'leading-[0.85] md:leading-[0.85]'}`}>
+                <span className={`text-brand-navy font-black text-lg md:text-2xl uppercase ${lang === 'ar' ? 'font-cairo' : 'font-inter tracking-tighter'}`}>
+                  {lang === 'ar' ? 'ثقة' : 'THIQA'}
                 </span>
-                <span className="text-[7px] md:text-[9px] text-brand-green font-bold uppercase tracking-[0.3em] mt-1 md:mt-1.5 font-inter">
+                <span className={`text-brand-green font-extrabold uppercase ${lang === 'ar' ? 'text-[9px] md:text-[11px] font-cairo mt-0.5' : 'text-[7px] md:text-[9px] font-inter tracking-[0.3em] mt-1 md:mt-1.5'}`}>
                   {lang === 'ar' ? 'للسفر' : 'TRAVEL'}
                 </span>
               </div>
@@ -138,9 +138,9 @@ const Navbar: React.FC = () => {
             <div className="flex justify-between items-center mb-8 pb-4 border-b border-slate-100">
               <div className="flex items-center gap-2">
                 <ThiqaLogo className="w-14 h-8" />
-                <div className="flex flex-col leading-none">
-                  <span className="text-brand-navy font-black text-lg uppercase font-inter">{t('ثقة', 'THIQA')}</span>
-                  <span className="text-[7px] text-brand-green font-bold uppercase tracking-[0.2em] mt-1 font-inter">{t('للسفر', 'TRAVEL')}</span>
+                <div className={`flex flex-col ${lang === 'ar' ? 'leading-[1.1]' : 'leading-none'}`}>
+                  <span className={`text-brand-navy font-black text-lg uppercase ${lang === 'ar' ? 'font-cairo' : 'font-inter'}`}>{t('ثقة', 'THIQA')}</span>
+                  <span className={`text-brand-green font-bold uppercase ${lang === 'ar' ? 'text-[10px] font-cairo' : 'text-[7px] tracking-[0.2em] font-inter mt-1'}`}>{t('للسفر', 'TRAVEL')}</span>
                 </div>
               </div>
               <button onClick={() => setIsOpen(false)} className="p-2 text-slate-400 bg-white border border-slate-50 rounded-lg shadow-sm">
