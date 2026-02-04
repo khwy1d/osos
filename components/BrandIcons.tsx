@@ -7,13 +7,14 @@ interface IconProps {
 
 /**
  * OsosLogo: شعار أُسس
- * استخدام الشعار من الرابط الخارجي.
+ * استخدام الشعار من الرابط الخارجي الجديد.
+ * تم تكبير الشعار بنسبة 25% (scale-125)
  */
 export const OsosLogo: React.FC<IconProps> = ({ className }) => (
   <img 
-    src="https://sxzbuoxjgdzalgogsnso.supabase.co/storage/v1/object/public/images/vectorink-vectorizer-result%20(2).svg"
+    src="https://vgcmzalkmsfvkfzgvvud.supabase.co/storage/v1/object/public/images/vectorink-vectorizer-result%20(2).svg"
     alt="Osos Travel Logo"
-    className={`${className} object-contain`}
+    className={`${className} object-contain scale-125`}
   />
 );
 
