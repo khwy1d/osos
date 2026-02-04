@@ -26,9 +26,9 @@ export const SERVICES: Service[] = [
     priority: true,
     icon: <FileCheck className="w-6 h-6" />,
     title: { ar: 'الموافقات الأمنية لمصر', en: 'Egypt Security Clearance' },
-    description: { ar: 'استخراج الموافقات الأمنية الرسمية للمواطنين اليمنيين بسرعة ودقة عبر وكالة ثقة للسفر.', en: 'Official security clearances for Yemeni citizens with speed via Thiqa Travel.' },
+    description: { ar: 'استخراج الموافقات الأمنية الرسمية للمواطنين اليمنيين بسرعة ودقة عبر وكالة أُسس للسفر.', en: 'Official security clearances for Yemeni citizens with speed via Osos Travel.' },
     cta: { ar: 'اطلب موافقتك', en: 'Request Clearance' },
-    waMessage: "أريد الاستعلام عن خدمة الموافقات الأمنية لمصر من وكالة ثقة.",
+    waMessage: "أريد الاستعلام عن خدمة الموافقات الأمنية لمصر من وكالة أُسس.",
     link: '/security-clearance-egypt'
   },
   {
@@ -38,7 +38,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'السفر العلاجي', en: 'Medical Travel' },
     description: { ar: 'تنسيق طبي متكامل في مصر والأردن مع ضمان الثقة والاحترافية في التعامل.', en: 'Integrated medical coordination in Egypt & Jordan with trust and professionalism.' },
     cta: { ar: 'نسّق رحلتك', en: 'Coordinate Now' },
-    waMessage: "أريد الاستعلام عن خدمة التنسيق الطبي والسفر العلاجي لدى ثقة.",
+    waMessage: "أريد الاستعلام عن خدمة التنسيق الطبي والسفر العلاجي لدى أُسس.",
     link: '/medical-tourism'
   },
   {
@@ -46,9 +46,9 @@ export const SERVICES: Service[] = [
     priority: false,
     icon: <Plane className="w-6 h-6" />,
     title: { ar: 'تذاكر طيران', en: 'Flight Tickets' },
-    description: { ar: 'حجز طيران داخلي ودولي بأسعار منافسة وتأكيد فوري من وكالة ثقة.', en: 'Domestic and international flights with competitive rates from Thiqa agency.' },
+    description: { ar: 'حجز طيران داخلي ودولي بأسعار منافسة وتأكيد فوري من وكالة أُسس.', en: 'Domestic and international flights with competitive rates from Osos agency.' },
     cta: { ar: 'استعلم الآن', en: 'Inquire Now' },
-    waMessage: "أريد الاستعلام عن تذاكر طيران من وكالة ثقة.",
+    waMessage: "أريد الاستعلام عن تذاكر طيران من وكالة أُسس.",
     link: '/flights'
   },
   {
@@ -58,7 +58,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'السياحة', en: 'Tourism' },
     description: { ar: 'باكجات سياحية متكاملة داخل اليمن وإلى تركيا، ماليزيا، جورجيا، ومصر.', en: 'Full tour packages within Yemen and to Turkey, Malaysia, Georgia, and Egypt.' },
     cta: { ar: 'اكتشف العروض', en: 'Explore Offers' },
-    waMessage: "أريد الاستعلام عن عروض السياحة لدى ثقة.",
+    waMessage: "أريد الاستعلام عن عروض السياحة لدى أُسس.",
     link: '/tourism'
   },
   {
@@ -68,7 +68,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'الحج والعمرة', en: 'Hajj & Umrah' },
     description: { ar: 'خدمات متكاملة للحجاج والمعتمرين برؤية واضحة وإجراءات ميسرة.', en: 'Integrated services for Hajj & Umrah with clear vision and easy procedures.' },
     cta: { ar: 'احجز مكانك', en: 'Request Now' },
-    waMessage: "أريد الاستفسار عن باقات العمرة والحج من ثقة.",
+    waMessage: "أريد الاستفسار عن باقات العمرة والحج من أُسس.",
     link: '/umrah'
   },
   {
@@ -78,7 +78,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'حجز الباصات', en: 'Bus Reservations' },
     description: { ar: 'حجز باصات دولية ومحلية بأسعار منافسة وتنسيق دقيق للمواعيد.', en: 'Internal and external bus bookings with competitive rates.' },
     cta: { ar: 'احجز رحلتك', en: 'Book Transport' },
-    waMessage: "أريد حجز تذاكر باص عبر وكالة ثقة.",
+    waMessage: "أريد حجز تذاكر باص عبر وكالة أُسس.",
     link: '/transport'
   },
   {
@@ -88,7 +88,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'تأجير سيارات', en: 'Car Rental' },
     description: { ar: 'تنسيق تأجير السيارات في مصر مع دعم كامل وشروط واضحة.', en: 'Car rental coordination in Egypt with full support.' },
     cta: { ar: 'اطلب سيارة', en: 'Request Car' },
-    waMessage: "أريد الاستفسار عن تأجير السيارات في مصر عبر ثقة.",
+    waMessage: "أريد الاستفسار عن تأجير السيارات في مصر عبر أُسس.",
     link: '/car-rental'
   },
   {
@@ -98,7 +98,7 @@ export const SERVICES: Service[] = [
     title: { ar: 'خدمات عقارية', en: 'Real Estate' },
     description: { ar: 'إدارة أملاك، بيع وشراء شقق، وتأجير العقارات بمهنية في مصر واليمن.', en: 'Property management, apartment sales, and rentals.' },
     cta: { ar: 'استشرنا عقارياً', en: 'Consult Us' },
-    waMessage: "أريد الاستشارة بخصوص الخدمات العقارية لدى ثقة.",
+    waMessage: "أريد الاستشارة بخصوص الخدمات العقارية لدى أُسس.",
     link: '/real-estate'
   }
 ];

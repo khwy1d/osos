@@ -6,33 +6,42 @@ interface IconProps {
 }
 
 /**
- * ThiqaLogo: هو إعادة رسم دقيق للشعار المرفق.
- * يتكون من رمز اللانهاية (Infinity) مع تدرج لوني انسيابي ونقطتين في مركز الدوائر.
+ * OsosLogo: شعار أُسس
+ * A circular logo featuring an S-shaped road transforming into a plane.
+ * Colors: Charcoal Circle (#212121), Crimson Red Road/Plane (#D32F2F).
  */
-export const ThiqaLogo: React.FC<IconProps> = ({ className }) => (
-  <svg viewBox="0 0 240 120" className={className} xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="thiqaInfinityGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="15%" stopColor="#2EC46E" />
-        <stop offset="85%" stopColor="#1B426E" />
-      </linearGradient>
-    </defs>
-    
-    {/* رمز اللانهاية المعاد رسمه بدقة */}
+export const OsosLogo: React.FC<IconProps> = ({ className }) => (
+  <svg viewBox="0 0 100 100" className={className} xmlns="http://www.w3.org/2000/svg">
+    {/* الدائرة الخارجية - فحمي */}
+    <circle cx="50" cy="50" r="42" stroke="#212121" strokeWidth="7" fill="none" />
+
+    {/* الطريق على شكل حرف S - أحمر كرزي */}
     <path 
-      d="M120,60 C120,60 145,15 185,15 C225,15 225,105 185,105 C145,105 120,60 120,60 C120,60 95,105 55,105 C15,105 15,15 55,15 C95,15 120,60 120,60 Z" 
+      d="M 32,72 C 62,72 58,55 50,50 C 42,45 38,28 72,28" 
+      stroke="#D32F2F" 
+      strokeWidth="13" 
       fill="none" 
-      stroke="url(#thiqaInfinityGradient)" 
-      strokeWidth="18" 
       strokeLinecap="round"
-      strokeLinejoin="round"
     />
     
-    {/* النقطة اليسرى (خضراء) */}
-    <circle cx="55" cy="60" r="10" fill="#2EC46E" />
+    {/* خطوط الطريق المتقطعة - أبيض */}
+    <path 
+      d="M 32,72 C 62,72 58,55 50,50 C 42,45 38,28 70,28" 
+      stroke="#FFFFFF" 
+      strokeWidth="1.5" 
+      fill="none" 
+      strokeLinecap="round" 
+      strokeDasharray="3 4" 
+    />
     
-    {/* النقطة اليمنى (نيفي) */}
-    <circle cx="185" cy="60" r="10" fill="#1B426E" />
+    {/* الطائرة - أحمر كرزي */}
+    {/* تم رسمها في نهاية المسار (الزاوية العلوية اليمنى) */}
+    <g transform="translate(72, 28) rotate(-30)">
+      <path 
+        d="M 2,0 L 14,-3 L 20,0 L 14,3 L 2,0 Z M 8,-1 L 4,-9 L 10,-2 Z M 8,1 L 4,9 L 10,2 Z" 
+        fill="#D32F2F" 
+      />
+    </g>
   </svg>
 );
 

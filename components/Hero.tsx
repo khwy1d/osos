@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
     setLoaded(true);
   }, []);
   
-  const bookingMsg = encodeURIComponent("السلام عليكم، أريد الاستعلام عن خدمات وكالة ثقة وبدء الحجز.");
+  const bookingMsg = encodeURIComponent("السلام عليكم، أريد الاستعلام عن خدمات وكالة أُسس وبدء الحجز.");
   
   return (
     <section className="relative min-h-[85vh] lg:min-h-[75vh] flex items-center pt-24 pb-12 overflow-hidden bg-white/50 border-b border-slate-100">
@@ -37,13 +37,13 @@ const Hero: React.FC = () => {
             <div className="space-y-4 md:space-y-6">
               <h1 className={`text-4xl sm:text-5xl md:text-6xl font-black text-brand-navy leading-[1.15] tracking-tight transition-all duration-1000 delay-300 transform ${loaded ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
                 {lang === 'ar' 
-                  ? <>خدمات سفر <span className="text-brand-green">بمعايير الثقة.</span></>
-                  : <>Travel Services <span className="text-brand-green">By Thiqa Standards.</span></>}
+                  ? <>خدمات سفر <span className="text-brand-green">بمعايير أُسس.</span></>
+                  : <>Travel Services <span className="text-brand-green">By Osos Standards.</span></>}
               </h1>
               <p className={`text-base sm:text-lg text-slate-500 font-bold leading-relaxed max-w-lg mx-auto lg:mx-0 transition-all duration-1000 delay-500 transform ${loaded ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'}`}>
                 {t(
-                  'وكالة ثقة توفر لك كافة حلول السفر من موافقات أمنية، تنسيق طبي، وحجوزات طيران بوضوح تام وأمان مطلق.',
-                  'Thiqa Agency provides all travel solutions from security clearances, medical coordination, and flight bookings with full clarity.'
+                  'وكالة أُسس توفر لك كافة حلول السفر من موافقات أمنية، تنسيق طبي، وحجوزات طيران بوضوح تام وأمان مطلق.',
+                  'Osos Agency provides all travel solutions from security clearances, medical coordination, and flight bookings with full clarity.'
                 )}
               </p>
             </div>

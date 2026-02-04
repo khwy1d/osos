@@ -4,7 +4,7 @@ import { Menu, X, Home, LayoutGrid, Info, PhoneCall, Globe, ArrowLeft, ArrowRigh
 import { NavLink, Link } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
 import { NAV_LINKS, WA_PHONE } from '../constants';
-import { WhatsAppIcon, ThiqaLogo } from './BrandIcons';
+import { WhatsAppIcon, OsosLogo } from './BrandIcons';
 
 const LanguageToggle: React.FC<{ variant?: 'nav' | 'sidebar' }> = ({ variant = 'nav' }) => {
   const { lang, setLang } = useLanguage();
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const defaultMsg = encodeURIComponent("السلام عليكم ، اريد الاستعلام عن خدمات وكالة ثقة.");
+  const defaultMsg = encodeURIComponent("السلام عليكم ، اريد الاستعلام عن خدمات وكالة أُسس.");
 
   const getIcon = (key: string) => {
     switch(key) {
@@ -68,11 +68,11 @@ const Navbar: React.FC = () => {
             {/* Logo Section */}
             <Link to="/" className="flex items-center gap-2 md:gap-4 group shrink-0">
               <div className="w-12 h-10 md:w-18 md:h-14 flex items-center justify-center transition-all duration-500 group-hover:scale-105">
-                <ThiqaLogo className="w-full h-full" />
+                <OsosLogo className="w-full h-full" />
               </div>
               <div className={`flex flex-col ${lang === 'ar' ? 'leading-[0.9] md:leading-[0.9]' : 'leading-[0.8] md:leading-[0.8]'}`}>
                 <span className={`text-brand-navy font-black text-xl md:text-3xl uppercase ${lang === 'ar' ? 'font-cairo tracking-tight' : 'font-inter tracking-tighter'}`}>
-                  {lang === 'ar' ? 'ثقـة' : 'THIQA'}
+                  {lang === 'ar' ? 'أُسس' : 'OSOS'}
                 </span>
                 <span className={`text-brand-green font-black uppercase ${lang === 'ar' ? 'text-[9px] md:text-[12px] font-cairo mt-1' : 'text-[7px] md:text-[10px] font-inter tracking-[0.4em] mt-1 md:mt-1.5'}`}>
                   {lang === 'ar' ? 'للسفر' : 'TRAVEL'}
@@ -80,14 +80,14 @@ const Navbar: React.FC = () => {
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-10">
+            {/* Desktop Navigation (Visible on Tablet and Desktop - md breakpoint) */}
+            <div className="hidden md:flex items-center gap-6 lg:gap-10">
               {NAV_LINKS.map((link) => (
                 <NavLink
                   key={link.key}
                   to={link.href}
                   className={({ isActive }) => 
-                    `text-[15px] font-extrabold transition-all relative group py-2 ${isActive ? 'text-brand-navy' : 'text-slate-500 hover:text-brand-navy'}`
+                    `text-sm lg:text-[15px] font-extrabold transition-all relative group py-2 ${isActive ? 'text-brand-navy' : 'text-slate-500 hover:text-brand-navy'}`
                   }
                 >
                   {({ isActive }) => (
@@ -102,44 +102,46 @@ const Navbar: React.FC = () => {
 
             {/* Actions */}
             <div className="flex items-center gap-2 md:gap-6">
-              <LanguageToggle />
+              <div className="hidden sm:block">
+                <LanguageToggle />
+              </div>
               
               <a
                 href={`https://wa.me/${WA_PHONE}?text=${defaultMsg}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:flex bg-brand-green text-white px-7 py-3.5 rounded-2xl font-black transition-all hover:bg-brand-navy shadow-lg shadow-brand-green/20 items-center gap-2.5 text-sm active:scale-95"
+                className="hidden md:flex bg-brand-green text-white px-5 lg:px-7 py-2.5 lg:py-3.5 rounded-2xl font-black transition-all hover:bg-brand-navy shadow-lg shadow-brand-green/20 items-center gap-2 lg:gap-2.5 text-xs lg:text-sm active:scale-95"
               >
-                <WhatsAppIcon className="w-4.5 h-4.5 fill-current" />
+                <WhatsAppIcon className="w-4 h-4 lg:w-4.5 lg:h-4.5 fill-current" />
                 <span>{t('احجز الآن', 'Book Now')}</span>
               </a>
 
-              {/* Mobile Menu Toggle */}
+              {/* Mobile Menu Toggle (Visible only on phone - below md breakpoint) */}
               <button 
                 onClick={() => setIsOpen(true)} 
-                className="lg:hidden p-2.5 text-brand-navy bg-slate-100 rounded-2xl border border-slate-200 active:scale-95 transition-all"
+                className="md:hidden p-2 text-brand-navy bg-slate-100 rounded-xl border border-slate-200 active:scale-95 transition-all"
               >
-                <Menu className="w-6 h-6" />
+                <Menu className="w-5 h-5" />
               </button>
             </div>
           </div>
         </div>
       </nav>
 
-      {/* Mobile Sidebar */}
-      <div className={`fixed inset-0 z-[200] lg:hidden transition-all duration-500 ${isOpen ? 'visible' : 'invisible'}`}>
+      {/* Mobile Sidebar (Active only below md breakpoint) */}
+      <div className={`fixed inset-0 z-[200] md:hidden transition-all duration-500 ${isOpen ? 'visible' : 'invisible'}`}>
         <div 
           className={`absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'}`} 
           onClick={() => setIsOpen(false)}
         ></div>
         
         <div className={`absolute top-0 right-0 h-full w-[85%] max-w-sm bg-white shadow-3xl transition-transform duration-500 ease-out flex flex-col ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-          <div className="p-8 md:p-10 flex flex-col h-full bg-brand-gray/30">
+          <div className="p-8 flex flex-col h-full bg-brand-gray/30">
             <div className="flex justify-between items-center mb-10 pb-6 border-b border-slate-100">
               <div className="flex items-center gap-3">
-                <ThiqaLogo className="w-16 h-10" />
+                <OsosLogo className="w-16 h-10" />
                 <div className={`flex flex-col ${lang === 'ar' ? 'leading-[0.9]' : 'leading-none'}`}>
-                  <span className={`text-brand-navy font-black text-xl uppercase ${lang === 'ar' ? 'font-cairo' : 'font-inter'}`}>{t('ثقة', 'THIQA')}</span>
+                  <span className={`text-brand-navy font-black text-xl uppercase ${lang === 'ar' ? 'font-cairo' : 'font-inter'}`}>{t('أُسس', 'OSOS')}</span>
                   <span className={`text-brand-green font-bold uppercase ${lang === 'ar' ? 'text-[11px] font-cairo' : 'text-[8px] tracking-[0.2em] font-inter mt-1'}`}>{t('للسفر', 'TRAVEL')}</span>
                 </div>
               </div>

@@ -6,7 +6,7 @@ import { WA_PHONE } from '../constants';
 
 const AboutPage: React.FC = () => {
   const { t, lang } = useLanguage();
-  const contactMsg = encodeURIComponent("السلام عليكم ، اريد الاستعلام عن خدمات وكالة ثقة.");
+  const contactMsg = encodeURIComponent("السلام عليكم ، اريد الاستعلام عن خدمات وكالة أُسس.");
 
   const features = [
     { icon: <Briefcase className="w-6 h-6" />, label: { ar: 'الاحترافية', en: 'Professionalism' } },
@@ -21,17 +21,17 @@ const AboutPage: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-brand-green/10 text-brand-green px-4 py-1.5 rounded-full text-sm font-bold mb-6">
             <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse"></span>
-            {t('ثقة تسافر معك', 'Thiqa Travels With You')}
+            {t('أُسس تسافر معك', 'Osos Travels With You')}
           </div>
           
           <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
-            {t('عنّا – وكالة ثقة', 'About Us – Thiqa Agency')}
+            {t('عنّا – وكالة أُسس', 'About Us – Osos Agency')}
           </h1>
           
           <p className="text-xl md:text-2xl text-slate-600 font-medium leading-relaxed max-w-3xl mx-auto">
             {t(
-              'ثقة هي وكالة سفر يمنية رائدة متخصصة في تقديم خدمات السفر المتكاملة، نؤمن بأن الثقة هي أساس كل رحلة ناجحة، لذا نكرس جهودنا لتوفير أفضل الحلول اللوجستية والطبية والسياحية لعملائنا بمهنية عالية.',
-              'Thiqa is a leading Yemeni travel agency specialized in providing integrated travel services. We believe that trust is the foundation of every successful trip.'
+              'أُسس هي وكالة سفر يمنية رائدة متخصصة في تقديم خدمات السفر المتكاملة، نؤمن بأن الثقة هي أساس كل رحلة ناجحة، لذا نكرس جهودنا لتوفير أفضل الحلول اللوجستية والطبية والسياحية لعملائنا بمهنية عالية.',
+              'Osos is a leading Yemeni travel agency specialized in providing integrated travel services. We believe that trust is the foundation of every successful trip.'
             )}
           </p>
         </div>
@@ -66,8 +66,8 @@ const AboutPage: React.FC = () => {
                 <h2 className="text-3xl font-black text-slate-900 mb-4">{t('مهمتنا', 'Our Mission')}</h2>
                 <p className="text-lg text-slate-600 font-medium leading-relaxed">
                   {t(
-                    'تبسيط إجراءات السفر والخدمات اللوجستية عبر تقديم حلول واقعية، شفافة، وسريعة تحت شعار الثقة.',
-                    'Simplifying travel procedures and logistics by providing realistic, transparent, and fast solutions.'
+                    'تبسيط إجراءات السفر والخدمات اللوجستية عبر تقديم حلول واقعية، شفافة، وسريعة تحت شعار أُسس.',
+                    'Simplifying travel procedures and logistics by providing realistic, transparent, and fast solutions under Osos banner.'
                   )}
                 </p>
               </div>
@@ -88,7 +88,7 @@ const AboutPage: React.FC = () => {
                   className="brand-gradient text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl hover:scale-105 transition-transform inline-flex items-center gap-3"
                >
                   <MessageCircle className="w-6 h-6" />
-                  {t('تواصل مع فريق ثقة', 'Contact Thiqa Team')}
+                  {t('تواصل مع فريق أُسس', 'Contact Osos Team')}
                </a>
             </div>
          </div>

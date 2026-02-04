@@ -24,7 +24,7 @@ const Breadcrumbs: React.FC = () => {
       case 'umrah': return t('تأشيرات عمرة', 'Umrah Visas');
       case 'real-estate': return t('خدمات عقارية', 'Real Estate');
       case 'car-rental': return t('تأجير سيارات', 'Car Rental');
-      case 'about': return t('عن ثقة', 'About Thiqa');
+      case 'about': return t('عن أُسس', 'About Osos');
       case 'contact': return t('اتصل بنا', 'Contact');
       default: return slug;
     }
