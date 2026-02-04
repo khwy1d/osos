@@ -42,12 +42,11 @@ const HomePage: React.FC = () => {
           </div>
         </ScrollReveal>
       </div>
-      <Services />
-      <HowItWorks />
-      <WhyChooseUs />
       
-      {/* Social Media Card Section */}
-      <section className="py-20 bg-slate-50">
+      <Services />
+
+      {/* Social Media Card Section - Moved Here */}
+      <section className="py-20 bg-slate-50 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-5 sm:px-10">
           <ScrollReveal direction="up">
             <div className="bg-white rounded-[3rem] p-10 md:p-14 text-center shadow-lg border border-slate-100 relative overflow-hidden">
@@ -83,6 +82,9 @@ const HomePage: React.FC = () => {
           </ScrollReveal>
         </div>
       </section>
+
+      <HowItWorks />
+      <WhyChooseUs />
     </>
   );
 };
