@@ -15,9 +15,6 @@ const WhyChooseUs: React.FC = () => {
           <div className="absolute top-0 right-0 w-64 h-64 bg-brand-coral/10 rounded-full blur-[80px]"></div>
           
           <div className="relative z-10 text-center mb-16 space-y-2">
-            <h2 className="text-brand-coral font-black text-[9px] uppercase tracking-[0.3em]">
-              {t('لماذا تختار واصِل؟', 'WHY CHOOSE WASIL?')}
-            </h2>
             <h3 className="text-3xl font-black text-white tracking-tighter">
               {t('نحن شريكك الموثوق في كل خطوة', 'Your Trusted Partner Every Step')}
             </h3>

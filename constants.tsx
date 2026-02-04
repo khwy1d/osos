@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Plane, Bus, HeartPulse, FileCheck, Landmark, Car, Building2, MapPin, Clock, BadgeDollarSign, Headphones, Users, Briefcase, Palmtree } from 'lucide-react';
+import { Plane, Bus, HeartPulse, FileCheck, Moon, Car, Building2, Palmtree, Clock, BadgeDollarSign, Headphones } from 'lucide-react';
 import { Service, NavLink, Offer, Step } from './types';
 
 export const WA_PHONE = '967776002190';
@@ -36,7 +36,7 @@ export const SERVICES: Service[] = [
     priority: true,
     icon: <HeartPulse className="w-6 h-6" />,
     title: { ar: 'السفر العلاجي', en: 'Medical Travel' },
-    description: { ar: 'تنسيق طبي متكامل في مصر والأردن مع ضمان الثقة والاحترافية في التعامل.', en: 'Integrated medical coordination in Egypt & Jordan with trust and professionalism.' },
+    description: { ar: 'تنسيق طبي متكامل في مصر مع ضمان الثقة والاحترافية في التعامل.', en: 'Integrated medical coordination in Egypt with trust and professionalism.' },
     cta: { ar: 'نسّق رحلتك', en: 'Coordinate Now' },
     waMessage: "أريد الاستعلام عن خدمة التنسيق الطبي والسفر العلاجي لدى أُسس.",
     link: '/medical-tourism'
@@ -56,7 +56,7 @@ export const SERVICES: Service[] = [
     priority: false,
     icon: <Palmtree className="w-6 h-6" />,
     title: { ar: 'السياحة', en: 'Tourism' },
-    description: { ar: 'باكجات سياحية متكاملة داخل اليمن وإلى تركيا، ماليزيا، جورجيا، ومصر.', en: 'Full tour packages within Yemen and to Turkey, Malaysia, Georgia, and Egypt.' },
+    description: { ar: 'باكجات سياحية متكاملة داخل اليمن وإلى أفضل الوجهات السياحية العالمية.', en: 'Full tour packages within Yemen and to top global destinations.' },
     cta: { ar: 'اكتشف العروض', en: 'Explore Offers' },
     waMessage: "أريد الاستعلام عن عروض السياحة لدى أُسس.",
     link: '/tourism'
@@ -64,7 +64,7 @@ export const SERVICES: Service[] = [
   {
     id: 'umrah',
     priority: false,
-    icon: <Landmark className="w-6 h-6" />,
+    icon: <Moon className="w-6 h-6" />,
     title: { ar: 'الحج والعمرة', en: 'Hajj & Umrah' },
     description: { ar: 'خدمات متكاملة للحجاج والمعتمرين برؤية واضحة وإجراءات ميسرة.', en: 'Integrated services for Hajj & Umrah with clear vision and easy procedures.' },
     cta: { ar: 'احجز مكانك', en: 'Request Now' },

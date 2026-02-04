@@ -14,9 +14,6 @@ const Services: React.FC = () => {
       <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-12">
         <ScrollReveal>
           <div className="text-center mb-16 md:mb-20 space-y-4">
-            <h2 className="text-brand-coral font-black tracking-[0.2em] uppercase text-xs">
-              {t('خدمات واصل المعتمدة', 'WASIL CERTIFIED SERVICES')}
-            </h2>
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-brand-blue tracking-tight leading-tight">
               {t('حلول ذكية لرحلتك القادمة', 'Smart Travel Solutions')}
             </h3>

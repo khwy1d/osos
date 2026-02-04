@@ -7,42 +7,14 @@ interface IconProps {
 
 /**
  * OsosLogo: شعار أُسس
- * A circular logo featuring an S-shaped road transforming into a plane.
- * Colors: Charcoal Circle (#212121), Crimson Red Road/Plane (#D32F2F).
+ * Updated to use the official image logo.
  */
 export const OsosLogo: React.FC<IconProps> = ({ className }) => (
-  <svg viewBox="0 0 100 100" className={className} xmlns="http://www.w3.org/2000/svg">
-    {/* الدائرة الخارجية - فحمي */}
-    <circle cx="50" cy="50" r="42" stroke="#212121" strokeWidth="7" fill="none" />
-
-    {/* الطريق على شكل حرف S - أحمر كرزي */}
-    <path 
-      d="M 32,72 C 62,72 58,55 50,50 C 42,45 38,28 72,28" 
-      stroke="#D32F2F" 
-      strokeWidth="13" 
-      fill="none" 
-      strokeLinecap="round"
-    />
-    
-    {/* خطوط الطريق المتقطعة - أبيض */}
-    <path 
-      d="M 32,72 C 62,72 58,55 50,50 C 42,45 38,28 70,28" 
-      stroke="#FFFFFF" 
-      strokeWidth="1.5" 
-      fill="none" 
-      strokeLinecap="round" 
-      strokeDasharray="3 4" 
-    />
-    
-    {/* الطائرة - أحمر كرزي */}
-    {/* تم رسمها في نهاية المسار (الزاوية العلوية اليمنى) */}
-    <g transform="translate(72, 28) rotate(-30)">
-      <path 
-        d="M 2,0 L 14,-3 L 20,0 L 14,3 L 2,0 Z M 8,-1 L 4,-9 L 10,-2 Z M 8,1 L 4,9 L 10,2 Z" 
-        fill="#D32F2F" 
-      />
-    </g>
-  </svg>
+  <img 
+    src="https://vgcmzalkmsfvkfzgvvud.supabase.co/storage/v1/object/public/images/1770231649400%20(2)%20(3).png" 
+    alt="Osos Travel Logo" 
+    className={className} 
+  />
 );
 
 export const WhatsAppIcon: React.FC<IconProps> = ({ className }) => (

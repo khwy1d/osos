@@ -18,9 +18,6 @@ const LiveOffers: React.FC = () => {
     <section id="offers" className="py-24 bg-gray-50 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center md:text-start mb-16 space-y-4">
-          <h2 className="text-brand-coral font-black tracking-widest uppercase text-sm">
-            {t('عروض حية', 'LIVE OFFERS')}
-          </h2>
           <h3 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
             {t('احجز مقعدك في الرحلات القادمة', 'Book Your Seat Now')}
           </h3>

@@ -25,10 +25,6 @@ const FlightsPage: React.FC = () => {
       {/* Hero Section */}
       <section className="bg-brand-blue py-20 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 relative z-10 text-center space-y-8">
-          <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20 text-xs font-bold uppercase tracking-widest">
-            <Plane className="w-4 h-4 text-brand-coral" />
-            {t('تأكيد فوري للحجوزات', 'Instant Ticket Confirmation')}
-          </div>
           <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tighter">
             {t('حجز تذاكر طيران محلية ودولية', 'Flight Tickets Worldwide')}
           </h1>
@@ -53,7 +49,7 @@ const FlightsPage: React.FC = () => {
               <div className="space-y-6">
                 <h2 className="text-3xl font-black text-brand-blue">{t('لماذا تحجز معنا؟', 'Why Book With Us?')}</h2>
                 <p className="text-lg text-slate-600 font-medium leading-relaxed">
-                  {t('بصفتنا وكلاء معتمدون، نوفر لك إمكانية الوصول المباشر لأنظمة الحجز العالمية والمحلية، مما يضمن لك الحصول على أقل سعر متاح مع إمكانية التعديل والإلغاء الميسر.', 'As certified agents, we provide direct access to global booking systems ensuring the best prices.')}
+                  {t('بصفتنا وكلاء معتمدون، نوفر لك إمكانية الوصول المباشر لأنظمة الحجز العالمية والمحلية، مما يضمن لك الحصول على أقل سعر متاح.', 'As certified agents, we provide direct access to global booking systems ensuring the best prices.')}
                 </p>
               </div>
 

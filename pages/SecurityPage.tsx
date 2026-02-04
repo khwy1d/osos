@@ -14,10 +14,6 @@ const SecurityPage: React.FC = () => {
       {/* Hero Section */}
       <section className="bg-brand-blue py-20 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 relative z-10 text-center space-y-8">
-          <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20 text-xs font-bold uppercase tracking-widest">
-            <ShieldAlert className="w-4 h-4 text-brand-coral" />
-            {t('إجراءات رسمية وموثقة', 'Official & Documented')}
-          </div>
           <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tighter">
             {t('الموافقات الأمنية لدخول مصر', 'Egypt Security Clearance')}
           </h1>

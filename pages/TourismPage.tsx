@@ -15,15 +15,11 @@ const TourismPage: React.FC = () => {
       <section className="bg-brand-blue py-14 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-topo"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg border border-white/10 text-[9px] font-bold uppercase tracking-widest">
-            <Palmtree className="w-3.5 h-3.5 text-brand-coral" />
-            {t('رحلات ترفيهية واستكشافية مذهلة', 'Amazing Leisure & Exploration')}
-          </div>
           <h1 className="text-3xl md:text-5xl font-black leading-tight tracking-tighter">
             {t('السياحة', 'Tourism')}
           </h1>
           <p className="text-sm md:text-base text-white/80 max-w-2xl mx-auto font-bold opacity-90">
-            {t('استكشف سحر اليمن وجمال العالم معنا، نقدم باكجات سياحية متكاملة في تركيا، مصر، ماليزيا، وجورجيا بأفضل الأسعار.', 'Explore Yemen and the world with our integrated tour packages in Turkey, Egypt, and Malaysia.')}
+            {t('استكشف سحر اليمن وجمال العالم معنا، نقدم باكجات سياحية متكاملة إلى أفضل الوجهات السياحية العالمية بأفضل الأسعار.', 'Explore Yemen and the world with our integrated tour packages to top global destinations.')}
           </p>
           <div className="pt-2 flex justify-center">
             <a href={`https://wa.me/${WA_PHONE}?text=${mainMsg}`} target="_blank" rel="noopener noreferrer" className="bg-brand-accent text-white px-8 py-3.5 rounded-xl font-black text-sm flex items-center gap-2.5 shadow-xl hover:scale-105 transition-all">
@@ -49,7 +45,7 @@ const TourismPage: React.FC = () => {
               <div className="grid sm:grid-cols-2 gap-6">
                 {[
                   { icon: <MapPin />, title: t('سياحة اليمن', 'Yemen Tours'), desc: t('رحلات استكشافية لأجمل المحميات والمدن اليمنية.', 'Trips to Yemen\'s beautiful nature.') },
-                  { icon: <Plane />, title: t('وجهات عالمية', 'Global Destinations'), desc: t('عروض حصرية لتركيا، مصر، وماليزيا.', 'Exclusive global tour offers.') },
+                  { icon: <Plane />, title: t('وجهات عالمية', 'Global Destinations'), desc: t('عروض حصرية لأجمل الوجهات السياحية.', 'Exclusive global tour offers.') },
                   { icon: <Compass />, title: t('رحلات عائلية', 'Family Packages'), desc: t('باكجات مخصصة توفر الخصوصية والراحة.', 'Custom family packages.') },
                   { icon: <Map />, title: t('جولات يومية', 'Daily Tours'), desc: t('تنسيق جولات مع مرشدين سياحيين محليين.', 'Organized tours with guides.') },
                 ].map((item, idx) => (

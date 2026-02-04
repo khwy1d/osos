@@ -29,21 +29,17 @@ const Hero: React.FC = () => {
           
           {/* Text Content */}
           <div className="lg:col-span-3 space-y-6 md:space-y-8 text-center lg:text-start">
-            <div className={`inline-flex items-center gap-2 bg-brand-navy/5 px-4 py-2 rounded-xl text-brand-navy text-[10px] md:text-xs font-black uppercase tracking-widest transition-all duration-1000 transform ${loaded ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0'}`}>
-              <ShieldCheck className="w-4 h-4 text-brand-green" />
-              {t('شريكك الموثوق للسفر والخدمات اللوجستية', 'Your Trusted Travel & Logistics Partner')}
-            </div>
             
             <div className="space-y-4 md:space-y-6">
               <h1 className={`text-4xl sm:text-5xl md:text-6xl font-black text-brand-navy leading-[1.15] tracking-tight transition-all duration-1000 delay-300 transform ${loaded ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
                 {lang === 'ar' 
-                  ? <>خدمات سفر <span className="text-brand-green">بمعايير أُسس.</span></>
-                  : <>Travel Services <span className="text-brand-green">By Osos Standards.</span></>}
+                  ? <>رحلتك.. <span className="text-brand-green">تُبنى على أُسس.</span></>
+                  : <>Your Journey.. <span className="text-brand-green">Built on Osos.</span></>}
               </h1>
               <p className={`text-base sm:text-lg text-slate-500 font-bold leading-relaxed max-w-lg mx-auto lg:mx-0 transition-all duration-1000 delay-500 transform ${loaded ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'}`}>
                 {t(
-                  'وكالة أُسس توفر لك كافة حلول السفر من موافقات أمنية، تنسيق طبي، وحجوزات طيران بوضوح تام وأمان مطلق.',
-                  'Osos Agency provides all travel solutions from security clearances, medical coordination, and flight bookings with full clarity.'
+                  'من الموافقات الأمنية إلى التنسيق الطبي وحجوزات الطيران؛ نوفر لك حلولاً متكاملة بوضوح تام وأمان مُطلق.',
+                  'From security clearances to medical coordination and flight bookings; we provide integrated solutions with full clarity and absolute safety.'
                 )}
               </p>
             </div>

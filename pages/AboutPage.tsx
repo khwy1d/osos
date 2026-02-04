@@ -19,11 +19,6 @@ const AboutPage: React.FC = () => {
     <div className="pt-10">
       <section className="bg-white py-20 relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 bg-brand-green/10 text-brand-green px-4 py-1.5 rounded-full text-sm font-bold mb-6">
-            <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse"></span>
-            {t('أُسس تسافر معك', 'Osos Travels With You')}
-          </div>
-          
           <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
             {t('عنّا – وكالة أُسس', 'About Us – Osos Agency')}
           </h1>

@@ -10,9 +10,6 @@ const HowItWorks: React.FC = () => {
     <section className="py-24 md:py-32 relative bg-brand-blue/[0.02]">
       <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-12">
         <div className="text-center mb-16 md:mb-24 space-y-4">
-          <h2 className="text-brand-coral font-black tracking-widest uppercase text-xs">
-            {t('سهولة الإجراءات', 'EASY PROCESS')}
-          </h2>
           <h3 className="text-3xl sm:text-4xl font-black text-brand-blue tracking-tight">
             {t('أربع خطوات لرحلة آمنة', 'Four Steps to a Safe Trip')}
           </h3>

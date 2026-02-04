@@ -9,7 +9,7 @@ const MedicalTourism: React.FC = () => {
   const medicalWaLink = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent("السلام عليكم، أريد الاستفسار عن خدمة السفر العلاجي والسياحة.")}`;
 
   const trustPoints = [
-    { icon: <Stethoscope className="w-4 h-4" />, ar: 'تنسيق مواعيد مع أفضل الاستشاريين في القاهرة وعمان', en: 'Consultant appointments in Cairo & Amman' },
+    { icon: <Stethoscope className="w-4 h-4" />, ar: 'تنسيق مواعيد مع أفضل الاستشاريين في القاهرة', en: 'Consultant appointments in Cairo' },
     { icon: <Hospital className="w-4 h-4" />, ar: 'خصومات حصرية تصل لـ 20% على التحاليل والأشعة', en: 'Up to 20% off on diagnostic tests' },
     { icon: <UserCheck className="w-4 h-4" />, ar: 'مرافق طبي متخصص لاستقبالك ومتابعة حالتك', en: 'Dedicated medical coordinator' },
     { icon: <ShieldCheck className="w-4 h-4" />, ar: 'إجراءات سفر ميسرة وسريعة للمرضى ومرافقيهم', en: 'Simplified travel for patients' },
@@ -31,16 +31,13 @@ const MedicalTourism: React.FC = () => {
 
           <div className="text-white space-y-8">
             <div className="space-y-3">
-              <h2 className="text-brand-coral font-black tracking-widest uppercase text-xs">
-                {t('صحتكم أولوية', 'YOUR HEALTH PRIORITY')}
-              </h2>
               <h3 className="text-3xl md:text-5xl font-black leading-tight tracking-tight">
                 {t('السفر العلاجي والسياحة.. رعاية بلا حدود', 'Medical Travel & Tourism.. Boundless Care')}
               </h3>
             </div>
             
             <p className="text-lg text-white/80 leading-relaxed font-semibold italic border-r-2 border-brand-coral pr-5">
-              {t('نوفر لكم جسراً آمناً للرعاية الطبية المتميزة في مصر والأردن، لضمان نتائج مطمئنة وراحة تامة.', 'A secure bridge to premium medical care in Egypt & Jordan.')}
+              {t('نوفر لكم جسراً آمناً للرعاية الطبية المتميزة في مصر، لضمان نتائج مطمئنة وراحة تامة.', 'A secure bridge to premium medical care in Egypt.')}
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">

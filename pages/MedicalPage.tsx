@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
-import { Stethoscope, Hospital, ClipboardList, ShieldCheck, CheckCircle, HeartPulse } from 'lucide-react';
+import { Stethoscope, Hospital, ClipboardList, ShieldCheck, CheckCircle } from 'lucide-react';
 import { WA_PHONE } from '../constants';
 import { WhatsAppIcon } from '../components/BrandIcons';
 
@@ -15,15 +15,11 @@ const MedicalPage: React.FC = () => {
       <section className="bg-brand-blue py-14 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-topo"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg border border-white/10 text-[9px] font-bold uppercase tracking-widest">
-            <HeartPulse className="w-3.5 h-3.5 text-brand-coral" />
-            {t('رعاية طبية يمنية بمستويات عالمية', 'Global Standard Medical Care')}
-          </div>
           <h1 className="text-3xl md:text-5xl font-black leading-tight tracking-tighter">
-            {t('السفر العلاجي (مصر والأردن)', 'Medical Travel')}
+            {t('السفر العلاجي (مصر)', 'Medical Travel (Egypt)')}
           </h1>
           <p className="text-sm md:text-base text-white/80 max-w-2xl mx-auto font-bold opacity-90">
-            {t('نحن بوابتك لأفضل المستشفيات والاستشاريين في القاهرة وعمان بأسعار مدروسة وتنسيق دقيق يضمن راحتك.', 'Your gateway to top hospitals in Cairo & Amman with professional coordination.')}
+            {t('نحن بوابتك لأفضل المستشفيات والاستشاريين في القاهرة بأسعار مدروسة وتنسيق دقيق يضمن راحتك.', 'Your gateway to top hospitals in Cairo with professional coordination.')}
           </p>
           <div className="pt-2 flex justify-center">
             <a href={`https://wa.me/${WA_PHONE}?text=${mainMsg}`} target="_blank" rel="noopener noreferrer" className="bg-brand-accent text-white px-8 py-3.5 rounded-xl font-black text-sm flex items-center gap-2.5 shadow-xl hover:scale-105 transition-all">
