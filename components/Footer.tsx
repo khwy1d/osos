@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
 import { MapPin, Phone, ArrowRight } from 'lucide-react';
-import { SERVICES, WA_PHONE, DISPLAY_PHONE, FACEBOOK_LINK, INSTAGRAM_LINK } from '../constants';
+import { SERVICES, WA_PHONE, DISPLAY_PHONE, FACEBOOK_LINK, INSTAGRAM_LINK, TIKTOK_LINK } from '../constants';
 import { WhatsAppIcon, TikTokIcon, XIcon, FacebookIcon, InstagramIcon, OsosLogo } from './BrandIcons';
 
 const Footer: React.FC = () => {
@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
     { icon: <WhatsAppIcon className="w-5 h-5" />, label: 'WhatsApp', link: `https://wa.me/${WA_PHONE}` },
     { icon: <FacebookIcon className="w-5 h-5" />, label: 'Facebook', link: FACEBOOK_LINK },
     { icon: <InstagramIcon className="w-5 h-5" />, label: 'Instagram', link: INSTAGRAM_LINK },
-    { icon: <TikTokIcon className="w-5 h-5" />, label: 'TikTok', link: '#' },
+    { icon: <TikTokIcon className="w-5 h-5" />, label: 'TikTok', link: TIKTOK_LINK },
     { icon: <XIcon className="w-5 h-5" />, label: 'X (Twitter)', link: '#' }
   ];
 
@@ -131,4 +131,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-    
