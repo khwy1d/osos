@@ -28,9 +28,9 @@ const App: React.FC = () => {
     <LanguageProvider>
       <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <ScrollToTop />
-        <div className="min-h-screen flex flex-col selection:bg-brand-coral selection:text-white">
+        <div className="min-h-screen flex flex-col selection:bg-brand-green selection:text-white bg-white">
           <Navbar />
-          <div className="mt-16 md:mt-32 flex-1 flex flex-col">
+          <div className="mt-[80px] flex-1 flex flex-col">
             <Breadcrumbs />
             <main className="flex-1">
               <Routes>
