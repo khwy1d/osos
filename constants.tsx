@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Plane, Bus, HeartPulse, FileCheck, Moon, Car, Building2, Palmtree, Clock, BadgeDollarSign, Headphones } from 'lucide-react';
-import { Service, NavLink, Offer, Step } from './types';
+import { Service, NavLink, Step, Offer } from './types';
 
 export const WA_PHONE = '967776002190';
 export const DISPLAY_PHONE = '+967 776 002 190';
@@ -110,18 +110,25 @@ export const SERVICES: Service[] = [
 
 export const LIVE_OFFERS: Offer[] = [
   {
-    id: 'offer-1',
-    route: { ar: 'صنعاء ⟵ القاهرة', en: 'Sanaa ⟵ Cairo' },
-    day: { ar: 'كل إثنين وخميس', en: 'Every Mon & Thu' },
-    price: '$380',
+    id: 1,
     type: 'Flight',
+    route: { ar: 'صنعاء - عمان - صنعاء', en: 'Sanaa - Amman - Sanaa' },
+    price: '$650',
+    day: { ar: 'الإثنين والأربعاء', en: 'Monday & Wednesday' }
   },
   {
-    id: 'offer-2',
-    route: { ar: 'تعز ⟵ الرياض', en: 'Taiz ⟵ Riyadh' },
-    day: { ar: 'يومياً', en: 'Daily' },
-    price: '450 SAR',
+    id: 2,
     type: 'Bus',
+    route: { ar: 'اليمن - السعودية', en: 'Yemen - Saudi Arabia' },
+    price: '300 SAR',
+    day: { ar: 'رحلات يومية', en: 'Daily Trips' }
+  },
+  {
+    id: 3,
+    type: 'Flight',
+    route: { ar: 'عدن - القاهرة - عدن', en: 'Aden - Cairo - Aden' },
+    price: '$580',
+    day: { ar: 'الأحد والثلاثاء', en: 'Sunday & Tuesday' }
   }
 ];
 

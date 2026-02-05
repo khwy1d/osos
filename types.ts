@@ -21,17 +21,16 @@ export interface Step {
   desc: Record<Language, string>;
 }
 
-export interface Offer {
-  id: string;
-  route: Record<Language, string>;
-  day: Record<Language, string>;
-  price: string;
-  type: 'Bus' | 'Flight';
-  badge?: Record<Language, string>;
-}
-
 export interface NavLink {
   key: string;
   label: Record<Language, string>;
   href: string;
+}
+
+export interface Offer {
+  id: number;
+  type: 'Flight' | 'Bus';
+  route: Record<Language, string>;
+  price: string;
+  day: Record<Language, string>;
 }
