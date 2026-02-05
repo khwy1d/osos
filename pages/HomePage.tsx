@@ -6,7 +6,7 @@ import Services from '../components/Services';
 import WhyChooseUs from '../components/WhyChooseUs';
 import { useLanguage } from '../components/LanguageContext';
 import ScrollReveal from '../components/ScrollReveal';
-import { WA_PHONE } from '../constants';
+import { WA_PHONE, FACEBOOK_LINK, INSTAGRAM_LINK } from '../constants';
 import { WhatsAppIcon, FacebookIcon, InstagramIcon, TikTokIcon, XIcon } from '../components/BrandIcons';
 
 const HomePage: React.FC = () => {
@@ -14,8 +14,8 @@ const HomePage: React.FC = () => {
 
   const socialLinks = [
     { icon: <WhatsAppIcon className="w-6 h-6" />, name: 'WhatsApp', link: `https://wa.me/${WA_PHONE}`, color: 'hover:bg-[#25D366] hover:text-white' },
-    { icon: <FacebookIcon className="w-6 h-6" />, name: 'Facebook', link: '#', color: 'hover:bg-[#1877F2] hover:text-white' },
-    { icon: <InstagramIcon className="w-6 h-6" />, name: 'Instagram', link: '#', color: 'hover:bg-[#E4405F] hover:text-white' },
+    { icon: <FacebookIcon className="w-6 h-6" />, name: 'Facebook', link: FACEBOOK_LINK, color: 'hover:bg-[#1877F2] hover:text-white' },
+    { icon: <InstagramIcon className="w-6 h-6" />, name: 'Instagram', link: INSTAGRAM_LINK, color: 'hover:bg-[#E4405F] hover:text-white' },
     { icon: <TikTokIcon className="w-6 h-6" />, name: 'TikTok', link: '#', color: 'hover:bg-[#000000] hover:text-white' },
     { icon: <XIcon className="w-5 h-5" />, name: 'X', link: '#', color: 'hover:bg-slate-900 hover:text-white' }
   ];

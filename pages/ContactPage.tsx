@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
 import { Phone, Mail, MapPin, ArrowUpRight, Clock } from 'lucide-react';
-import { WA_PHONE, DISPLAY_PHONE } from '../constants';
+import { WA_PHONE, DISPLAY_PHONE, EMAIL_ADDRESS, FACEBOOK_LINK, INSTAGRAM_LINK } from '../constants';
 import { WhatsAppIcon, TikTokIcon, XIcon, FacebookIcon, InstagramIcon } from '../components/BrandIcons';
 
 const ContactPage: React.FC = () => {
@@ -10,8 +10,8 @@ const ContactPage: React.FC = () => {
 
   const socialLinks = [
     { icon: <WhatsAppIcon className="w-6 h-6" />, name: 'WhatsApp', link: `https://wa.me/${WA_PHONE}`, color: 'hover:bg-[#25D366] hover:text-white' },
-    { icon: <FacebookIcon className="w-6 h-6" />, name: 'Facebook', link: '#', color: 'hover:bg-[#1877F2] hover:text-white' },
-    { icon: <InstagramIcon className="w-6 h-6" />, name: 'Instagram', link: '#', color: 'hover:bg-[#E4405F] hover:text-white' },
+    { icon: <FacebookIcon className="w-6 h-6" />, name: 'Facebook', link: FACEBOOK_LINK, color: 'hover:bg-[#1877F2] hover:text-white' },
+    { icon: <InstagramIcon className="w-6 h-6" />, name: 'Instagram', link: INSTAGRAM_LINK, color: 'hover:bg-[#E4405F] hover:text-white' },
     { icon: <TikTokIcon className="w-6 h-6" />, name: 'TikTok', link: '#', color: 'hover:bg-[#000000] hover:text-white' },
     { icon: <XIcon className="w-5 h-5" />, name: 'X', link: '#', color: 'hover:bg-slate-900 hover:text-white' }
   ];
@@ -35,8 +35,8 @@ const ContactPage: React.FC = () => {
       icon: <Mail />, 
       title: t('البريد الإلكتروني', 'Email'), 
       value: t('للتعاملات الرسمية والشركات', 'For Official Business'), 
-      display: 'info@wasil-travel.com',
-      action: 'mailto:info@wasil-travel.com', 
+      display: EMAIL_ADDRESS,
+      action: `mailto:${EMAIL_ADDRESS}`, 
     }
   ];
 

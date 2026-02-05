@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Home, LayoutGrid, Info, PhoneCall, Globe, ArrowLeft, ArrowRight, Mail, Phone } from 'lucide-react';
 import { NavLink, Link } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
-import { NAV_LINKS, WA_PHONE, DISPLAY_PHONE } from '../constants';
+import { NAV_LINKS, WA_PHONE, DISPLAY_PHONE, EMAIL_ADDRESS } from '../constants';
 import { WhatsAppIcon, OsosLogo } from './BrandIcons';
 
 const LanguageToggle: React.FC<{ variant?: 'nav' | 'sidebar' | 'topbar' }> = ({ variant = 'nav' }) => {
@@ -73,9 +73,9 @@ const Navbar: React.FC = () => {
         <div className="hidden md:block bg-brand-navy text-white py-2.5 transition-all">
            <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 flex justify-between items-center text-xs font-medium">
               <div className="flex items-center gap-6">
-                 <a href={`mailto:info@wasil-travel.com`} className="flex items-center gap-2 hover:text-brand-green transition-colors">
+                 <a href={`mailto:${EMAIL_ADDRESS}`} className="flex items-center gap-2 hover:text-brand-green transition-colors">
                     <Mail className="w-3.5 h-3.5" />
-                    <span dir="ltr">info@wasil-travel.com</span>
+                    <span dir="ltr">{EMAIL_ADDRESS}</span>
                  </a>
                  <a href={`tel:${WA_PHONE}`} className="flex items-center gap-2 hover:text-brand-green transition-colors">
                     <Phone className="w-3.5 h-3.5" />

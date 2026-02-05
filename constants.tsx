@@ -5,6 +5,9 @@ import { Service, NavLink, Offer, Step } from './types';
 
 export const WA_PHONE = '967776002190';
 export const DISPLAY_PHONE = '+967 776 002 190';
+export const EMAIL_ADDRESS = 'osostravel1@gmail.com';
+export const FACEBOOK_LINK = 'https://www.facebook.com/share/1C75gKppb4/';
+export const INSTAGRAM_LINK = 'https://www.instagram.com/osos_travel?igsh=ZjRjNmV3NDdpbmZ4';
 
 export const NAV_LINKS: NavLink[] = [
   { key: 'home', label: { ar: 'الرئيسية', en: 'Home' }, href: '/' },
