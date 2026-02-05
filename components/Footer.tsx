@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
           {/* Brand Info Section */}
           <div className="space-y-6">
             <div className="flex items-center gap-4">
-              <div className="w-24 h-12 flex items-center justify-center">
+              <div className="w-32 h-16 flex items-center justify-center">
                 <OsosLogo className="w-full h-full" />
               </div>
               <div className={`flex flex-col ${lang === 'ar' ? 'leading-[1.1]' : 'leading-[0.85]'}`}>
@@ -131,3 +131,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+    

@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
             <div className="flex justify-between items-center h-14 md:h-16">
               {/* Logo Section */}
               <Link to="/" className="flex items-center gap-2 md:gap-4 group shrink-0">
-                <div className="w-12 h-10 md:w-16 md:h-12 flex items-center justify-center transition-all duration-500 group-hover:scale-105">
+                <div className="w-16 h-14 md:w-20 md:h-16 flex items-center justify-center transition-all duration-500 group-hover:scale-105">
                   <OsosLogo className="w-full h-full" />
                 </div>
                 <div className={`flex flex-col ${lang === 'ar' ? 'leading-[0.9] md:leading-[0.9]' : 'leading-[0.8] md:leading-[0.8]'}`}>
@@ -168,7 +168,7 @@ const Navbar: React.FC = () => {
           <div className="p-8 flex flex-col h-full bg-brand-gray/30">
             <div className="flex justify-between items-center mb-10 pb-6 border-b border-slate-100">
               <div className="flex items-center gap-3">
-                <OsosLogo className="w-16 h-10" />
+                <OsosLogo className="w-16 h-14" />
                 <div className={`flex flex-col ${lang === 'ar' ? 'leading-[0.9]' : 'leading-none'}`}>
                   <span className={`text-brand-navy font-black text-xl uppercase ${lang === 'ar' ? 'font-cairo' : 'font-inter'}`}>{t('أُسس', 'OSOS')}</span>
                   <span className={`text-brand-green font-bold uppercase ${lang === 'ar' ? 'text-[11px] font-cairo' : 'text-[8px] tracking-[0.2em] font-inter mt-1'}`}>{t('للسفر', 'TRAVEL')}</span>
@@ -224,3 +224,4 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+    
