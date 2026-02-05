@@ -1,9 +1,10 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Globe, Phone } from 'lucide-react';
 import { NavLink, Link } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
 import { NAV_LINKS, WA_PHONE } from '../constants';
-import { OsosLogo } from './BrandIcons';
+import { OsosLogo, WhatsAppIcon } from './BrandIcons';
 
 const Navbar: React.FC = () => {
   const { lang, setLang, t } = useLanguage();
@@ -133,11 +134,13 @@ const Navbar: React.FC = () => {
 
             <div className="mt-auto space-y-4">
                <a
-                href={`tel:${WA_PHONE}`}
-                className="w-full flex items-center justify-center gap-2 bg-brand-navy text-white px-6 py-4 rounded-2xl font-bold text-sm shadow-lg active:scale-95 transition-transform"
+                href={`https://wa.me/${WA_PHONE}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-4 rounded-2xl font-bold text-sm shadow-lg active:scale-95 transition-transform hover:bg-[#128C7E]"
               >
-                <Phone className="w-5 h-5" />
-                <span>{t('اتصل بنا', 'Call Us')}</span>
+                <WhatsAppIcon className="w-5 h-5 fill-current" />
+                <span>{t('واتساب', 'WhatsApp')}</span>
               </a>
             </div>
           </div>

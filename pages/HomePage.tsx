@@ -13,7 +13,6 @@ const HomePage: React.FC = () => {
   const { t } = useLanguage();
 
   const socialLinks = [
-    { icon: <WhatsAppIcon className="w-6 h-6" />, name: 'WhatsApp', link: `https://wa.me/${WA_PHONE}`, color: 'hover:bg-[#25D366] hover:text-white' },
     { icon: <FacebookIcon className="w-6 h-6" />, name: 'Facebook', link: FACEBOOK_LINK, color: 'hover:bg-[#1877F2] hover:text-white' },
     { icon: <InstagramIcon className="w-6 h-6" />, name: 'Instagram', link: INSTAGRAM_LINK, color: 'hover:bg-[#E4405F] hover:text-white' },
     { icon: <TikTokIcon className="w-6 h-6" />, name: 'TikTok', link: TIKTOK_LINK, color: 'hover:bg-[#000000] hover:text-white' },
@@ -51,10 +50,10 @@ const HomePage: React.FC = () => {
                           href={social.link} 
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`w-16 h-16 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-600 transition-all duration-300 shadow-sm hover:shadow-xl hover:scale-110 ${social.color}`}
+                          className={`w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-600 transition-all duration-300 shadow-sm hover:shadow-xl hover:scale-110 ${social.color}`}
                           title={social.name}
                         >
-                          {React.cloneElement(social.icon as React.ReactElement<{ className?: string }>, { className: 'w-7 h-7 fill-current' })}
+                          {React.cloneElement(social.icon as React.ReactElement<{ className?: string }>, { className: 'w-5 h-5 md:w-7 md:h-7 fill-current' })}
                         </a>
                     ))}
                   </div>
