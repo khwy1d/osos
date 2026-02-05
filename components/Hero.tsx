@@ -11,7 +11,9 @@ const Hero: React.FC = () => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    setLoaded(true);
+    // Small delay to ensure the ease-out-expo pop effect is visible after render
+    const timer = setTimeout(() => setLoaded(true), 100);
+    return () => clearTimeout(timer);
   }, []);
   
   const bookingMsg = encodeURIComponent("السلام عليكم، أريد الاستعلام عن خدمات وكالة أُسس.");
@@ -25,7 +27,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           
           {/* Text Content */}
-          <div className={`flex-1 text-center lg:text-start transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className={`flex-1 text-center lg:text-start transition-all duration-700 ease-out-expo ${loaded ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-[0.98]'}`}>
             
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-green/5 border border-brand-green/10 text-brand-green text-xs font-bold mb-6">
               <span className="relative flex h-2 w-2">
@@ -72,7 +74,7 @@ const Hero: React.FC = () => {
               {[
                 t('سرعة في الإنجاز', 'Fast Processing'),
                 t('دعم متواصل 24/7', '24/7 Support'),
-                t('أسعار شفافة', 'Transparent Pricing')
+                t('أسعار منافسة', 'Competitive Prices')
               ].map((feat, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-brand-green" />
@@ -83,7 +85,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Visual Element (Hidden on mobile for cleaner look) */}
-          <div className="hidden lg:block flex-1 relative">
+          <div className={`hidden lg:block flex-1 relative transition-all duration-1000 delay-100 ease-out-expo ${loaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
              <div className="relative z-10 grid grid-cols-2 gap-4">
                 <div className="space-y-4 mt-12">
                    <div className="bg-white p-6 rounded-3xl shadow-soft border border-slate-50">
@@ -91,27 +93,3 @@ const Hero: React.FC = () => {
                          <CheckCircle2 className="w-6 h-6" />
                       </div>
                       <p className="font-black text-brand-navy text-lg">99%</p>
-                      <p className="text-slate-400 text-sm font-bold">{t('نسبة قبول', 'Approval Rate')}</p>
-                   </div>
-                   <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=600" className="rounded-3xl shadow-lg object-cover h-64 w-full" alt="Travel" />
-                </div>
-                <div className="space-y-4">
-                   <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=600" className="rounded-3xl shadow-lg object-cover h-64 w-full" alt="Bus" />
-                   <div className="bg-brand-navy p-6 rounded-3xl shadow-soft text-white">
-                      <p className="font-bold text-white/80 text-sm mb-1">{t('خبرة تفوق', 'Experience')}</p>
-                      <p className="font-black text-3xl">10+ {t('سنوات', 'Years')}</p>
-                   </div>
-                </div>
-             </div>
-             
-             {/* Decor Dots */}
-             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[url('https://www.transparenttextures.com/patterns/dots-spaced.png')] opacity-20 -z-10"></div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Hero;

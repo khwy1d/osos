@@ -9,6 +9,7 @@ export const EMAIL_ADDRESS = 'osostravel1@gmail.com';
 export const FACEBOOK_LINK = 'https://www.facebook.com/share/1C75gKppb4/';
 export const INSTAGRAM_LINK = 'https://www.instagram.com/osos_travel?igsh=ZjRjNmV3NDdpbmZ4';
 export const TIKTOK_LINK = 'https://tiktok.com/@osos_travel';
+export const X_LINK = 'https://x.com/osos_travel?t=kPh-mG5xYRI3ccVYXGLcNQ&s=09';
 
 export const NAV_LINKS: NavLink[] = [
   { key: 'home', label: { ar: 'الرئيسية', en: 'Home' }, href: '/' },

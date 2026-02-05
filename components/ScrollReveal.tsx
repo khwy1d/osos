@@ -26,8 +26,8 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
         }
       },
       {
-        threshold: 0.15, // Trigger when 15% of element is visible
-        rootMargin: '50px'
+        threshold: 0.1, // Trigger slightly earlier
+        rootMargin: '20px'
       }
     );
 
@@ -43,13 +43,14 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   const getTransform = () => {
     if (!isVisible) {
       switch (direction) {
-        case 'up': return 'translate-y-16';
-        case 'left': return '-translate-x-16';
-        case 'right': return 'translate-x-16';
-        default: return '';
+        // Reduced translation distance for a tighter, faster feel
+        case 'up': return 'translate-y-10 scale-[0.96]'; 
+        case 'left': return '-translate-x-10';
+        case 'right': return 'translate-x-10';
+        default: return 'scale-[0.96]';
       }
     }
-    return 'translate-y-0 translate-x-0';
+    return 'translate-y-0 translate-x-0 scale-100';
   };
 
   const transitionDelay = `${delay}ms`;
@@ -58,8 +59,8 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
     <div
       ref={ref}
       style={{ transitionDelay }}
-      className={`transition-all duration-1000 ease-out transform ${
-        isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+      className={`transition-all duration-700 ease-out-expo transform ${
+        isVisible ? 'opacity-100 blur-0' : 'opacity-0 blur-[2px]'
       } ${getTransform()} ${className}`}
     >
       {children}
