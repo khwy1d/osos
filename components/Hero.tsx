@@ -11,7 +11,6 @@ const Hero: React.FC = () => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // Small delay to ensure the ease-out-expo pop effect is visible after render
     const timer = setTimeout(() => setLoaded(true), 100);
     return () => clearTimeout(timer);
   }, []);
@@ -93,3 +92,28 @@ const Hero: React.FC = () => {
                          <CheckCircle2 className="w-6 h-6" />
                       </div>
                       <p className="font-black text-brand-navy text-lg">99%</p>
+                      <p className="text-slate-400 text-sm font-bold">{t('نسبة قبول', 'Approval Rate')}</p>
+                   </div>
+                   <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=600" className="rounded-3xl shadow-lg object-cover h-64 w-full" alt="Travel" />
+                </div>
+                <div className="space-y-4">
+                   <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=600" className="rounded-3xl shadow-lg object-cover h-64 w-full" alt="Bus" />
+                   <div className="bg-brand-navy p-6 rounded-3xl shadow-soft text-white">
+                      <p className="font-bold text-white/80 text-sm mb-1">{t('خبرة تفوق', 'Experience')}</p>
+                      <p className="font-black text-3xl">10+ {t('سنوات', 'Years')}</p>
+                   </div>
+                </div>
+             </div>
+             
+             {/* Decor Dots */}
+             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[url('https://www.transparenttextures.com/patterns/dots-spaced.png')] opacity-20 -z-10"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
+    
