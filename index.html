@@ -16,30 +16,34 @@
           extend: {
             colors: {
               brand: {
-                // Visual Identity Mapping
-                navy: '#212121',   // Charcoal Gray (Text/Headers)
-                green: '#D32F2F',  // Cherry Red (Primary Action)
+                // PRIMARY IDENTITY MAPPING
+                // Main Dark (Headers, Backgrounds)
+                navy: '#212121',
+                // Main Accent (Buttons, Icons, Highlights)
+                red: '#D32F2F',
                 
-                // Mapped Colors for consistency
-                blue: '#212121',   // Map old blue to Charcoal
-                coral: '#D32F2F',  // Map old coral to Cherry Red
-                teal: '#212121',   // Map old teal to Charcoal
-                accent: '#D32F2F', // Accent is Red
+                // LEGACY MAPPING (Forcing consistency)
+                // Mapping old 'green', 'blue', 'teal' to the official palette
+                green: '#D32F2F',  // Maps to Red
+                blue: '#212121',   // Maps to Navy
+                teal: '#212121',   // Maps to Navy
+                coral: '#D32F2F',  // Maps to Red
+                accent: '#D32F2F', // Maps to Red
                 
                 // Backgrounds
-                gray: '#F9FAFB',   // Very light gray for section bgs
+                gray: '#F9FAFB',
                 
                 // Utilities
-                'red-light': '#FEF2F2', // Red 50
-                'red-hover': '#B71C1C', // Darker Red
+                'red-light': '#FEF2F2',
+                'red-hover': '#B71C1C',
               }
             },
             fontFamily: {
               cairo: ['Cairo', 'sans-serif'],
-              tajawal: ['Tajawal', 'sans-serif'] // Adding Tajawal as requested
+              tajawal: ['Tajawal', 'sans-serif']
             },
             borderRadius: {
-              'card': '1rem', // Rounded-2xl equivalent usually
+              'card': '1rem',
             },
             boxShadow: {
               'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
