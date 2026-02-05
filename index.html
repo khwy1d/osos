@@ -7,9 +7,14 @@
     <meta name="google-site-verification" content="LQxnny5CJzHQD2cSqeY8NO2BZNRCNLV8Jc6jbNaCO64" />
     
     <!-- Favicon Configuration -->
-    <link rel="icon" type="image/svg+xml" href="https://vgcmzalkmsfvkfzgvvud.supabase.co/storage/v1/object/public/images/vectorink-vectorizer-result%20(2).svg" />
-    <link rel="shortcut icon" href="https://vgcmzalkmsfvkfzgvvud.supabase.co/storage/v1/object/public/images/vectorink-vectorizer-result%20(2).svg" />
+    <!-- Added sizes="any" to ensure SVG renders correctly in Chrome/Edge -->
+    <link rel="icon" type="image/svg+xml" href="https://vgcmzalkmsfvkfzgvvud.supabase.co/storage/v1/object/public/images/vectorink-vectorizer-result%20(2).svg" sizes="any" />
+    <link rel="shortcut icon" href="https://vgcmzalkmsfvkfzgvvud.supabase.co/storage/v1/object/public/images/vectorink-vectorizer-result%20(2).svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="https://vgcmzalkmsfvkfzgvvud.supabase.co/storage/v1/object/public/images/vectorink-vectorizer-result%20(2).svg" />
+    
+    <!-- Browser Theme Colors (Matches Brand Identity) -->
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#212121" media="(prefers-color-scheme: dark)">
     
     <title>أُسس للسفر | Osos Travel</title>
     
@@ -22,13 +27,10 @@
             colors: {
               brand: {
                 // PRIMARY IDENTITY MAPPING
-                // Main Dark (Headers, Backgrounds)
-                navy: '#212121',
-                // Main Accent (Buttons, Icons, Highlights)
-                red: '#D32F2F',
+                navy: '#212121', // Main Dark
+                red: '#D32F2F',  // Main Accent
                 
-                // LEGACY MAPPING (Forcing consistency)
-                // Mapping old 'green', 'blue', 'teal' to the official palette
+                // LEGACY MAPPING
                 green: '#D32F2F',  // Maps to Red
                 blue: '#212121',   // Maps to Navy
                 teal: '#212121',   // Maps to Navy
