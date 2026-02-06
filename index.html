@@ -20,104 +20,89 @@
     <title>أُسس للسفر | Osos Travel</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    
+    <title>أُسس للسفر | OSOS Travel</title>
+    <meta name="description" content="وكالة أُسس للسفر والسياحة - خدمات متكاملة: موافقات أمنية لمصر، تنسيق طبي، حجوزات طيران، وتأجير سيارات. رحلتك تبدأ من هنا.">
+    <meta name="keywords" content="سفر, سياحة, موافقات أمنية, مصر, اليمن, طيران, علاج, أُسس">
+    <meta name="google-site-verification" content="LQxnny5CJzHQD2cSqeY8NO2BZNRCNLV8Jc6jbNaCO64" />
+
+    <meta property="og:title" content="أُسس للسفر | OSOS Travel">
+    <meta property="og:description" content="خدمات سفر متكاملة وموافقات أمنية وحجوزات طيران.">
+    <meta property="og:image" content="/public/cover-image.jpg"> <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" href="/public/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+    <link rel="shortcut icon" href="/public/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="OSOS TRAVEL" />
+
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#212121" media="(prefers-color-scheme: dark)">
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
               brand: {
-                navy: '#212121', // Main Dark
-                red: '#D32F2F',  // Main Accent
-                green: '#D32F2F',  // Alias
-                blue: '#212121',   // Alias
-                teal: '#212121',   // Alias
-                coral: '#D32F2F',  // Alias
-                accent: '#D32F2F', // Alias
-                
-                // Backgrounds
-                gray: '#F9FAFB',
-                
-                // Utilities
-                'red-light': '#FEF2F2',
-                'red-hover': '#B71C1C',
+                dark: '#212121',   // الفحمي (للنصوص والعناوين)
+                primary: '#D32F2F', // الأحمر الكرزي (للأزرار والشعار)
+                gray: '#F9FAFB',    // خلفيات فاتحة
+                surface: '#FFFFFF', // خلفية الكروت
+                'red-light': '#FEF2F2', // خلفية أيقونات فاتحة
+                'red-hover': '#B71C1C', // لون الزر عند الضغط
               }
             },
             fontFamily: {
-              cairo: ['Cairo', 'sans-serif'],
-              tajawal: ['Tajawal', 'sans-serif']
-            },
-            transitionTimingFunction: {
-              'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
+              cairo: ['Cairo', 'sans-serif'],   // للعناوين
+              tajawal: ['Tajawal', 'sans-serif'] // للنصوص الطويلة
             },
             borderRadius: {
               'card': '1rem',
             },
             boxShadow: {
-              'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
-              'hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-            },
-            animation: {
-              'float': 'float 6s ease-in-out infinite',
-              'pulse-soft': 'pulseSoft 3s infinite',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
-              },
-              pulseSoft: {
-                '0%, 100%': { opacity: '1' },
-                '50%': { opacity: '0.85' },
-              }
+              'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07)',
             }
           }
         }
       }
     </script>
+
     <style>
-      :root {
-        --sat: env(safe-area-inset-top);
-        --sar: env(safe-area-inset-right);
-        --sab: env(safe-area-inset-bottom);
-        --sal: env(safe-area-inset-left);
-      }
       body {
-        font-family: 'Cairo', 'Tajawal', sans-serif;
-        scroll-behavior: smooth;
+        font-family: 'Tajawal', sans-serif; /* الخط الافتراضي */
         background-color: #FFFFFF;
         color: #212121;
-        padding: var(--sat) var(--sar) var(--sab) var(--sal);
         -webkit-tap-highlight-color: transparent;
       }
-      /* Clean Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Cairo', sans-serif; /* خط العناوين */
       }
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #D32F2F; 
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #B71C1C; 
-      }
+      /* تحسين شكل شريط التمرير */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #f1f1f1; }
+      ::-webkit-scrollbar-thumb { background: #D32F2F; border-radius: 4px; }
     </style>
+
     <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@19.0.0",
-    "react-dom": "https://esm.sh/react-dom@19.0.0",
-    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
-    "react-router-dom": "https://esm.sh/react-router-dom@6.28.0?deps=react@19.0.0,react-dom@19.0.0",
-    "lucide-react": "https://esm.sh/lucide-react@0.473.0?deps=react@19.0.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/"
-  }
-}
-</script>
+    {
+      "imports": {
+        "react": "https://esm.sh/react@19.0.0",
+        "react-dom": "https://esm.sh/react-dom@19.0.0",
+        "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+        "react-router-dom": "https://esm.sh/react-router-dom@6.28.0?deps=react@19.0.0,react-dom@19.0.0",
+        "lucide-react": "https://esm.sh/lucide-react@0.473.0?deps=react@19.0.0"
+      }
+    }
+    </script>
   </head>
   <body class="antialiased overflow-x-hidden">
     <div id="root"></div>
