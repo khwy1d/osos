@@ -1,5 +1,11 @@
 {
-  "name": "Osos Travel",
-  "description": "تطبيق وكالة أُسس للسفر، متخصص في السفر العلاجي والسياحة، وتسهيل التأشيرات والنقل بين اليمن ومصر والأردن.",
+  "name": "Osos Travel | أُسس للسفر",
+  "short_name": "OSOS",
+  "description": "رفيقك المعتمد للسفر العلاجي واستخراج الموافقات الأمنية. خدمات متكاملة تشمل حجوزات الطيران، النقل البري، والتنسيق الطبي.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#D32F2F",
+  "orientation": "portrait",
   "requestFramePermissions": []
 }
