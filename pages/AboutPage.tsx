@@ -1,22 +1,13 @@
-
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
-import { Target, Eye, ShieldCheck, Zap, Briefcase, HeartHandshake, MessageCircle, Building2, Plane, FileCheck, Bus } from 'lucide-react';
-import { WA_PHONE } from '../constants';
+import { Target, Eye } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
-  const { t, lang } = useLanguage();
-  const contactMsg = encodeURIComponent("السلام عليكم ، اريد الاستعلام عن خدمات وكالة أُسس.");
-
-  const features = [
-    { icon: <Briefcase className="w-6 h-6" />, label: { ar: 'الاحترافية', en: 'Professionalism' } },
-    { icon: <HeartHandshake className="w-6 h-6" />, label: { ar: 'الثقة المطلقة', en: 'Absolute Trust' } },
-    { icon: <Zap className="w-6 h-6" />, label: { ar: 'السرعة والدقة', en: 'Speed & Accuracy' } },
-    { icon: <ShieldCheck className="w-6 h-6" />, label: { ar: 'خدمة شاملة', en: 'Comprehensive Service' } },
-  ];
+  const { t } = useLanguage();
 
   return (
     <div className="pt-10">
+      {/* قسم العنوان والوصف (كما يظهر في أعلى الصورة) */}
       <section className="bg-white py-20 relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
@@ -32,10 +23,12 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Vision & Mission Card Section */}
+      {/* قسم الرؤية والمهمة (البطاقات البيضاء في الصورة) */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
+            
+            {/* بطاقة الرؤية */}
             <div className="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 hover:shadow-lg transition-all relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-brand-green/5 rounded-bl-[100%] transition-transform group-hover:scale-110"></div>
               <div className="relative z-10">
@@ -52,6 +45,7 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
 
+            {/* بطاقة المهمة */}
             <div className="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 hover:shadow-lg transition-all relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-brand-navy/5 rounded-bl-[100%] transition-transform group-hover:scale-110"></div>
               <div className="relative z-10">
@@ -67,27 +61,12 @@ const AboutPage: React.FC = () => {
                 </p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-slate-900 text-white relative overflow-hidden text-center">
-         <div className="max-w-4xl mx-auto px-4 space-y-8 relative z-10">
-            <h2 className="text-3xl md:text-5xl font-black">{t('سافر بثقة.. سافر معنا', 'Travel with Trust.. Travel with Us')}</h2>
-            <div className="pt-4">
-               <a 
-                  href={`https://wa.me/${WA_PHONE}?text=${contactMsg}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="brand-gradient text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl hover:scale-105 transition-transform inline-flex items-center gap-3"
-               >
-                  <MessageCircle className="w-6 h-6" />
-                  {t('تواصل مع فريق أُسس', 'Contact Osos Team')}
-               </a>
-            </div>
-         </div>
-      </section>
+      
+      {/* تمت إزالة القسم الأسود السفلي من هنا */}
     </div>
   );
 };
