@@ -1,25 +1,3 @@
-
-<!DOCTYPE html>
-<html lang="ar" dir="rtl" class="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[16px] xl:text-[17px]">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="google-site-verification" content="LQxnny5CJzHQD2cSqeY8NO2BZNRCNLV8Jc6jbNaCO64" />
-    
-    <!-- Favicon Configuration -->
-    <link rel="icon" type="image/png" href="./public/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
-    <link rel="shortcut icon" href="./public/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./public/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="OSOS TRAVEL" />
-    
-    <!-- Browser Theme Colors -->
-    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#212121" media="(prefers-color-scheme: dark)">
-    
-    <title>أُسس للسفر | Osos Travel</title>
-    
-    
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" class="scroll-smooth">
   <head>
@@ -33,7 +11,8 @@
 
     <meta property="og:title" content="أُسس للسفر | OSOS Travel">
     <meta property="og:description" content="خدمات سفر متكاملة وموافقات أمنية وحجوزات طيران.">
-    <meta property="og:image" content="/public/cover-image.jpg"> <meta property="og:type" content="website">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/public/cover-image.jpg">
 
     <link rel="icon" type="image/png" href="/public/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
@@ -44,26 +23,26 @@
     <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#212121" media="(prefers-color-scheme: dark)">
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
               brand: {
-                dark: '#212121',   // الفحمي (للنصوص والعناوين)
-                primary: '#D32F2F', // الأحمر الكرزي (للأزرار والشعار)
-                gray: '#F9FAFB',    // خلفيات فاتحة
-                surface: '#FFFFFF', // خلفية الكروت
-                'red-light': '#FEF2F2', // خلفية أيقونات فاتحة
-                'red-hover': '#B71C1C', // لون الزر عند الضغط
+                dark: '#212121',   
+                primary: '#D32F2F', 
+                gray: '#F9FAFB',    
+                surface: '#FFFFFF', 
+                'red-light': '#FEF2F2', 
+                'red-hover': '#B71C1C', 
               }
             },
             fontFamily: {
-              cairo: ['Cairo', 'sans-serif'],   // للعناوين
-              tajawal: ['Tajawal', 'sans-serif'] // للنصوص الطويلة
+              cairo: ['Cairo', 'sans-serif'],
+              tajawal: ['Tajawal', 'sans-serif']
             },
             borderRadius: {
               'card': '1rem',
@@ -78,15 +57,14 @@
 
     <style>
       body {
-        font-family: 'Tajawal', sans-serif; /* الخط الافتراضي */
+        font-family: 'Tajawal', sans-serif;
         background-color: #FFFFFF;
         color: #212121;
         -webkit-tap-highlight-color: transparent;
       }
       h1, h2, h3, h4, h5, h6 {
-        font-family: 'Cairo', sans-serif; /* خط العناوين */
+        font-family: 'Cairo', sans-serif;
       }
-      /* تحسين شكل شريط التمرير */
       ::-webkit-scrollbar { width: 8px; }
       ::-webkit-scrollbar-track { background: #f1f1f1; }
       ::-webkit-scrollbar-thumb { background: #D32F2F; border-radius: 4px; }
