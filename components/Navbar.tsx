@@ -85,10 +85,11 @@ const Navbar: React.FC = () => {
                 <span>{t('اتصل بنا', 'Call Us')}</span>
               </a>
 
-              {/* Mobile Menu Toggle */}
+                            {/* Mobile Menu Toggle */}
               <button 
                 onClick={() => setIsOpen(true)} 
-                className="md:hidden p-2.5 text-brand-navy bg-slate-50 rounded-xl active:scale-95 transition-all border border-slate-100"
+                className="md:hidden p-2.5 text-brand-navy bg-slate-50 rounded-xl active:scale-95 transition-all border border-slate-100 hover:bg-slate-100"
+                aria-label="فتح القائمة"
               >
                 <Menu className="w-6 h-6" />
               </button>
@@ -96,6 +97,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </nav>
+
 
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 z-[200] md:hidden transition-all duration-500 ${isOpen ? 'visible' : 'invisible'}`}>
