@@ -54,24 +54,26 @@ const FlightsPage: React.FC = () => {
               </div>
 
               <div className="grid sm:grid-cols-2 gap-8">
-                {[
-                  { title: t('رحلات يومية', 'Daily Flights'), desc: t('تغطية شاملة لكافة الرحلات من وإلى اليمن.', 'Full coverage for all flights from/to Yemen.') },
-                  { title: t('تأكيد فوري', 'Instant Booking'), desc: t('إصدار التذاكر فور الدفع بوضوح تـام.', 'Tickets issued immediately upon payment.') },
-                  { title: t('دعم فني', '24/7 Support'), desc: t('نحن معك في حال حدوث أي تغييرات في الرحلة.', 'We are with you for any flight changes.') },
-                  { title: t('أسعار منافسة', 'Best Prices'), desc: t('عروض حصرية وخصومات للمجموعات والعائلات.', 'Exclusive offers and group discounts.') },
-                ].map((item, idx) => (
-                  <div key={idx} className="flex gap-5">
-                    <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-coral flex-shrink-0 border border-slate-100">
-                      <CheckCircle className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h4 className="font-black text-xl text-slate-900 mb-1">{item.title}</h4>
-                      <p className="text-slate-500 font-medium text-sm leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+  {[
+    { title: t('رحلات يومية', 'Daily Flights'), desc: t('تغطية شاملة لكافة الرحلات من وإلى اليمن.', 'Full coverage for all flights from/to Yemen.') },
+    { title: t('تأكيد فوري', 'Instant Booking'), desc: t('إصدار التذاكر فور الدفع بوضوح تـام.', 'Tickets issued immediately upon payment.') },
+    { title: t('دعم فني', '24/7 Support'), desc: t('نحن معك في حال حدوث أي تغييرات في الرحلة.', 'We are with you for any flight changes.') },
+    { title: t('أسعار منافسة', 'Best Prices'), desc: t('عروض حصرية وخصومات للمجموعات والعائلات.', 'Exclusive offers and group discounts.') },
+  ].map((item, idx) => (
+    /* --- التعديل هنا --- */
+    <div key={idx} className="flex justify-start items-start gap-4">
+      <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-coral flex-shrink-0 border border-slate-100">
+        <CheckCircle className="w-6 h-6" />
+      </div>
+      <div className="text-start"> {/* إضافة text-start مهمة جداً */}
+        <h4 className="font-black text-xl text-slate-900 mb-1">{item.title}</h4>
+        <p className="text-slate-500 font-medium text-sm leading-relaxed">{item.desc}</p>
+      </div>
+    </div>
+    /* ------------------ */
+  ))}
+</div>
+
 
             {/* Form Side */}
             <div className="bg-white p-8 md:p-10 rounded-[3rem] shadow-2xl border border-slate-100 space-y-8 sticky top-28">
