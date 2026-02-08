@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../components/LanguageContext';
-import { Calendar, MapPin, Info, CheckCircle, Plane } from 'lucide-react';
+import { CheckCircle } from 'lucide-react'; // تأكدنا من استيراد الأيقونات المستخدمة
 import { WA_PHONE } from '../constants';
 import { WhatsAppIcon } from '../components/BrandIcons';
 
@@ -52,6 +52,7 @@ const FlightsPage: React.FC = () => {
                 </p>
               </div>
 
+              {/* Grid Features with Fix applied */}
               <div className="grid sm:grid-cols-2 gap-8">
                 {[
                   { title: t('رحلات يومية', 'Daily Flights'), desc: t('تغطية شاملة لكافة الرحلات من وإلى اليمن.', 'Full coverage for all flights from/to Yemen.') },
@@ -59,11 +60,11 @@ const FlightsPage: React.FC = () => {
                   { title: t('دعم فني', '24/7 Support'), desc: t('نحن معك في حال حدوث أي تغييرات في الرحلة.', 'We are with you for any flight changes.') },
                   { title: t('أسعار منافسة', 'Best Prices'), desc: t('عروض حصرية وخصومات للمجموعات والعائلات.', 'Exclusive offers and group discounts.') },
                 ].map((item, idx) => (
-                  <div key={idx} className="flex gap-5">
+                  <div key={idx} className="flex justify-start items-start gap-4">
                     <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-coral flex-shrink-0 border border-slate-100">
                       <CheckCircle className="w-6 h-6" />
                     </div>
-                    <div>
+                    <div className="text-start">
                       <h4 className="font-black text-xl text-slate-900 mb-1">{item.title}</h4>
                       <p className="text-slate-500 font-medium text-sm leading-relaxed">{item.desc}</p>
                     </div>
@@ -94,6 +95,16 @@ const FlightsPage: React.FC = () => {
                   <WhatsAppIcon className="w-6 h-6 fill-current" />
                   {t('إرسال الاستفسار', 'Send via WhatsApp')}
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default FlightsPage;
               </div>
             </div>
           </div>
