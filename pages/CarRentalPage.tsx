@@ -48,18 +48,27 @@ const CarRentalPage: React.FC = () => {
                   { icon: <MapPin />, title: t('استلام مرن', 'Flexible Pickup'), desc: t('تنسيق الاستلام في المطار أو مقر إقامتك.', 'Coordination at airport or your stay.') },
                   { icon: <AlertTriangle />, title: t('دعم 24 ساعة', '24h Support'), desc: t('فريق دعم فني جاهز للرد على اتصالاتكم.', 'Support team ready for your calls.') },
                 ].map((item, idx) => (
-                  <div key={idx} className="flex gap-5 group">
-                    <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-coral border border-slate-100 group-hover:bg-brand-blue group-hover:text-white transition-all">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <h4 className="font-black text-xl text-slate-900 mb-1">{item.title}</h4>
-                      <p className="text-slate-500 font-medium text-sm leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+                  /* --- استبدل كل ما بداخل دالة .map بهذا الكود --- */
+
+<div key={idx} className="flex justify-start items-start gap-4 bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all">
+  
+  {/* 1. حاوية الأيقونة */}
+  <div className="flex-shrink-0 w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-coral border border-slate-50">
+    <CheckCircle className="w-6 h-6" />
+  </div>
+
+  {/* 2. حاوية النصوص */}
+  <div className="text-start">
+    <h4 className="font-black text-xl text-slate-900 mb-1">
+      {item.title}
+    </h4>
+    <p className="text-slate-500 font-medium text-sm leading-relaxed">
+      {item.desc}
+    </p>
+  </div>
+
+</div>
+
 
             <div className="bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm space-y-8 sticky top-28">
                <h3 className="text-2xl font-black text-brand-blue">{t('المتطلبات الأساسية', 'Basic Requirements')}</h3>
