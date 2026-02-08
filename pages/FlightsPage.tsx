@@ -59,8 +59,9 @@ const FlightsPage: React.FC = () => {
                   { title: t('دعم فني', '24/7 Support'), desc: t('نحن معك في حال حدوث أي تغييرات في الرحلة.', 'We are with you for any flight changes.') },
                   { title: t('أسعار منافسة', 'Best Prices'), desc: t('عروض حصرية وخصومات للمجموعات والعائلات.', 'Exclusive offers and group discounts.') },
                 ].map((item, idx) => (
-                  <div key={idx} className="flex justify-start items-start gap-4">
-                    <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-coral flex-shrink-0 border border-slate-100">
+                  /* --- التعديل المطبق: تصميم الكارت + إصلاح المحاذاة --- */
+                  <div key={idx} className="flex justify-start items-start gap-4 bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all">
+                    <div className="flex-shrink-0 w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-coral border border-slate-50">
                       <CheckCircle className="w-6 h-6" />
                     </div>
                     <div className="text-start">
@@ -68,6 +69,7 @@ const FlightsPage: React.FC = () => {
                       <p className="text-slate-500 font-medium text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
+                  /* --------------------------------------------------- */
                 ))}
               </div>
             </div>
@@ -100,6 +102,11 @@ const FlightsPage: React.FC = () => {
         </div>
       </section>
     </div>
+  );
+};
+
+export default FlightsPage;
+iv>
   );
 };
 
