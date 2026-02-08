@@ -73,11 +73,12 @@ const FlightsPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Form Side */}
+            {/* Form Side (Fixed Mobile Layout) */}
             <div className="bg-white p-8 md:p-10 rounded-[3rem] shadow-2xl border border-slate-100 space-y-8 sticky top-28">
               <h3 className="text-2xl font-black text-brand-blue text-center">{t('استعلام سريع', 'Quick Inquiry')}</h3>
               <div className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
+                {/* التعديل هنا: grid-cols-1 للموبايل و md:grid-cols-2 للشاشات الأكبر */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-1">
                     <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t('من', 'From')}</label>
                     <input type="text" value={fromCity} onChange={(e) => setFromCity(e.target.value)} placeholder={t('الإقلاع', 'Origin')} className="w-full bg-slate-50 border border-slate-200 p-3 rounded-xl focus:ring-2 focus:ring-brand-blue outline-none font-bold" />
@@ -105,4 +106,3 @@ const FlightsPage: React.FC = () => {
 };
 
 export default FlightsPage;
-      
