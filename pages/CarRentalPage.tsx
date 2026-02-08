@@ -66,10 +66,6 @@ const CarRentalPage: React.FC = () => {
       {item.desc}
     </p>
   </div>
-
-</div>
-
-
             <div className="bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm space-y-8 sticky top-28">
                <h3 className="text-2xl font-black text-brand-blue">{t('المتطلبات الأساسية', 'Basic Requirements')}</h3>
                <ul className="space-y-4">
