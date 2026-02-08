@@ -103,6 +103,15 @@ const FlightsPage: React.FC = () => {
   );
 };
 
+export default FlightsPage;              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
 export default FlightsPage;                  <WhatsAppIcon className="w-6 h-6 fill-current" />
                   {t('إرسال الاستفسار', 'Send via WhatsApp')}
                 </a>
