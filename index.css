@@ -40,7 +40,7 @@
 
 /* --- Reset & Base --- */
 html {
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 87.5%;
   tab-size: 4;
   font-family: var(--font-cairo), sans-serif;
   line-height: 1.5;
