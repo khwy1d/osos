@@ -40,11 +40,19 @@
 
 /* --- Reset & Base --- */
 html {
-  -webkit-text-size-adjust: 87.5%;
+  -webkit-text-size-adjust: 100%; /* تصحيح: منع تكبير الايفون العشوائي */
   tab-size: 4;
   font-family: var(--font-cairo), sans-serif;
   line-height: 1.5;
   scroll-behavior: smooth;
+  font-size: 100%; /* الأساس للكمبيوتر */
+}
+
+/* هذا الكود الجديد: يصغر النصوص فقط عند فتح الموقع من الموبايل */
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%; /* يجعل كل 1rem يساوي 14px بدلاً من 16px */
+  }
 }
 
 body {
