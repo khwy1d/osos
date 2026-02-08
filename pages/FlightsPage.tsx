@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../components/LanguageContext';
-import { CheckCircle } from 'lucide-react'; // تأكدنا من استيراد الأيقونات المستخدمة
+import { CheckCircle } from 'lucide-react';
 import { WA_PHONE } from '../constants';
 import { WhatsAppIcon } from '../components/BrandIcons';
 
@@ -52,7 +52,6 @@ const FlightsPage: React.FC = () => {
                 </p>
               </div>
 
-              {/* Grid Features with Fix applied */}
               <div className="grid sm:grid-cols-2 gap-8">
                 {[
                   { title: t('رحلات يومية', 'Daily Flights'), desc: t('تغطية شاملة لكافة الرحلات من وإلى اليمن.', 'Full coverage for all flights from/to Yemen.') },
@@ -93,48 +92,6 @@ const FlightsPage: React.FC = () => {
                 </div>
                 <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black text-lg flex items-center justify-center gap-3 shadow-xl hover:bg-[#128C7E] transition-all">
                   <WhatsAppIcon className="w-6 h-6 fill-current" />
-                  {t('إرسال الاستفسار', 'Send via WhatsApp')}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default FlightsPage;
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default FlightsPage;
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default FlightsPage;              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default FlightsPage;                  <WhatsAppIcon className="w-6 h-6 fill-current" />
                   {t('إرسال الاستفسار', 'Send via WhatsApp')}
                 </a>
               </div>
