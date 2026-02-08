@@ -85,7 +85,7 @@ const CarRentalPage: React.FC = () => {
                   </p>
                </div>
                <a href={`https://wa.me/${WA_PHONE}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black text-center flex items-center justify-center gap-2 hover:bg-[#128C7E] transition-all shadow-xl">
-                 <WhatsAppIcon className="w-5 h-5 fill-current mt-6" />
+                 <WhatsAppIcon className="w-5 h-5 fill-current " />
                  {t('احجز سيارتك الآن', 'Book Now')}
                </a>
             </div>
