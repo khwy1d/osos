@@ -105,6 +105,17 @@ const FlightsPage: React.FC = () => {
 };
 
 export default FlightsPage;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default FlightsPage;
               </div>
             </div>
           </div>
