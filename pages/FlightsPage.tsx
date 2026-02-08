@@ -52,6 +52,7 @@ const FlightsPage: React.FC = () => {
                 </p>
               </div>
 
+              {/* Grid Features with Card Design applied */}
               <div className="grid sm:grid-cols-2 gap-8">
                 {[
                   { title: t('رحلات يومية', 'Daily Flights'), desc: t('تغطية شاملة لكافة الرحلات من وإلى اليمن.', 'Full coverage for all flights from/to Yemen.') },
@@ -59,7 +60,6 @@ const FlightsPage: React.FC = () => {
                   { title: t('دعم فني', '24/7 Support'), desc: t('نحن معك في حال حدوث أي تغييرات في الرحلة.', 'We are with you for any flight changes.') },
                   { title: t('أسعار منافسة', 'Best Prices'), desc: t('عروض حصرية وخصومات للمجموعات والعائلات.', 'Exclusive offers and group discounts.') },
                 ].map((item, idx) => (
-                  /* --- التعديل المطبق: تصميم الكارت + إصلاح المحاذاة --- */
                   <div key={idx} className="flex justify-start items-start gap-4 bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all">
                     <div className="flex-shrink-0 w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-coral border border-slate-50">
                       <CheckCircle className="w-6 h-6" />
@@ -69,7 +69,6 @@ const FlightsPage: React.FC = () => {
                       <p className="text-slate-500 font-medium text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
-                  /* --------------------------------------------------- */
                 ))}
               </div>
             </div>
@@ -106,8 +105,4 @@ const FlightsPage: React.FC = () => {
 };
 
 export default FlightsPage;
-iv>
-  );
-};
-
-export default FlightsPage;
+      
