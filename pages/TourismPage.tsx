@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
 import { Palmtree, Map, Plane, Compass, MapPin, CheckCircle } from 'lucide-react';
@@ -11,7 +10,7 @@ const TourismPage: React.FC = () => {
 
   return (
     <div className="pb-16">
-      {/* Hero Section - Standardized */}
+      {/* Hero Section */}
       <section className="bg-brand-navy py-20 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center space-y-8">
           <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tighter">
@@ -33,6 +32,7 @@ const TourismPage: React.FC = () => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-16 items-start">
+            {/* Info Side */}
             <div className="lg:col-span-2 space-y-12">
               <div className="space-y-6">
                 <h2 className="text-3xl font-black text-brand-navy">{t('وجهاتك المفضلة بلمسة أُسس', 'Your Destinies, Osos Touch')}</h2>
@@ -41,6 +41,7 @@ const TourismPage: React.FC = () => {
                 </p>
               </div>
 
+              {/* Grid Features with Card Design Applied */}
               <div className="grid sm:grid-cols-2 gap-8">
                 {[
                   { icon: <MapPin />, title: t('سياحة اليمن', 'Yemen Tours'), desc: t('رحلات استكشافية لأجمل المحميات والمدن اليمنية.', 'Trips to Yemen\'s beautiful nature.') },
@@ -48,11 +49,13 @@ const TourismPage: React.FC = () => {
                   { icon: <Compass />, title: t('رحلات عائلية', 'Family Packages'), desc: t('باكجات مخصصة توفر الخصوصية والراحة.', 'Custom family packages.') },
                   { icon: <Map />, title: t('جولات يومية', 'Daily Tours'), desc: t('تنسيق جولات مع مرشدين سياحيين محليين.', 'Organized tours with guides.') },
                 ].map((item, idx) => (
-                  <div key={idx} className="flex gap-5 group">
-                    <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-red border border-slate-100 group-hover:bg-brand-navy group-hover:text-white transition-all">
+                  <div key={idx} className="flex justify-start items-start gap-4 bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all group">
+                    {/* Icon Box */}
+                    <div className="flex-shrink-0 w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-red border border-slate-50 group-hover:bg-brand-navy group-hover:text-white transition-colors">
                       {React.cloneElement(item.icon as React.ReactElement<{ className?: string }>, { className: 'w-6 h-6' })}
                     </div>
-                    <div>
+                    {/* Text Box */}
+                    <div className="text-start">
                       <h4 className="font-black text-xl text-brand-navy mb-1">{item.title}</h4>
                       <p className="text-slate-500 font-medium text-sm leading-relaxed">{item.desc}</p>
                     </div>
@@ -61,7 +64,8 @@ const TourismPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-slate-50 p-10 rounded-[2.5rem] shadow-sm space-y-8 sticky top-28 border border-slate-100">
+            {/* Sidebar (Updated Design) */}
+            <div className="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-2xl space-y-8 sticky top-28">
                <h3 className="text-2xl font-black text-brand-navy">{t('مميزات الباكجات', 'Package Perks')}</h3>
                <ul className="space-y-4">
                   {[
@@ -69,13 +73,13 @@ const TourismPage: React.FC = () => {
                     t('تأشيرات سياحية ميسرة.', 'Simplified tourism visas.'),
                     t('استقبال وتوديع من المطارات.', 'Airport pickup and drop-off.'),
                   ].map((text, idx) => (
-                    <li key={idx} className="flex items-center gap-3 font-bold text-slate-700">
-                       <CheckCircle className="w-5 h-5 text-brand-red flex-shrink-0" />
-                       <span className="text-sm">{text}</span>
+                    <li key={idx} className="flex items-start gap-3 font-bold text-slate-700">
+                       <CheckCircle className="w-5 h-5 text-brand-red flex-shrink-0 mt-0.5" />
+                       <span className="text-sm leading-relaxed">{text}</span>
                     </li>
                   ))}
                </ul>
-               <a href={`https://wa.me/${WA_PHONE}?text=${mainMsg}`} target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black text-center flex items-center justify-center gap-2 hover:bg-[#128C7E] transition-all text-lg shadow-lg">
+               <a href={`https://wa.me/${WA_PHONE}?text=${mainMsg}`} target="_blank" rel="noopener noreferrer" className="mt-8 w-full bg-[#25D366] text-white py-4 rounded-2xl font-black text-center flex items-center justify-center gap-2 hover:bg-[#128C7E] transition-all text-lg shadow-xl">
                  <WhatsAppIcon className="w-6 h-6 fill-current" />
                  {t('اطلب عرضك الآن', 'Request a Quote')}
                </a>
