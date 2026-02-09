@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
 import { Building2, Key, LayoutDashboard, FileText, CheckCircle, Landmark } from 'lucide-react';
@@ -33,6 +32,7 @@ const RealEstatePage: React.FC = () => {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-16 items-start">
+            {/* Info Side */}
             <div className="lg:col-span-2 space-y-12">
               <div className="space-y-6">
                 <h2 className="text-3xl font-black text-brand-blue">{t('حلول ذكية لإدارة وتنمية عقاراتك', 'Smart Real Estate Solutions')}</h2>
@@ -41,18 +41,21 @@ const RealEstatePage: React.FC = () => {
                 </p>
               </div>
 
+              {/* Grid Features with Card Design Applied */}
               <div className="grid sm:grid-cols-2 gap-8">
                 {[
-                  { icon: <LayoutDashboard />, title: t('إدارة الأملاك', 'Property Management'), desc: t('إشراف كامل وتطوير مستمر للعقار.', 'Full supervision and continuous property development.') },
-                  { icon: <Key />, title: t('إدارة التأجير', 'Rental Admin'), desc: t('تحصيل الإيجارات ومتابعة عقود المستأجرين.', 'Collecting rent and following tenant contracts.') },
-                  { icon: <Landmark />, title: t('بيع وشراء', 'Sale & Purchase'), desc: t('وساطة عقارية شفافة في أفضل المواقع.', 'Transparent brokerage in the best locations.') },
-                  { icon: <FileText />, title: t('تخليص قانوني', 'Legal Clearance'), desc: t('إتمام كافة الأوراق والإجراءات الإدارية.', 'Completing all legal papers and admin procedures.') },
+                  { icon: <LayoutDashboard className="w-6 h-6" />, title: t('إدارة الأملاك', 'Property Management'), desc: t('إشراف كامل وتطوير مستمر للعقار.', 'Full supervision and continuous property development.') },
+                  { icon: <Key className="w-6 h-6" />, title: t('إدارة التأجير', 'Rental Admin'), desc: t('تحصيل الإيجارات ومتابعة عقود المستأجرين.', 'Collecting rent and following tenant contracts.') },
+                  { icon: <Landmark className="w-6 h-6" />, title: t('بيع وشراء', 'Sale & Purchase'), desc: t('وساطة عقارية شفافة في أفضل المواقع.', 'Transparent brokerage in the best locations.') },
+                  { icon: <FileText className="w-6 h-6" />, title: t('تخليص قانوني', 'Legal Clearance'), desc: t('إتمام كافة الأوراق والإجراءات الإدارية.', 'Completing all legal papers and admin procedures.') },
                 ].map((item, idx) => (
-                  <div key={idx} className="flex gap-5 group">
-                    <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-coral border border-slate-100 group-hover:bg-brand-blue group-hover:text-white transition-all">
+                  <div key={idx} className="flex justify-start items-start gap-4 bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all group">
+                    {/* Icon Box */}
+                    <div className="flex-shrink-0 w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-coral border border-slate-50 group-hover:bg-brand-blue group-hover:text-white transition-colors">
                       {item.icon}
                     </div>
-                    <div>
+                    {/* Text Box */}
+                    <div className="text-start">
                       <h4 className="font-black text-xl text-slate-900 mb-1">{item.title}</h4>
                       <p className="text-slate-500 font-medium text-sm leading-relaxed">{item.desc}</p>
                     </div>
@@ -61,7 +64,8 @@ const RealEstatePage: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm space-y-8 sticky top-28">
+            {/* Sidebar (Updated Design) */}
+            <div className="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-2xl space-y-8 sticky top-28">
                <h3 className="text-2xl font-black text-brand-blue">{t('لماذا تختارنا؟', 'Why Choose Us?')}</h3>
                <ul className="space-y-4">
                   {[
@@ -70,13 +74,13 @@ const RealEstatePage: React.FC = () => {
                     t('تقارير دورية لأصحاب الأملاك.', 'Periodic reports for property owners.'),
                     t('فريق قانوني مختص بمراجعة الأوراق.', 'Legal team specialized in paper review.'),
                   ].map((text, idx) => (
-                    <li key={idx} className="flex items-center gap-3 font-bold text-slate-700">
-                       <CheckCircle className="w-5 h-5 text-brand-coral flex-shrink-0" />
-                       <span className="text-sm">{text}</span>
+                    <li key={idx} className="flex items-start gap-3 font-bold text-slate-700">
+                       <CheckCircle className="w-5 h-5 text-brand-coral flex-shrink-0 mt-0.5" />
+                       <span className="text-sm leading-relaxed">{text}</span>
                     </li>
                   ))}
                </ul>
-               <a href={`https://wa.me/${WA_PHONE}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black text-center flex items-center justify-center gap-2 hover:bg-[#128C7E] transition-all">
+               <a href={`https://wa.me/${WA_PHONE}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="mt-8 w-full bg-[#25D366] text-white py-4 rounded-2xl font-black text-center flex items-center justify-center gap-2 hover:bg-[#128C7E] transition-all shadow-xl">
                  <WhatsAppIcon className="w-5 h-5 fill-current" />
                  {t('طلب استشارة عقارية', 'Request Consultation')}
                </a>
