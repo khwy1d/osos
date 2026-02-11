@@ -23,8 +23,8 @@ const MedicalTourism: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative group hidden md:block">
             <img
-              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=2053"
-              className="rounded-3xl shadow-2xl border border-white/10 object-cover aspect-[4/3]"
+              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=2000"
+              className="rounded-3xl shadow-2xl border border-white/10 object-cover aspect-[4/3] bg-white"
               alt="Medical Care"
             />
           </div>

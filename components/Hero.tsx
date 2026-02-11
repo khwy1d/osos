@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Visual Element (Hidden on mobile for cleaner look) */}
+          {/* Visual Element */}
           <div className={`hidden lg:block flex-1 relative transition-all duration-1000 delay-100 ease-out-expo ${loaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
              <div className="relative z-10 grid grid-cols-2 gap-4">
                 <div className="space-y-4 mt-12">
@@ -94,10 +94,10 @@ const Hero: React.FC = () => {
                       <p className="font-black text-brand-navy text-lg">99%</p>
                       <p className="text-slate-400 text-sm font-bold">{t('نسبة قبول', 'Approval Rate')}</p>
                    </div>
-                   <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=600" className="rounded-3xl shadow-lg object-cover h-64 w-full" alt="Travel" />
+                   <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=2000" className="rounded-3xl shadow-lg object-cover h-64 w-full bg-slate-100" alt="Travel" />
                 </div>
                 <div className="space-y-4">
-                   <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=600" className="rounded-3xl shadow-lg object-cover h-64 w-full" alt="Bus" />
+                   <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=2000" className="rounded-3xl shadow-lg object-cover h-64 w-full bg-slate-100" alt="Bus" />
                    <div className="bg-brand-navy p-6 rounded-3xl shadow-soft text-white">
                       <p className="font-bold text-white/80 text-sm mb-1">{t('خبرة تفوق', 'Experience')}</p>
                       <p className="font-black text-3xl">10+ {t('سنوات', 'Years')}</p>
@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
              </div>
              
              {/* Decor Dots */}
-             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[url('https://www.transparenttextures.com/patterns/dots-spaced.png')] opacity-20 -z-10"></div>
+             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-pattern-dots opacity-20 -z-10"></div>
           </div>
 
         </div>
@@ -116,4 +116,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-    

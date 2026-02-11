@@ -1,0 +1,12 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <rect width="800" height="600" fill="#0f172a"/>
+  <!-- Clouds -->
+  <circle cx="100" cy="100" r="80" fill="#ffffff" opacity="0.05"/>
+  <circle cx="700" cy="200" r="120" fill="#ffffff" opacity="0.05"/>
+  <circle cx="400" cy="500" r="200" fill="#ffffff" opacity="0.03"/>
+  <!-- Flight Path -->
+  <path d="M100,500 Q400,100 700,100" fill="none" stroke="#D32F2F" stroke-width="4" stroke-dasharray="10,10" opacity="0.3"/>
+  <!-- Plane Silhouette -->
+  <path d="M680,80 L720,100 L680,120 Z" fill="#D32F2F" opacity="0.6"/>
+</svg>

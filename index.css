@@ -40,19 +40,12 @@
 
 /* --- Reset & Base --- */
 html {
-  -webkit-text-size-adjust: 100%; /* تصحيح: منع تكبير الايفون العشوائي */
+  -webkit-text-size-adjust: 100%;
   tab-size: 4;
   font-family: var(--font-cairo), sans-serif;
   line-height: 1.5;
   scroll-behavior: smooth;
-  font-size: 100%; /* الأساس للكمبيوتر */
-}
-
-/* هذا الكود الجديد: يصغر النصوص فقط عند فتح الموقع من الموبايل */
-@media (max-width: 768px) {
-  html {
-    font-size: 87.5%; /* يجعل كل 1rem يساوي 14px بدلاً من 16px */
-  }
+  font-size: 16px; /* Restored to standard 16px to match original design */
 }
 
 body {
@@ -356,11 +349,13 @@ button {
 .bg-white\/80 { background-color: rgba(255, 255, 255, 0.8); }
 .bg-white\/95 { background-color: rgba(255, 255, 255, 0.95); }
 .bg-slate-50 { background-color: var(--slate-50); }
+.bg-slate-50\/50 { background-color: rgba(248, 250, 252, 0.5); }
 .bg-slate-100 { background-color: var(--slate-100); }
 .bg-slate-200 { background-color: var(--slate-200); }
 .bg-slate-900 { background-color: var(--slate-900); }
 .bg-slate-950 { background-color: var(--slate-950); }
 .bg-black\/50 { background-color: rgba(0, 0, 0, 0.5); }
+.bg-black\/70 { background-color: rgba(0, 0, 0, 0.7); }
 .bg-brand-gray { background-color: var(--brand-gray); }
 .bg-brand-navy { background-color: var(--brand-navy); }
 .bg-brand-navy\/5 { background-color: rgba(33, 33, 33, 0.05); }
@@ -380,6 +375,11 @@ button {
 .bg-brand-coral\/20 { background-color: rgba(211, 47, 47, 0.2); }
 .bg-brand-teal { background-color: var(--brand-teal); }
 .bg-\[\#25D366\] { background-color: #25D366; } /* WhatsApp */
+
+/* Semantic Pattern Classes */
+.bg-pattern-dots { background-image: url('https://www.transparenttextures.com/patterns/dots-spaced.png'); }
+.bg-pattern-cubes { background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); }
+.bg-pattern-map { background-image: url('https://www.transparenttextures.com/patterns/map-cube.png'); }
 
 /* Gradients */
 .bg-gradient-to-t { background-image: linear-gradient(to top, var(--tw-gradient-stops)); }
@@ -513,6 +513,7 @@ button {
 .hover\:bg-brand-navy:hover { background-color: var(--brand-navy); }
 .hover\:bg-brand-red:hover { background-color: var(--brand-red); }
 .hover\:bg-brand-coral:hover { background-color: var(--brand-coral); }
+.hover\:bg-brand-coralLight:hover { background-color: #EF5350; }
 .hover\:bg-\[\#128C7E\]:hover { background-color: #128C7E; } /* WhatsApp Hover */
 .hover\:bg-\[\#1877F2\]:hover { background-color: #1877F2; } /* Facebook */
 .hover\:bg-\[\#E4405F\]:hover { background-color: #E4405F; } /* Instagram */

@@ -1,0 +1,9 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <rect width="800" height="600" fill="#f8fafc"/>
+  <rect x="0" y="0" width="800" height="600" fill="#212121" opacity="0.8"/> 
+  <!-- Decorative Medical Elements -->
+  <path d="M350,250 L450,250 M400,200 L400,300" stroke="#D32F2F" stroke-width="40" stroke-linecap="round" opacity="0.3"/>
+  <circle cx="400" cy="275" r="180" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.1"/>
+  <path d="M100,500 Q400,400 700,500" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.1"/>
+</svg>

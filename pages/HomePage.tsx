@@ -7,7 +7,7 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import { useLanguage } from '../components/LanguageContext';
 import ScrollReveal from '../components/ScrollReveal';
 import { WA_PHONE, FACEBOOK_LINK, INSTAGRAM_LINK, TIKTOK_LINK, X_LINK } from '../constants';
-import { WhatsAppIcon, FacebookIcon, InstagramIcon, TikTokIcon, XIcon } from '../components/BrandIcons';
+import { FacebookIcon, InstagramIcon, TikTokIcon, XIcon } from '../components/BrandIcons';
 
 const HomePage: React.FC = () => {
   const { t } = useLanguage();
@@ -25,7 +25,7 @@ const HomePage: React.FC = () => {
       
       <Services />
 
-      {/* Social Media Card Section - Moved Here */}
+      {/* Social Media Card Section */}
       <section className="py-20 bg-slate-50 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-5 sm:px-10">
           <ScrollReveal direction="up">

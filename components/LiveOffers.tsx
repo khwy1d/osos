@@ -31,7 +31,9 @@ const LiveOffers: React.FC = () => {
             >
               <div className="h-48 bg-slate-100 relative overflow-hidden">
                 <img 
-                  src={offer.type === 'Flight' ? "https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?auto=format&fit=crop&q=80&w=800" : "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800"} 
+                  src={offer.type === 'Flight' 
+                    ? "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=2000" 
+                    : "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=2000"} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   alt={offer.route[lang]}
                 />

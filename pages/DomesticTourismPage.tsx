@@ -1,98 +1,71 @@
+
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
-import { FileCheck, Globe, Clock, Shield, CheckCircle } from 'lucide-react';
+import { MapPin, Compass, Users, MessageCircle } from 'lucide-react';
 import { WA_PHONE } from '../constants';
-import { WhatsAppIcon } from '../components/BrandIcons';
 
-const VisaPage: React.FC = () => {
+const DomesticTourismPage: React.FC = () => {
   const { t } = useLanguage();
-  const msg = encodeURIComponent("السلام عليكم، أريد الاستعلام عن خدمات التأشيرات.");
+  const msg = encodeURIComponent("السلام عليكم ، اريد الاستعلام عن خدمة السياحة الداخلية.");
 
   return (
-    <div className="pb-20">
-      {/* Hero Section */}
-      <section className="bg-brand-blue py-20 text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 relative z-10 text-center space-y-8">
-          <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tighter">
-            {t('خدمات التأشيرات', 'Visa Services')}
-          </h1>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto font-medium">
-            {t('ننجز معاملاتك بسرعة وموثوقية عالية. خدماتنا تشمل تأشيرات العمل، الزيارة، والسياحة لمختلف الوجهات.', 'Fast and reliable visa processing for work, visit, and tourism to various destinations.')}
-          </p>
-          <div className="pt-4 flex justify-center">
-            <a href={`https://wa.me/${WA_PHONE}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white px-10 py-5 rounded-2xl font-black text-xl flex items-center gap-3 shadow-2xl hover:scale-105 transition-all">
-              <WhatsAppIcon className="w-7 h-7 fill-current" />
-              {t('ابدأ معاملتك الآن', 'Start Process')}
-            </a>
-          </div>
-        </div>
+    <div className="pt-10">
+      <section className="relative min-h-[60vh] flex items-center justify-center text-white text-center overflow-hidden">
+         <div className="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1627133912781-8079df939227?auto=format&fit=crop&q=80&w=1920" 
+              className="w-full h-full object-cover" 
+              alt="Yemen Nature" 
+            />
+            {/* Strong Black Overlay for Readability */}
+            <div className="absolute inset-0 bg-black/50"></div>
+         </div>
+         <div className="relative z-10 max-w-4xl mx-auto px-4 pt-20">
+             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 drop-shadow-lg leading-tight">
+               {t('اكتشف جمال اليمن مع خدماتنا للسياحة الداخلية', 'Explore Yemen with Our Domestic Tourism Services')}
+             </h1>
+             <p className="text-xl md:text-2xl text-white/90 font-medium max-w-2xl mx-auto px-4 mb-8 drop-shadow-md">
+               {t('نقدم خدمات سياحية محلية مبسطة وعملية لاستكشاف أجمل المناطق والمدن اليمنية.', 'Simple and practical local tourism services to explore beautiful Yemeni regions.')}
+             </p>
+             <a href={`https://wa.me/${WA_PHONE}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="bg-brand-coral hover:bg-brand-coralLight text-white px-8 py-4 rounded-2xl font-black text-lg shadow-xl hover:scale-105 transition-transform inline-flex items-center gap-2">
+                <MessageCircle className="w-6 h-6" />
+                {t('تواصل معنا للترتيب', 'Contact Us to Arrange')}
+             </a>
+         </div>
       </section>
 
-      {/* Content Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-3 gap-16 items-start">
-            {/* Info Side */}
-            <div className="lg:col-span-2 space-y-12">
-              <div className="space-y-6">
-                <h2 className="text-3xl font-black text-brand-blue">{t('لماذا تختار خدماتنا؟', 'Why Choose Us?')}</h2>
-                <p className="text-lg text-slate-600 font-medium leading-relaxed">
-                  {t('نمتلك خبرة واسعة في تخليص المعاملات القنصلية، مما يضمن لك أعلى نسب قبول وتوفير وقتك وجهدك في الإجراءات الروتينية.', 'Extensive experience in consular processing ensuring high acceptance rates and saving your time.')}
-                </p>
-              </div>
-
-              {/* Card Design Applied */}
-              <div className="grid sm:grid-cols-2 gap-8">
-                {[
-                  { icon: <FileCheck className="w-6 h-6" />, title: t('تجهيز الملفات', 'Document Prep'), desc: t('مراجعة دقيقة لكافة المستندات المطلوبة.', 'Precise review of all required documents.') },
-                  { icon: <Globe className="w-6 h-6" />, title: t('وجهات متعددة', 'Global Access'), desc: t('تأشيرات للسعودية، الإمارات، الهند، والمزيد.', 'Visas for KSA, UAE, India, and more.') },
-                  { icon: <Clock className="w-6 h-6" />, title: t('سرعة الإنجاز', 'Fast Processing'), desc: t('متابعة مستمرة لضمان سرعة الإصدار.', 'Continuous follow-up for fast issuance.') },
-                  { icon: <Shield className="w-6 h-6" />, title: t('موثوقية عالية', 'High Reliability'), desc: t('تعامل رسمي وشفافية في الرسوم.', 'Official handling and transparent fees.') },
-                ].map((item, idx) => (
-                  <div key={idx} className="flex justify-start items-start gap-4 bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all group">
-                    <div className="flex-shrink-0 w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-brand-coral border border-slate-50 group-hover:bg-brand-blue group-hover:text-white transition-colors">
-                      {item.icon}
-                    </div>
-                    <div className="text-start">
-                      <h4 className="font-black text-xl text-slate-900 mb-1">{item.title}</h4>
-                      <p className="text-slate-500 font-medium text-sm leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Sidebar */}
-            <div className="bg-white p-8 md:p-10 rounded-[3rem] border border-slate-100 shadow-2xl space-y-8 sticky top-28">
-               <h3 className="text-2xl font-black text-brand-blue text-center">{t('المستندات المطلوبة', 'Documents')}</h3>
-               <ul className="space-y-4">
-                  {[
-                    t('جواز سفر ساري المفعول (6 أشهر).', 'Valid Passport (6 months).'),
-                    t('صور شخصية حديثة بخلفية بيضاء.', 'Recent white-background photos.'),
-                    t('الهوية الوطنية أو البطاقة الشخصية.', 'National ID card.'),
-                  ].map((text, idx) => (
-                    <li key={idx} className="flex items-start gap-3 font-bold text-slate-700">
-                       <CheckCircle className="w-5 h-5 text-brand-coral flex-shrink-0 mt-0.5" />
-                       <span className="text-sm leading-relaxed">{text}</span>
-                    </li>
-                  ))}
-               </ul>
-               <div className="bg-brand-coral/5 p-4 rounded-xl border border-brand-coral/10">
-                  <p className="text-[10px] text-brand-coral font-bold leading-relaxed">
-                    {t('ملاحظة: المتطلبات قد تختلف حسب نوع التأشيرة والبلد المراد زيارته.', 'Note: Requirements vary by visa type and destination country.')}
-                  </p>
-               </div>
-               <a href={`https://wa.me/${WA_PHONE}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="mt-8 w-full bg-[#25D366] text-white py-4 rounded-2xl font-black text-center flex items-center justify-center gap-2 hover:bg-[#128C7E] transition-all shadow-xl">
-                 <WhatsAppIcon className="w-5 h-5 fill-current" />
-                 {t('تواصل معنا للاستفسار', 'Contact Us')}
-               </a>
-            </div>
-          </div>
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="grid md:grid-cols-3 gap-12">
+              {[
+                { icon: <MapPin />, title: t('رحلات استكشافية', 'Exploration Trips'), desc: t('تنظيم رحلات محلية للمناطق السياحية والتاريخية بأسعار منافسة.', 'Organizing local trips to tourist and historical sites at competitive rates.') },
+                { icon: <Compass />, title: t('إرشادات سياحية', 'Tourism Guidance'), desc: t('تزويدكم بالمعلومات الكافية حول أفضل الوجهات المحلية وطرق الوصول.', 'Providing info on best local destinations and how to get there.') },
+                { icon: <Users />, title: t('تنسيق المجموعات', 'Group Coordination'), desc: t('تنسيق السكن والنقل للمجموعات والعائلات بمهنية عالية.', 'Coordinating stay and transport for groups and families professionally.') },
+              ].map((item, idx) => (
+                <div key={idx} className="p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:shadow-lg transition-all flex flex-row items-start gap-6 text-start">
+                   <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-brand-teal shadow-sm flex-shrink-0">
+                      {React.cloneElement(item.icon as React.ReactElement<{ className?: string }>, { className: 'w-8 h-8' })}
+                   </div>
+                   <div className="flex-1 space-y-2">
+                       <h3 className="text-2xl font-black text-slate-900 leading-tight">{item.title}</h3>
+                       <p className="text-slate-600 font-medium leading-relaxed text-sm">{item.desc}</p>
+                       <a 
+                          href={`https://wa.me/${WA_PHONE}?text=${encodeURIComponent(`السلام عليكم، استفسار بخصوص: ${item.title}`)}`}
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-brand-coral font-bold text-xs flex items-center gap-1 hover:underline mt-2"
+                       >
+                         <MessageCircle className="w-3.5 h-3.5" />
+                         {t('استفسر الآن', 'Inquire Now')}
+                       </a>
+                   </div>
+                </div>
+              ))}
+           </div>
         </div>
       </section>
     </div>
   );
 };
 
-export default VisaPage;
-                 
+export default DomesticTourismPage;

@@ -11,7 +11,7 @@ const WhyChooseUs: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
         <div className="bg-brand-blue rounded-[3rem] p-12 md:p-16 relative overflow-hidden shadow-2xl">
           {/* Decor Pattern Overlay */}
-          <div className="absolute inset-0 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+          <div className="absolute inset-0 opacity-5 pointer-events-none bg-pattern-cubes"></div>
           <div className="absolute top-0 right-0 w-64 h-64 bg-brand-coral/10 rounded-full blur-[80px]"></div>
           
           <div className="relative z-10 text-center mb-16 space-y-2">

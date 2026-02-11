@@ -124,7 +124,7 @@ const ContactPage: React.FC = () => {
         <div className="hidden">
            <div className="bg-slate-100 rounded-3xl overflow-hidden relative min-h-[400px] border border-slate-200 group">
                {/* Decorative Map Placeholder */}
-               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/map-cube.png')] opacity-10"></div>
+               <div className="absolute inset-0 bg-pattern-map opacity-10"></div>
                <div className="absolute inset-0 flex items-center justify-center bg-slate-200/50">
                   <div className="text-center space-y-3 p-6">
                     <div className="w-16 h-16 mx-auto bg-brand-coral rounded-full flex items-center justify-center shadow-xl animate-bounce">

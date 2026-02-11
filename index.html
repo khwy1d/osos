@@ -1,56 +1,42 @@
+
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-
-    <title>أُسس للسفر | OSOS Travel</title>
-
-    <meta name="description" content="وكالة أُسس للسفر والسياحة - خدمات متكاملة: موافقات أمنية لمصر، تنسيق طبي، حجوزات طيران، وتأجير سيارات. رحلتك تبدأ من هنا.">
-    <meta name="keywords" content="سفر, سياحة, موافقات أمنية, مصر, اليمن, طيران, علاج, أُسس">
     <meta name="google-site-verification" content="LQxnny5CJzHQD2cSqeY8NO2BZNRCNLV8Jc6jbNaCO64" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="أُسس للسفر | OSOS Travel">
-    <meta property="og:description" content="خدمات سفر متكاملة وموافقات أمنية وحجوزات طيران.">
-    <meta property="og:image" content="https://osostravel.vercel.app/web-app-manifest-512x512.png">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
-    <meta property="og:type" content="website">
-
-    <!-- Icons -->
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-
-    <meta name="apple-mobile-web-app-title" content="OSOS TRAVEL" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <!-- Theme color -->
+    
+    <!-- Browser Theme Colors -->
     <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#212121" media="(prefers-color-scheme: dark)">
-
-    <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <title>أُسس للسفر | Osos Travel</title>
+    
+    <!-- Favicon & App Metadata -->
+    <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="OSOS TRAVEL" />
+    <link rel="manifest" href="./site.webmanifest" />
+    
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-
-    <!-- Structured Data (Google Logo Hint) -->
-    <script type="application/ld+json">
+    
+    <script type="importmap">
     {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "OSOS Travel",
-      "url": "https://osostravel.vercel.app/",
-      "logo": "https://osostravel.vercel.app/web-app-manifest-512x512.png"
+      "imports": {
+        "react": "https://esm.sh/react@19.0.0",
+        "react-dom": "https://esm.sh/react-dom@19.0.0",
+        "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+        "react-router-dom": "https://esm.sh/react-router-dom@6.28.0?deps=react@19.0.0,react-dom@19.0.0",
+        "lucide-react": "https://esm.sh/lucide-react@0.473.0?deps=react@19.0.0",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "react/": "https://esm.sh/react@^19.2.4/"
+      }
     }
     </script>
-
   </head>
-
-  <body class="antialiased overflow-x-hidden bg-white text-gray-900">
+  <body>
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
   </body>

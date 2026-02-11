@@ -1,0 +1,10 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <rect width="800" height="600" fill="#212121"/>
+  <!-- Archways -->
+  <path d="M100,600 V300 A100,100 0 0,1 300,300 V600" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.1"/>
+  <path d="M500,600 V300 A100,100 0 0,1 700,300 V600" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.1"/>
+  <!-- Moon -->
+  <path d="M650,100 A50,50 0 1,1 600,50 A40,40 0 1,0 650,100" fill="#D32F2F" opacity="0.4"/>
+  <circle cx="400" cy="600" r="200" fill="#ffffff" opacity="0.05"/>
+</svg>

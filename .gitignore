@@ -1,3 +1,5 @@
+# Logs
+logs
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -5,25 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Dependencies
 node_modules
-.pnp
-.pnp.js
-
-# Testing
-coverage
-
-# Production Build
 dist
-build
-out
-
-# Environment Variables (مهم جداً للحماية)
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+dist-ssr
+*.local
 
 # Editor directories and files
 .vscode/*

@@ -1,0 +1,10 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <rect width="800" height="600" fill="#0284c7"/>
+  <rect width="800" height="600" fill="#212121" opacity="0.6"/>
+  <!-- Sun -->
+  <circle cx="700" cy="100" r="60" fill="#fbbf24" opacity="0.5"/>
+  <!-- Waves/Mountains -->
+  <path d="M0,300 Q200,200 400,300 T800,300 V600 H0 Z" fill="#ffffff" opacity="0.1"/>
+  <path d="M0,400 Q200,350 400,450 T800,400 V600 H0 Z" fill="#ffffff" opacity="0.1"/>
+</svg>

@@ -1,0 +1,11 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <rect width="800" height="600" fill="#334155"/>
+  <!-- Road lines -->
+  <path d="M0,600 L350,300 L450,300 L800,600" fill="#212121" opacity="0.3"/>
+  <path d="M400,300 L400,600" stroke="#ffffff" stroke-width="5" stroke-dasharray="20,20" opacity="0.2"/>
+  <!-- Abstract Bus Shape -->
+  <rect x="250" y="250" width="300" height="200" rx="20" fill="#212121" opacity="0.4"/>
+  <circle cx="300" cy="450" r="30" fill="#111" opacity="0.5"/>
+  <circle cx="500" cy="450" r="30" fill="#111" opacity="0.5"/>
+</svg>
