@@ -87,6 +87,7 @@ const Navbar: React.FC = () => {
 
               {/* Mobile Menu Toggle */}
               <button 
+                aria-label = "فتح القائمة"
                 onClick={() => setIsOpen(true)} 
                 className="md:hidden p-2 text-brand-navy bg-slate-50 rounded-xl active:scale-95 transition-all border border-slate-100"
               >
