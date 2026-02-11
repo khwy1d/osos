@@ -30,7 +30,8 @@ const App: React.FC = () => {
         <ScrollToTop />
         <div className="min-h-screen flex flex-col selection:bg-brand-green selection:text-white bg-white">
           <Navbar />
-          <div className="mt-[80px] flex-1 flex flex-col">
+          {/* Using valid utility classes defined in index.css: mt-24 (6rem/96px) for mobile, md:mt-32 (8rem/128px) for desktop */}
+          <div className="mt-24 md:mt-32 flex-1 flex flex-col">
             <Breadcrumbs />
             <main className="flex-1">
               <Routes>

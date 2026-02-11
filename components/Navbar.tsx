@@ -25,22 +25,22 @@ const Navbar: React.FC = () => {
         className={`fixed w-full top-0 left-0 right-0 z-[100] transition-all duration-300 ${
           scrolled 
             ? 'bg-white/95 backdrop-blur-md shadow-sm py-2' 
-            : 'bg-white py-4 border-b border-slate-50'
+            : 'bg-white py-3 md:py-4 border-b border-slate-50'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <div className="flex justify-between items-center">
             
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+            <Link to="/" className="flex items-center gap-2 md:gap-3 group">
+              <div className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                 <OsosLogo className="w-full h-full" />
               </div>
               <div className="flex flex-col justify-center">
-                <span className={`text-brand-navy font-black text-xl md:text-2xl uppercase tracking-tight leading-none ${lang === 'ar' ? 'font-cairo' : 'font-tajawal'}`}>
+                <span className={`text-brand-navy font-black text-lg md:text-2xl uppercase tracking-tight leading-none ${lang === 'ar' ? 'font-cairo' : 'font-tajawal'}`}>
                   {lang === 'ar' ? 'أُسس' : 'OSOS'}
                 </span>
-                <span className="text-brand-green font-bold text-xs md:text-sm tracking-widest uppercase mt-0.5">
+                <span className="text-brand-green font-bold text-[10px] md:text-sm tracking-widest uppercase mt-0.5">
                   {lang === 'ar' ? 'للسفر' : 'TRAVEL'}
                 </span>
               </div>
@@ -70,11 +70,11 @@ const Navbar: React.FC = () => {
               {/* Language Toggle - Icon Only - Visible on all screens */}
               <button
                 onClick={() => setLang(lang === 'ar' ? 'en' : 'ar')}
-                className="p-2.5 rounded-full hover:bg-slate-50 transition-colors text-brand-navy group"
+                className="p-2 md:p-2.5 rounded-full hover:bg-slate-50 transition-colors text-brand-navy group"
                 aria-label={lang === 'ar' ? 'Switch to English' : 'التحويل للعربية'}
                 title={lang === 'ar' ? 'Switch to English' : 'التحويل للعربية'}
               >
-                <Globe className="w-6 h-6 stroke-[1.5] group-hover:stroke-2 transition-all" />
+                <Globe className="w-5 h-5 md:w-6 md:h-6 stroke-[1.5] group-hover:stroke-2 transition-all" />
               </button>
 
               <a
@@ -88,9 +88,9 @@ const Navbar: React.FC = () => {
               {/* Mobile Menu Toggle */}
               <button 
                 onClick={() => setIsOpen(true)} 
-                className="md:hidden p-2.5 text-brand-navy bg-slate-50 rounded-xl active:scale-95 transition-all border border-slate-100"
+                className="md:hidden p-2 text-brand-navy bg-slate-50 rounded-xl active:scale-95 transition-all border border-slate-100"
               >
-                <Menu className="w-6 h-6" />
+                <Menu className="w-5 h-5" />
               </button>
             </div>
           </div>

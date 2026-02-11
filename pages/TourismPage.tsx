@@ -12,7 +12,7 @@ const TourismPage: React.FC = () => {
   return (
     <div className="pb-16">
       {/* Hero Section - Standardized */}
-      <section className="relative min-h-[60vh] flex items-center justify-center text-white overflow-hidden">
+      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=1920" 
@@ -22,16 +22,16 @@ const TourismPage: React.FC = () => {
           {/* Strong Black Overlay for Readability */}
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center space-y-8 pt-20">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tighter drop-shadow-lg">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center space-y-6 md:space-y-8 pt-16 md:pt-20">
+          <h1 className="text-2xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tighter drop-shadow-lg">
             {t('خدمات السياحة', 'Tourism Services')}
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto font-medium drop-shadow-md leading-relaxed">
+          <p className="text-base md:text-2xl text-white/90 max-w-2xl mx-auto font-medium drop-shadow-md leading-relaxed">
             {t('استكشف سحر اليمن وجمال العالم معنا، نقدم باكجات سياحية متكاملة إلى أفضل الوجهات السياحية العالمية بأفضل الأسعار.', 'Explore Yemen and the world with our integrated tour packages to top global destinations.')}
           </p>
-          <div className="pt-4 flex justify-center">
-            <a href={`https://wa.me/${WA_PHONE}?text=${mainMsg}`} target="_blank" rel="noopener noreferrer" className="bg-brand-red hover:bg-red-700 text-white px-10 py-5 rounded-2xl font-black text-lg flex items-center gap-3 shadow-2xl hover:scale-105 transition-all">
-              <WhatsAppIcon className="w-6 h-6 fill-current" />
+          <div className="pt-2 md:pt-4 flex justify-center">
+            <a href={`https://wa.me/${WA_PHONE}?text=${mainMsg}`} target="_blank" rel="noopener noreferrer" className="bg-brand-red hover:bg-red-700 text-white px-6 py-3 md:px-10 md:py-5 rounded-2xl font-black text-base md:text-lg flex items-center gap-3 shadow-2xl hover:scale-105 transition-all">
+              <WhatsAppIcon className="w-5 h-5 md:w-6 md:h-6 fill-current" />
               {t('اكتشف عروضنا', 'Explore Offers')}
             </a>
           </div>
@@ -39,13 +39,13 @@ const TourismPage: React.FC = () => {
       </section>
 
       {/* Content Section */}
-      <section className="py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-3 gap-16 items-start">
-            <div className="lg:col-span-2 space-y-12">
-              <div className="space-y-6">
-                <h2 className="text-3xl font-black text-brand-navy">{t('وجهاتك المفضلة بلمسة أُسس', 'Your Destinies, Osos Touch')}</h2>
-                <p className="text-lg text-slate-600 font-medium leading-relaxed">
+          <div className="grid lg:grid-cols-3 gap-10 md:gap-16 items-start">
+            <div className="lg:col-span-2 space-y-8 md:space-y-12">
+              <div className="space-y-4 md:space-y-6">
+                <h2 className="text-2xl md:text-3xl font-black text-brand-navy">{t('وجهاتك المفضلة بلمسة أُسس', 'Your Destinies, Osos Touch')}</h2>
+                <p className="text-base md:text-lg text-slate-600 font-medium leading-relaxed">
                   {t('نحن نوفر لك تجربة سياحية فريدة تبدأ من التخطيط وحتى العودة، نعتني بحجوزات الطيران، الفنادق، والجولات اليومية لضمان قضائك أجمل الأوقات.', 'Unique tourism experience caring for flights, hotels, and daily tours.')}
                 </p>
               </div>
@@ -57,35 +57,35 @@ const TourismPage: React.FC = () => {
                   { icon: <Compass />, title: t('رحلات عائلية', 'Family Packages'), desc: t('باكجات مخصصة توفر الخصوصية والراحة.', 'Custom family packages.') },
                   { icon: <Map />, title: t('جولات يومية', 'Daily Tours'), desc: t('تنسيق جولات مع مرشدين سياحيين محليين.', 'Organized tours with guides.') },
                 ].map((item, idx) => (
-                  <div key={idx} className="p-6 rounded-3xl bg-slate-50 border border-slate-100 flex items-start gap-4 group hover:bg-white hover:shadow-lg transition-all duration-300">
-                    <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-brand-red shadow-sm group-hover:bg-brand-navy group-hover:text-white transition-all flex-shrink-0">
-                      {React.cloneElement(item.icon as React.ReactElement<{ className?: string }>, { className: 'w-6 h-6' })}
+                  <div key={idx} className="p-5 md:p-6 rounded-3xl bg-slate-50 border border-slate-100 flex items-start gap-4 group hover:bg-white hover:shadow-lg transition-all duration-300">
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-2xl flex items-center justify-center text-brand-red shadow-sm group-hover:bg-brand-navy group-hover:text-white transition-all flex-shrink-0">
+                      {React.cloneElement(item.icon as React.ReactElement<{ className?: string }>, { className: 'w-5 h-5 md:w-6 md:h-6' })}
                     </div>
                     <div>
-                      <h4 className="font-black text-xl text-brand-navy mb-2">{item.title}</h4>
-                      <p className="text-slate-500 font-medium text-sm leading-relaxed">{item.desc}</p>
+                      <h4 className="font-black text-lg md:text-xl text-brand-navy mb-1 md:mb-2">{item.title}</h4>
+                      <p className="text-slate-500 font-medium text-xs md:text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-slate-50 p-10 rounded-[2.5rem] shadow-sm space-y-8 sticky top-28 border border-slate-100">
-               <h3 className="text-2xl font-black text-brand-navy">{t('مميزات الباكجات', 'Package Perks')}</h3>
-               <ul className="space-y-4">
+            <div className="bg-slate-50 p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-sm space-y-6 md:space-y-8 sticky top-28 border border-slate-100">
+               <h3 className="text-xl md:text-2xl font-black text-brand-navy">{t('مميزات الباكجات', 'Package Perks')}</h3>
+               <ul className="space-y-3 md:space-y-4">
                   {[
                     t('إقامة فندقية بمستويات فاخرة.', 'Luxury hotel accommodation.'),
                     t('تأشيرات سياحية ميسرة.', 'Simplified tourism visas.'),
                     t('استقبال وتوديع من المطارات.', 'Airport pickup and drop-off.'),
                   ].map((text, idx) => (
                     <li key={idx} className="flex items-center gap-3 font-bold text-slate-700">
-                       <CheckCircle className="w-5 h-5 text-brand-red flex-shrink-0" />
+                       <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-brand-red flex-shrink-0" />
                        <span className="text-sm">{text}</span>
                     </li>
                   ))}
                </ul>
-               <a href={`https://wa.me/${WA_PHONE}?text=${mainMsg}`} target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-4 rounded-2xl font-black text-center flex items-center justify-center gap-2 transition-all text-lg shadow-lg">
-                 <WhatsAppIcon className="w-6 h-6 fill-current" />
+               <a href={`https://wa.me/${WA_PHONE}?text=${mainMsg}`} target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-3 md:py-4 rounded-2xl font-black text-center flex items-center justify-center gap-2 transition-all text-base md:text-lg shadow-lg">
+                 <WhatsAppIcon className="w-5 h-5 md:w-6 md:h-6 fill-current" />
                  {t('اطلب عرضك الآن', 'Request a Quote')}
                </a>
             </div>
