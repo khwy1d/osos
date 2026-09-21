@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
             <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black text-brand-navy leading-[1.2] mb-4 md:mb-6 tracking-tight font-tajawal">
               {lang === 'ar' 
                 ? <>رحلتك تبدأ بـ <span className="text-brand-green">أُسس</span> صحيحة.</>
-                : <>Your Journey Starts on Right <span className="text-brand-green">Osos</span>.</>}
+                : <>Your Journey Starts on Right <span className="text-brand-green">OSOS</span>.</>}
             </h1>
             
             <p className="text-base sm:text-xl text-slate-500 font-medium leading-relaxed max-w-xl mx-auto lg:mx-0 mb-6 md:mb-8">
