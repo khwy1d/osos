@@ -28,13 +28,7 @@ const Hero: React.FC = () => {
           {/* Text Content */}
           <div className={`flex-1 text-center lg:text-start transition-all duration-700 ease-out-expo ${loaded ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-[0.98]'}`}>
             
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-brand-green/5 border border-brand-green/10 text-brand-green text-[10px] md:text-xs font-bold mb-4 md:mb-6">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-green"></span>
-              </span>
-              {t('خدمات سفر متكاملة', 'Integrated Travel Services')}
-            </div>
+            
 
             <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black text-brand-navy leading-[1.2] mb-4 md:mb-6 tracking-tight font-tajawal">
               {lang === 'ar' 
