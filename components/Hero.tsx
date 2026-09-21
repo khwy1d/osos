@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from './LanguageContext';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
@@ -26,10 +25,8 @@ const Hero: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-20">
           
           {/* Text Content */}
+          
           <div className={`flex-1 text-center lg:text-start transition-all duration-700 ease-out-expo ${loaded ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-[0.98]'}`}>
-            
-            
-
             <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black text-brand-navy leading-[1.2] mb-4 md:mb-6 tracking-tight font-tajawal">
               {lang === 'ar' 
                 ? <>رحلتك تبدأ بـ <span className="text-brand-green">أُسس</span> صحيحة.</>
@@ -38,7 +35,7 @@ const Hero: React.FC = () => {
             
             <p className="text-base sm:text-xl text-slate-500 font-medium leading-relaxed max-w-xl mx-auto lg:mx-0 mb-6 md:mb-8">
               {t(
-                'نقدم لك حلولاً ذكية للسفر، من الموافقات الأمنية وحتى الوصول لوجهتك. سهولة، أمان، واحترافية.',
+                'نقدم لك حلولاً للسفر، من الموافقات الأمنية وحتى الوصول لوجهتك. سهولة، أمان، واحترافية.',
                 'Smart travel solutions, from security clearances to your destination. Ease, safety, and professionalism.'
               )}
             </p>
