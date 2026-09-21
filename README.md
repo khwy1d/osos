@@ -1,20 +1,38 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# OSOS Travel
 
-# Run and deploy your AI Studio app
+موقع أُسس للسفر والسياحة، وهو تطبيق واجهة أمامية مبني باستخدام React وTypeScript وVite. يدعم الموقع العربية والإنجليزية، ويعرض خدمات السفر والسياحة والعقارات مع تحويل طلبات العملاء إلى واتساب.
 
-This contains everything you need to run your app locally.
+## المتطلبات
 
-View your app in AI Studio: https://ai.studio/apps/drive/1tOj97wHtY-93nt7O2ANAsQFbWNGaUjJX
+- Node.js 18 أو أحدث
+- npm
 
-## Run Locally
+## التشغيل محليًا
 
-**Prerequisites:**  Node.js
+```bash
+npm install
+npm run dev
+```
 
+يفتح خادم التطوير عادةً على `http://localhost:3000`.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## أوامر مهمة
+
+```bash
+npm run build      # إنشاء نسخة الإنتاج داخل dist
+npm run preview    # معاينة نسخة الإنتاج
+npx tsc --noEmit   # فحص TypeScript
+```
+
+## بنية المشروع
+
+- `App.tsx`: إعداد المسارات والمكوّنات العامة.
+- `pages/`: صفحات الخدمات والمحتوى.
+- `components/`: المكوّنات المشتركة مثل التنقل، الخدمات، التذييل، واتساب واللغات.
+- `constants.tsx`: بيانات الخدمات وروابط الاتصال والمحتوى الثابت.
+- `public/`: الشعارات والأيقونات والملفات الثابتة.
+- `index.css`: نظام التصميم والتنسيقات العامة.
+
+## ملاحظات
+
+المشروع حاليًا واجهة أمامية ولا يحتوي على Backend أو قاعدة بيانات أو نظام دفع. استقبال الطلبات يتم عبر روابط واتساب والاتصال والبريد الإلكتروني المعرفة في `constants.tsx`.
