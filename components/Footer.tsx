@@ -67,28 +67,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Navigation Links Section */}
-          <div className="space-y-8">
-            <h4 className="text-lg font-black border-r-3 border-brand-green pr-3 flex items-center gap-2">
-              {t('خدماتنا الأكثر طلباً', 'Most Requested')}
-            </h4>
-            <ul className="grid grid-cols-1 gap-3">
-              {footerServices.map(service => (
-                <li key={service.id}>
-                  <Link 
-                    to={service.link}
-                    className="text-slate-400 hover:text-white transition-all flex items-center justify-between group p-2.5 rounded-xl hover:bg-white/5 border border-transparent hover:border-white/10"
-                  >
-                    <span className="font-bold text-sm flex items-center gap-2.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-brand-green opacity-40 group-hover:opacity-100 transition-opacity"></div>
-                      {service.title[lang]}
-                    </span>
-                    <ArrowRight className={`w-3.5 h-3.5 opacity-0 group-hover:opacity-40 transition-all ${lang === 'ar' ? 'rotate-180' : ''}`} />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+
 
           {/* Contact Details Section */}
           <div className="space-y-8">
