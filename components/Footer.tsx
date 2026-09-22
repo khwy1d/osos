@@ -23,22 +23,6 @@ const Footer: React.FC = () => {
     <footer id="contact" className="bg-slate-950 text-white pt-14 pb-8 overflow-hidden relative border-t border-white/5">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-navy/15 rounded-full blur-[100px] opacity-60"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-10 mb-10">
-          {/* Brand Info Section */}
-          <div className="space-y-5">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 flex items-center justify-center">
-                <OsosLogo className="w-full h-full" />
-              </div>
-              <div className={`flex flex-col ${lang === 'ar' ? 'leading-[1.1]' : 'leading-[0.85]'}`}>
-                <span className={`font-black text-2xl uppercase ${lang === 'ar' ? 'font-cairo' : 'font-inter tracking-tighter'}`}>
-                    {lang === 'ar' ? 'أُسس' : 'OSOS'}
-                </span>
-                <span className={`text-brand-green font-bold uppercase ${lang === 'ar' ? 'text-[11px] font-cairo mt-1' : 'text-[8px] tracking-[0.2em] font-inter mt-1.5'}`}>للسفر</span>
-              </div>
-            </div>
-
             <p className="text-slate-400 leading-relaxed font-medium text-base max-w-sm">
               {t(
                 'أُسس للسفر، خيارك الأول والموثوق في خدمات السفر، الموافقات الأمنية، وحجوزات الطيران والنقل.',
