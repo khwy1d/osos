@@ -23,6 +23,13 @@ const Footer: React.FC = () => {
     <footer id="contact" className="bg-slate-950 text-white pt-14 pb-8 overflow-hidden relative border-t border-white/5">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-navy/15 rounded-full blur-[100px] opacity-60"></div>
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 mb-10">
+          {/* Brand Info Section */}
+          <div className="space-y-5">
+            <div className="flex items-center gap-4">
+            </div>
+
             <p className="text-slate-400 leading-relaxed font-medium text-base max-w-sm">
               {t(
                 'أُسس للسفر، خيارك الأول والموثوق في خدمات السفر، الموافقات الأمنية، وحجوزات الطيران والنقل.',
