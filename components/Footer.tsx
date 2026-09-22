@@ -67,8 +67,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-
-
           {/* Contact Details Section */}
           <div className="space-y-8">
             <h4 className="text-lg font-black border-r-3 border-brand-green pr-3">{t('تواصـل معنـا', 'Get in Touch')}</h4>
@@ -77,8 +75,6 @@ const Footer: React.FC = () => {
                 <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green flex-shrink-0 transition-transform shadow-sm">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <div>
-                  <p className="text-slate-500 text-[9px] font-black uppercase tracking-widest mb-0.5">{t('مقرنا الرئيسي', 'Our HQ')}</p>
                   <p className="font-black text-lg text-slate-100">{t('اليمن، تعز', 'Yemen, Taiz')}</p>
                 </div>
               </li>
@@ -86,8 +82,6 @@ const Footer: React.FC = () => {
                 <div className="w-10 h-10 rounded-xl bg-brand-navy/20 flex items-center justify-center text-brand-navy flex-shrink-0 transition-transform shadow-sm">
                   <Phone className="w-5 h-5" />
                 </div>
-                <div dir="ltr">
-                  <p className="text-slate-500 text-[9px] font-black uppercase tracking-widest mb-0.5 text-start">{t('اتصل بنا مباشرة', 'Call Direct')}</p>
                   <p className="font-black text-lg text-slate-100">{DISPLAY_PHONE}</p>
                 </div>
               </li>
