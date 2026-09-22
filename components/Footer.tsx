@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
-import { MapPin, Phone, ArrowRight } from 'lucide-react';
-import { SERVICES, WA_PHONE, DISPLAY_PHONE, FACEBOOK_LINK, INSTAGRAM_LINK, TIKTOK_LINK, X_LINK } from '../constants';
+import { MapPin, Phone } from 'lucide-react';
+import { WA_PHONE, DISPLAY_PHONE, FACEBOOK_LINK, INSTAGRAM_LINK, TIKTOK_LINK, X_LINK } from '../constants';
 import { WhatsAppIcon, TikTokIcon, XIcon, FacebookIcon, InstagramIcon, OsosLogo } from './BrandIcons';
 
 const Footer: React.FC = () => {
@@ -17,12 +16,10 @@ const Footer: React.FC = () => {
     { icon: <XIcon className="w-5 h-5" />, label: 'X (Twitter)', link: X_LINK }
   ];
 
-  const footerServices = SERVICES.filter(s => !s.hidden).slice(0, 6);
-
   return (
     <footer id="contact" className="bg-slate-950 text-white pt-16 pb-10 overflow-hidden relative border-t border-white/5">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-navy/10 rounded-full blur-[120px] opacity-40"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-3 gap-12 mb-16">
           {/* Brand Info Section */}
@@ -38,7 +35,7 @@ const Footer: React.FC = () => {
                 <span className={`text-brand-green font-bold uppercase ${lang === 'ar' ? 'text-[11px] font-cairo mt-1' : 'text-[8px] tracking-[0.2em] font-inter mt-1.5'}`}>للسفر</span>
               </div>
             </div>
-            
+
             <p className="text-slate-400 leading-relaxed font-medium text-base max-w-sm">
               {t(
                 'أُسس للسفر، خيارك الأول والموثوق في خدمات السفر، الموافقات الأمنية، وحجوزات الطيران والنقل.',
@@ -50,11 +47,11 @@ const Footer: React.FC = () => {
               <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{t('تابعنا على منصاتنا', 'Follow Us')}</p>
               <div className="flex flex-wrap gap-3">
                 {socialLinks.map((social, i) => (
-                  <a 
+                  <a
                     key={i}
-                    href={social.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group text-slate-400 hover:text-brand-green"
                     aria-label={social.label}
                   >
@@ -66,25 +63,27 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-          
-{/* Contact Details Section */}
-<div className="space-y-8">
-  <h4 className="text-lg font-black border-r-3 border-brand-green pr-3">{t('تواصـل معنـا', 'Get in Touch')}</h4>
-  <ul className="space-y-5">
-    <li className="flex items-start gap-4 group">
-      <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green flex-shrink-0 transition-transform shadow-sm">
-        <MapPin className="w-5 h-5" />
-      </div>
-      <p className="font-black text-lg text-slate-100">{t('اليمن، تعز', 'Yemen, Taiz')}</p>
-    </li>
-    <li className="flex items-start gap-4 group">
-      <div className="w-10 h-10 rounded-xl bg-brand-navy/20 flex items-center justify-center text-brand-navy flex-shrink-0 transition-transform shadow-sm">
-        <Phone className="w-5 h-5" />
-      </div>
-      <p className="font-black text-lg text-slate-100">{DISPLAY_PHONE}</p>
-    </li>
-  </ul>
-</div>
+
+          {/* Contact Details Section */}
+          <div className="space-y-8">
+            <h4 className="text-lg font-black border-r-3 border-brand-green pr-3">{t('تواصـل معنـا', 'Get in Touch')}</h4>
+            <ul className="space-y-5">
+              <li className="flex items-start gap-4 group">
+                <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green flex-shrink-0 transition-transform shadow-sm">
+                  <MapPin className="w-5 h-5" />
+                </div>
+                <p className="font-black text-lg text-slate-100">{t('اليمن، تعز', 'Yemen, Taiz')}</p>
+              </li>
+              <li className="flex items-start gap-4 group">
+                <div className="w-10 h-10 rounded-xl bg-brand-navy/20 flex items-center justify-center text-brand-navy flex-shrink-0 transition-transform shadow-sm">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <p className="font-black text-lg text-slate-100">{DISPLAY_PHONE}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
         <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-[10px] font-black tracking-widest uppercase">
           <p>© {new Date().getFullYear()} {t('أُسس للسفر والسياحة. جميع الحقوق محفوظة.', 'Osos Travel & Tourism.')}</p>
