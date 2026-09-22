@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
-import { MapPin, Phone, ArrowRight } from 'lucide-react';
+import { MapPin, Phone } from 'lucide-react';
 import { WA_PHONE, DISPLAY_PHONE, FACEBOOK_LINK, INSTAGRAM_LINK, TIKTOK_LINK, X_LINK } from '../constants';
-import { WhatsAppIcon, TikTokIcon, XIcon, FacebookIcon, InstagramIcon, OsosLogo } from './BrandIcons';
+import { WhatsAppIcon, TikTokIcon, XIcon, FacebookIcon, InstagramIcon } from './BrandIcons';
 
 const Footer: React.FC = () => {
   const { t, lang } = useLanguage();
@@ -27,20 +27,6 @@ const Footer: React.FC = () => {
         <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-9 md:gap-12 lg:gap-20 pb-9 md:pb-12">
           {/* Brand Section */}
           <div className="space-y-6 md:space-y-7 text-center lg:text-start">
-            <Link to="/" className="inline-flex items-center gap-3 group" aria-label={t('العودة إلى الرئيسية', 'Back to home')}>
-              <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                <OsosLogo className="w-full h-full" />
-              </div>
-              <div className="flex flex-col items-start leading-none">
-                <span className={`font-black text-3xl md:text-4xl text-white ${lang === 'ar' ? 'font-cairo' : 'font-inter tracking-tight'}`}>
-                  {lang === 'ar' ? 'أُسس' : 'OSOS'}
-                </span>
-                <span className="text-brand-green font-black text-sm md:text-base tracking-[0.18em] uppercase mt-2">
-                  {lang === 'ar' ? 'للسفر' : 'TRAVEL'}
-                </span>
-              </div>
-            </Link>
-
             <p className="text-slate-400 leading-7 md:leading-8 font-medium text-[15px] md:text-lg max-w-xl mx-auto lg:mx-0">
               {t(
                 'أُسس للسفر، خيارك الأول والموثوق في خدمات السفر، الموافقات الأمنية، وحجوزات الطيران والنقل.',
@@ -52,7 +38,7 @@ const Footer: React.FC = () => {
               <p className="text-xs font-black text-slate-500 tracking-widest uppercase">
                 {t('تابعنا على منصات التواصل', 'Follow us on social media')}
               </p>
-              <div className="flex flex-wrap justify-center lg:justify-start gap-2.5 md:gap-3">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-5">
                 {socialLinks.map((social) => (
                   <a
                     key={social.label}
@@ -76,32 +62,21 @@ const Footer: React.FC = () => {
               {t('تواصل معنا', 'Get in Touch')}
             </h2>
 
-            <div className="space-y-3">
-              <div dir={lang === 'ar' ? 'rtl' : 'ltr'} className="flex items-center gap-4 rounded-2xl bg-white/[0.04] border border-white/[0.08] p-3.5 md:p-5 hover:bg-white/[0.07] transition-colors">
-                <div className="w-11 h-11 md:w-12 md:h-12 rounded-2xl bg-brand-green/10 flex items-center justify-center text-brand-green flex-shrink-0">
-                  <MapPin className="w-5 h-5 md:w-6 md:h-6" />
+            <div className="space-y-5">
+              <div dir={lang === 'ar' ? 'rtl' : 'ltr'} className="flex items-center gap-4 text-slate-100">
+                <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green flex-shrink-0">
+                  <MapPin className="w-5 h-5" />
                 </div>
-                <div>
-                  <p className="text-[11px] md:text-xs font-bold text-slate-500 mb-1">{t('مقرنا الرئيسي', 'Our headquarters')}</p>
-                  <p className="font-black text-base md:text-lg text-slate-100">{t('اليمن، تعز', 'Yemen, Taiz')}</p>
-                </div>
+                <span className="font-black text-base md:text-lg">{t('اليمن، تعز', 'Yemen, Taiz')}</span>
               </div>
 
-              <a href={telLink} dir={lang === 'ar' ? 'rtl' : 'ltr'} className="flex items-center gap-4 rounded-2xl bg-white/[0.04] border border-white/[0.08] p-3.5 md:p-5 hover:bg-white/[0.07] transition-colors group">
-                <div className="w-11 h-11 md:w-12 md:h-12 rounded-2xl bg-brand-green/10 flex items-center justify-center text-brand-green flex-shrink-0 group-hover:bg-brand-green group-hover:text-white transition-colors">
-                  <Phone className="w-5 h-5 md:w-6 md:h-6" />
+              <a href={telLink} dir="ltr" className="flex items-center gap-4 text-slate-100 group">
+                <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green flex-shrink-0 group-hover:bg-brand-green group-hover:text-white transition-colors">
+                  <Phone className="w-5 h-5" />
                 </div>
-                <div className="text-start" dir="ltr">
-                  <p className="text-[11px] md:text-xs font-bold text-slate-500 mb-1" dir={lang === 'ar' ? 'rtl' : 'ltr'}>{t('اتصل بنا مباشرة', 'Call us directly')}</p>
-                  <p className="font-black text-base md:text-lg text-slate-100 group-hover:text-brand-green transition-colors">{DISPLAY_PHONE}</p>
-                </div>
+                <span className="font-black text-base md:text-lg group-hover:text-brand-green transition-colors">{DISPLAY_PHONE}</span>
               </a>
             </div>
-
-            <Link to="/contact" className="mt-5 inline-flex items-center gap-2 text-brand-green font-black text-sm hover:text-white transition-colors">
-              {t('جميع طرق التواصل', 'All contact options')}
-              <ArrowRight className={`w-4 h-4 transition-transform ${lang === 'ar' ? 'rotate-180' : ''}`} />
-            </Link>
           </div>
         </div>
 
@@ -113,7 +88,7 @@ const Footer: React.FC = () => {
             {t('جميع الحقوق محفوظة', 'All rights reserved')}
           </p>
 
-          <nav className="flex flex-wrap items-center justify-center gap-1 text-[11px] font-bold" aria-label={t('روابط التذييل', 'Footer links')}>
+          <nav className="flex flex-wrap items-center justify-center gap-x-6 md:gap-x-10 gap-y-3 text-[11px] font-bold" aria-label={t('روابط التذييل', 'Footer links')}>
             <Link to="/about" className="px-3 py-2 rounded-lg hover:bg-white/5 hover:text-white transition-all">{t('عن أُسس', 'About')}</Link>
             <Link to="/contact" className="px-3 py-2 rounded-lg hover:bg-white/5 hover:text-white transition-all">{t('اتصل بنا', 'Contact')}</Link>
             <Link to="/services" className="px-3 py-2 rounded-lg hover:bg-white/5 hover:text-white transition-all">{t('الخدمات', 'Services')}</Link>
