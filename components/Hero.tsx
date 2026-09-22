@@ -60,30 +60,27 @@ const Hero: React.FC = () => {
           </div>
 
           {/* ميزات صادقة بدل الإحصائيات الكاذبة */}
-          <div className="mt-10 md:mt-12 flex flex-wrap justify-center gap-x-6 gap-y-3 text-[13px] md:text-sm font-bold text-slate-500">
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded-full bg-brand-green/10 flex items-center justify-center">
-                <ShieldCheck className="w-3.5 h-3.5 text-brand-green" />
-              </div>
-              <span>{t('موافقات أمنية', 'Security Clearances')}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded-full bg-brand-green/10 flex items-center justify-center">
-                <Plane className="w-3.5 h-3.5 text-brand-green" />
-              </div>
-              <span>{t('حجوزات طيران', 'Flight Booking')}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded-full bg-brand-green/10 flex items-center justify-center">
-                <Bus className="w-3.5 h-3.5 text-brand-green" />
-              </div>
-              <span>{t('نقل بري', 'Ground Transport')}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-brand-green" />
-              <span>{t('دعم 24/7', '24/7 Support')}</span>
-            </div>
-          </div>
+          <div className="mt-10 md:mt-12 flex flex-wrap justify-center gap-x-5 gap-y-2.5">
+  <div className="flex items-center gap-1.5 text-[13px] md:text-sm font-bold text-slate-500">
+    <ShieldCheck className="w-[18px] h-[18px] text-[#D61F26] flex-shrink-0" />
+    <span>{t('موافقات أمنية', 'Security')}</span>
+  </div>
+
+  <div className="flex items-center gap-1.5 text-[13px] md:text-sm font-bold text-slate-500">
+    <Plane className="w-[18px] h-[18px] text-[#D61F26] flex-shrink-0" />
+    <span>{t('حجوزات طيران', 'Flights')}</span>
+  </div>
+
+  <div className="flex items-center gap-1.5 text-[13px] md:text-sm font-bold text-slate-500">
+    <Bus className="w-[18px] h-[18px] text-[#D61F26] flex-shrink-0" />
+    <span>{t('نقل بري', 'Ground')}</span>
+  </div>
+
+  <div className="flex items-center gap-1.5 text-[13px] md:text-sm font-bold text-slate-500">
+    <CheckCircle2 className="w-[18px] h-[18px] text-[#D61F26] flex-shrink-0" />
+    <span>{t('دعم 24/7', '24/7 Support')}</span>
+  </div>
+</div>
         </div>
       </div>
     </section>
