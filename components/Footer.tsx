@@ -16,16 +16,19 @@ const Footer: React.FC = () => {
     { icon: <XIcon className="w-5 h-5" />, label: 'X (Twitter)', link: X_LINK }
   ];
 
+  // رابط الاتصال المباشر: يبني tel: من WA_PHONE (يفترض أنه بدون + مثل 967776200190)
+  const telLink = `tel:+${WA_PHONE.replace(/\D/g, '')}`;
+
   return (
-    <footer id="contact" className="bg-slate-950 text-white pt-16 pb-10 overflow-hidden relative border-t border-white/5">
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-navy/10 rounded-full blur-[120px] opacity-40"></div>
+    <footer id="contact" className="bg-slate-950 text-white pt-14 pb-8 overflow-hidden relative border-t border-white/5">
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-navy/15 rounded-full blur-[100px] opacity-60"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-3 gap-12 mb-16">
+        <div className="grid lg:grid-cols-2 gap-10 mb-10">
           {/* Brand Info Section */}
-          <div className="space-y-6">
+          <div className="space-y-5">
             <div className="flex items-center gap-4">
-              <div className="w-32 h-16 flex items-center justify-center">
+              <div className="w-14 h-14 flex items-center justify-center">
                 <OsosLogo className="w-full h-full" />
               </div>
               <div className={`flex flex-col ${lang === 'ar' ? 'leading-[1.1]' : 'leading-[0.85]'}`}>
@@ -52,7 +55,7 @@ const Footer: React.FC = () => {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group text-slate-400 hover:text-brand-green"
+                    className="w-10 h-10 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:bg-brand-green/15 hover:border-brand-green/40 group text-slate-300 hover:text-brand-green"
                     aria-label={social.label}
                   >
                     <div className="transition-transform group-hover:scale-110">
@@ -65,28 +68,38 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Details Section */}
-          <div className="space-y-8">
+          <div className="space-y-5 lg:border-r lg:border-white/5 lg:pr-10">
             <h4 className="text-lg font-black border-r-3 border-brand-green pr-3">{t('تواصـل معنـا', 'Get in Touch')}</h4>
-            <ul className="space-y-5">
+            <ul className="space-y-4">
               <li className="flex items-start gap-4 group">
                 <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green flex-shrink-0 transition-transform shadow-sm">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <p className="font-black text-lg text-slate-100">{t('اليمن، تعز', 'Yemen, Taiz')}</p>
+                <p className="font-black text-lg text-slate-100 pt-2">{t('اليمن، تعز', 'Yemen, Taiz')}</p>
               </li>
               <li className="flex items-start gap-4 group">
-                <div className="w-10 h-10 rounded-xl bg-brand-navy/20 flex items-center justify-center text-brand-navy flex-shrink-0 transition-transform shadow-sm">
+                <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green flex-shrink-0 transition-transform shadow-sm">
                   <Phone className="w-5 h-5" />
                 </div>
-                <p className="font-black text-lg text-slate-100">{DISPLAY_PHONE}</p>
+                <a
+                  href={telLink}
+                  dir="ltr"
+                  className="font-black text-lg text-slate-100 pt-2 hover:text-brand-green transition-colors inline-block"
+                >
+                  {DISPLAY_PHONE}
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-[10px] font-black tracking-widest uppercase">
-          <p>© {new Date().getFullYear()} {t('أُسس للسفر والسياحة. جميع الحقوق محفوظة.', 'Osos Travel & Tourism.')}</p>
+        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-[11px] font-black tracking-widest uppercase">
+          <p>
+            {t('أُسس للسفر والسياحة. جميع الحقوق محفوظة.', 'Osos Travel & Tourism. All rights reserved.')}
+            {' '}
+            <span className="text-sm">©</span> {new Date().getFullYear()}
+          </p>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
              <Link to="/about" className="hover:text-white transition-colors">{t('عن أُسس', 'About')}</Link>
              <Link to="/contact" className="hover:text-white transition-colors">{t('اتصل بنا', 'Contact')}</Link>
