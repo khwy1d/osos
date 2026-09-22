@@ -70,24 +70,6 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-slate-900 text-white relative overflow-hidden text-center">
-         <div className="max-w-4xl mx-auto px-4 space-y-8 relative z-10">
-            <h2 className="text-3xl md:text-5xl font-black">{t('سافر بثقة.. سافر معنا', 'Travel with Trust.. Travel with Us')}</h2>
-            <div className="pt-4">
-               <a 
-                  href={`https://wa.me/${WA_PHONE}?text=${contactMsg}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="brand-gradient text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl hover:scale-105 transition-transform inline-flex items-center gap-3"
-               >
-                  <MessageCircle className="w-6 h-6" />
-                  {t('تواصل مع فريق أُسس', 'Contact Osos Team')}
-               </a>
-            </div>
-         </div>
-      </section>
     </div>
   );
 };
