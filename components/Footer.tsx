@@ -63,35 +63,45 @@ const Footer: React.FC = () => {
             </h2>
 
             <div className="space-y-5">
-              <div dir={lang === 'ar' ? 'rtl' : 'ltr'} className="flex items-center gap-4 text-slate-100">
+              <div dir={lang === 'ar'? 'rtl' : 'ltr'} className="flex items-center justify-center lg:justify-start gap-4 text-slate-100">
                 <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green flex-shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <span className="font-black text-base md:text-lg">{t('اليمن، تعز', 'Yemen, Taiz')}</span>
               </div>
 
-              <a href={telLink} dir="ltr" className="flex items-center gap-4 text-slate-100 group">
-                <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green flex-shrink-0 group-hover:bg-brand-green group-hover:text-white transition-colors">
+              {/* --- تم التصحيح هنا --- */}
+              <div dir={lang === 'ar'? 'rtl' : 'ltr'} className="flex items-center justify-center lg:justify-start gap-4 text-slate-100">
+                <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green flex-shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span className="font-black text-base md:text-lg group-hover:text-brand-green transition-colors">{DISPLAY_PHONE}</span>
-              </a>
+                <a href={telLink} dir="ltr" className="font-black text-base md:text-lg hover:text-brand-green transition-colors">
+                  {DISPLAY_PHONE}
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-6 md:pt-7 flex flex-col md:flex-row justify-between items-center gap-5 text-slate-500">
-          <p className="text-center md:text-start text-[11px] md:text-xs font-bold leading-relaxed" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
-            <span className="text-slate-300">© {new Date().getFullYear()} {t('أُسس للسفر والسياحة', 'Osos Travel & Tourism')}</span>
-            <span className="mx-2 text-brand-green/70">•</span>
-            {t('جميع الحقوق محفوظة', 'All rights reserved')}
+          {/* --- تم تكبير © هنا --- */}
+          <p className="text-center md:text-start text-[11px] md:text-xs font-bold leading-relaxed flex items-center gap-1.5" dir={lang === 'ar'? 'rtl' : 'ltr'}>
+            <span className="text-[14px] md:text-[16px] leading-none -mt-0.5">©</span>
+            <span className="text-slate-300">{new Date().getFullYear()} {t('أُسس للسفر والسياحة', 'Osos Travel & Tourism')}</span>
+            <span className="mx-1.5 text-brand-green/70">•</span>
+            <span>{t('جميع الحقوق محفوظة', 'All rights reserved')}</span>
           </p>
 
-          <nav className="flex flex-wrap items-center justify-center gap-x-6 md:gap-x-10 gap-y-3 text-[11px] font-bold" aria-label={t('روابط التذييل', 'Footer links')}>
-            <Link to="/about" className="px-3 py-2 rounded-lg hover:bg-white/5 hover:text-white transition-all">{t('عن أُسس', 'About')}</Link>
-            <Link to="/contact" className="px-3 py-2 rounded-lg hover:bg-white/5 hover:text-white transition-all">{t('اتصل بنا', 'Contact')}</Link>
-            <Link to="/services" className="px-3 py-2 rounded-lg hover:bg-white/5 hover:text-white transition-all">{t('الخدمات', 'Services')}</Link>
+          {/* --- تم زيادة الفارق هنا --- */}
+          <nav
+            className="flex items-center justify-center text-[12px] md:text-[13px] font-bold divide-x divide-white/10 rtl:divide-x-reverse"
+            aria-label={t('روابط التذييل', 'Footer links')}
+            dir={lang === 'ar'? 'rtl' : 'ltr'}
+          >
+            <Link to="/about" className="px-4 md:px-5 py-2 hover:text-white transition-colors first:pr-0 last:pl-0">{t('عن أُسس', 'About')}</Link>
+            <Link to="/contact" className="px-4 md:px-5 py-2 hover:text-white transition-colors">{t('اتصل بنا', 'Contact')}</Link>
+            <Link to="/services" className="px-4 md:px-5 py-2 hover:text-white transition-colors">{t('الخدمات', 'Services')}</Link>
           </nav>
         </div>
       </div>
