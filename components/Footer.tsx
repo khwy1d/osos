@@ -66,29 +66,25 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-
-          {/* Contact Details Section */}
-          <div className="space-y-8">
-            <h4 className="text-lg font-black border-r-3 border-brand-green pr-3">{t('تواصـل معنـا', 'Get in Touch')}</h4>
-            <ul className="space-y-5">
-              <li className="flex items-start gap-4 group">
-                <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green flex-shrink-0 transition-transform shadow-sm">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                  <p className="font-black text-lg text-slate-100">{t('اليمن، تعز', 'Yemen, Taiz')}</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-4 group">
-                <div className="w-10 h-10 rounded-xl bg-brand-navy/20 flex items-center justify-center text-brand-navy flex-shrink-0 transition-transform shadow-sm">
-                  <Phone className="w-5 h-5" />
-                </div>
-                  <p className="font-black text-lg text-slate-100">{DISPLAY_PHONE}</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
+          
+{/* Contact Details Section */}
+<div className="space-y-8">
+  <h4 className="text-lg font-black border-r-3 border-brand-green pr-3">{t('تواصـل معنـا', 'Get in Touch')}</h4>
+  <ul className="space-y-5">
+    <li className="flex items-start gap-4 group">
+      <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green flex-shrink-0 transition-transform shadow-sm">
+        <MapPin className="w-5 h-5" />
+      </div>
+      <p className="font-black text-lg text-slate-100">{t('اليمن، تعز', 'Yemen, Taiz')}</p>
+    </li>
+    <li className="flex items-start gap-4 group">
+      <div className="w-10 h-10 rounded-xl bg-brand-navy/20 flex items-center justify-center text-brand-navy flex-shrink-0 transition-transform shadow-sm">
+        <Phone className="w-5 h-5" />
+      </div>
+      <p className="font-black text-lg text-slate-100">{DISPLAY_PHONE}</p>
+    </li>
+  </ul>
+</div>
         {/* Bottom Bar */}
         <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-[10px] font-black tracking-widest uppercase">
           <p>© {new Date().getFullYear()} {t('أُسس للسفر والسياحة. جميع الحقوق محفوظة.', 'Osos Travel & Tourism.')}</p>
