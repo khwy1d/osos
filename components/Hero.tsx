@@ -59,25 +59,33 @@ const Hero: React.FC = () => {
             </Link>
           </div>
 
-          {/* ميزات صادقة بدل الإحصائيات الكاذبة */}
-          <div className="mt-10 md:mt-12 flex flex-wrap justify-center gap-x-5 gap-y-2.5">
-  <div className="flex items-center gap-1.5 text-[13px] md:text-sm font-bold text-slate-500">
-    <ShieldCheck className="w-[18px] h-[18px] text-[#D61F26] flex-shrink-0" />
+    {/* ميزات منتظمة - تصلح مشكلة الأيقونات */}
+<div className="mt-10 md:mt-12 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-3 sm:gap-x-6 sm:gap-y-3">
+  <div className="flex items-center justify-center gap-2 text-[13px] md:text-sm font-bold text-slate-500 bg-slate-50 sm:bg-transparent border sm:border-0 border-slate-100 rounded-full sm:rounded-none px-3 py-2.5 sm:p-0">
+    <div className="w-7 h-7 rounded-full bg-red-50 flex items-center justify-center flex-shrink-0">
+      <ShieldCheck className="w-4 h-4 text-[#D61F26]" />
+    </div>
     <span>{t('موافقات أمنية', 'Security')}</span>
   </div>
 
-  <div className="flex items-center gap-1.5 text-[13px] md:text-sm font-bold text-slate-500">
-    <Plane className="w-[18px] h-[18px] text-[#D61F26] flex-shrink-0" />
+  <div className="flex items-center justify-center gap-2 text-[13px] md:text-sm font-bold text-slate-500 bg-slate-50 sm:bg-transparent border sm:border-0 border-slate-100 rounded-full sm:rounded-none px-3 py-2.5 sm:p-0">
+    <div className="w-7 h-7 rounded-full bg-red-50 flex items-center justify-center flex-shrink-0">
+      <Plane className="w-4 h-4 text-[#D61F26]" />
+    </div>
     <span>{t('حجوزات طيران', 'Flights')}</span>
   </div>
 
-  <div className="flex items-center gap-1.5 text-[13px] md:text-sm font-bold text-slate-500">
-    <Bus className="w-[18px] h-[18px] text-[#D61F26] flex-shrink-0" />
+  <div className="flex items-center justify-center gap-2 text-[13px] md:text-sm font-bold text-slate-500 bg-slate-50 sm:bg-transparent border sm:border-0 border-slate-100 rounded-full sm:rounded-none px-3 py-2.5 sm:p-0">
+    <div className="w-7 h-7 rounded-full bg-red-50 flex items-center justify-center flex-shrink-0">
+      <Bus className="w-4 h-4 text-[#D61F26]" />
+    </div>
     <span>{t('نقل بري', 'Ground')}</span>
   </div>
 
-  <div className="flex items-center gap-1.5 text-[13px] md:text-sm font-bold text-slate-500">
-    <CheckCircle2 className="w-[18px] h-[18px] text-[#D61F26] flex-shrink-0" />
+  <div className="flex items-center justify-center gap-2 text-[13px] md:text-sm font-bold text-slate-500 bg-slate-50 sm:bg-transparent border sm:border-0 border-slate-100 rounded-full sm:rounded-none px-3 py-2.5 sm:p-0">
+    <div className="w-7 h-7 rounded-full bg-red-50 flex items-center justify-center flex-shrink-0">
+      <CheckCircle2 className="w-4 h-4 text-[#D61F26]" />
+    </div>
     <span>{t('دعم 24/7', '24/7 Support')}</span>
   </div>
 </div>
